@@ -1,0 +1,24 @@
+.nav {
+    padding-top: 3em;
+    /* background: $dark-color; */
+  
+    li {
+      display: inline;
+    }
+  
+    a:link,
+    a:visited {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover,
+    a:focus {
+    }
+  
+    small {
+      display: block;
+      font-size: 0.7em;
+      color: mix($text-color,$accent-color, 60%);
+    }
+  }

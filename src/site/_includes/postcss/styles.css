@@ -16,20 +16,19 @@
 }
 
 html {
-  background-color: $accent-color;
+  background-color: $page-color;
 }
 
 body {
   text-align: center;
   background-color: $page-color;
-  color: mix($text-color, $page-color, 90%);
+  color: $text-color;
   font-family: sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
   background:  $page-color;
-  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
 
   @media (min-width: $narrow) {
     font-size: 18px;
@@ -89,10 +88,6 @@ ul, ol {
 a:link,
 a:visited {
   color: $text-color;
-  text-decoration: none;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: mix($text-color, $accent-color, 20%)
 }
 a:hover,
 a:focus {
@@ -107,42 +102,7 @@ a:focus {
   border-bottom-style:none;
 }
 
-.nav {
-  padding-top: 3em;
-
-  li {
-    display: inline;
-  }
-
-  a:link,
-  a:visited {
-    display: inline-block;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: mix($text-color, $accent-color, 40%);
-    border-bottom-style: none;
-    padding-top: 0.8em;
-    padding-bottom: 2em;
-    margin-left: 0;
-    margin-right: 0.7em;
-    width: 9em;
-    text-align: left;
-    color: mix($text-color, $accent-color, 80%);
-    text-decoration: none;
-  }
-  a:hover,
-  a:focus {
-      color: $text-color;
-      border-top-color: $text-color;
-      border-bottom-style: none;
-  }
-
-  small {
-    display: block;
-    font-size: 0.7em;
-    color: mix($text-color,$accent-color, 60%);
-  }
-}
+@import '_nav.css';
 
 
 code {
