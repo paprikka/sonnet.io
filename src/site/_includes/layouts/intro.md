@@ -1,13 +1,12 @@
 ---
 layout: layouts/base.njk
-pageClass: posts
+pageClass: intro
 templateEngineOverride: njk, md
 ---
 
 <main>
 <article class="article">
   <header class="article__header">
-    <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
     <h1 class='title'>{{ title }}</h1>
         {%- if subtitle %}
           <p class="subtitle">{{ subtitle | safe }}</p>
@@ -17,9 +16,5 @@ templateEngineOverride: njk, md
     {{ content | safe }}
   </div>
 </article>
-<aside class="footnote">
-  <p>
-    This page is part of the posts section.
-  </p>
-</aside>
+
 </main>

@@ -1,52 +1,23 @@
 .article {
-    line-height: 1.5;
-    color: $color-body;
+    /* &__title {
+        
+    }
+    &__subtitle {
 
-    h1, h2, h3, h4 {
-        font-family: $font-header;
     }
 
-    h1 {
-        font-size: 3rem;
-        font-style: italic;
-        font-weight: 400;
-        line-height: 1.25;
-        margin: 1rem 0 5rem;
+    &__header {
+
+    } */
+
+    @media all and (min-width: $screen-mid) {
+        max-width: 50rem;
+        /* margin: 0 0 0 auto; */
     }
 
-    h2 {
-        font-family: $font-body;
-        font-size: 1.5rem;
-        line-height: 1;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin: 2em 0 1em;
-    }
-
-    p {
-        line-height: 1.5;
-    }
-
-    ul, ol {
-        margin: 0;
-        padding: 0;
-    }
-
-   
-    header {
-        position: relative;
-
-        & time {
-            opacity: .5;
-            position: absolute;
-            left: 0;
-            bottom: -1.25rem;
+    &__content {
+        @media all and (min-width: $screen-mid) {
+            max-width: 30rem;
         }
-    }
-
-
-    a:link, a:visited {
-        font-weight: 600;
-        color: $color-body;
     }
 }

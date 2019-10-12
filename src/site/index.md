@@ -1,8 +1,17 @@
 ---
 title: Rafał Pastuszak.
 subtitle: /‘rafau pastoohshak/
-layout: layouts/base.njk
+layout: layouts/intro.md
 ---
+
+I’ve spent the past 10+ years helping businesses to move towards digital & mobile.
+
+Recently, I made an app called Façade, it makes rainbows.
+
+I love photography.
+
+I write, sometimes,
+and speak Persian in my sleep. 
 
 
 ## Recent Posts

@@ -6,6 +6,8 @@ $screen-wide: 1200px;
 $font-size: 16px;
 $baseline: 24px;
 
+$page-margin: 2.5rem;
+
 $color-page: #fff;
 $color-body: #444;
 $color-accent-primary: #FF4555;
