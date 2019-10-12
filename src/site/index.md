@@ -1,6 +1,5 @@
 ---
-title: Rafał Pastuszak.
-subtitle: /‘rafau pastoohshak/
+title: Hej!
 layout: layouts/intro.md
 ---
 

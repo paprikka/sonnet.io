@@ -1,4 +1,8 @@
 .article {
+    @media all and (min-width: $screen-mid) {
+        font-size: 18px;
+    }
+
     &__title {
         font-size: 3rem;
         line-height: calc($rhythm-unit * 2);
@@ -8,6 +12,13 @@
         font-family: $font-title;
         font-weight: 400;
         font-style: italic;
+
+        @media all and (min-width: $screen-mid) {
+            font-size: 6rem;
+            font-weight: 700;
+            line-height: calc($rhythm-unit * 4);
+            margin: calc($rhythm-unit * .25) 0  0;
+        }
     }
     &__subtitle {
         margin: 0;
@@ -30,7 +41,8 @@
 
     &__content {
         @media all and (min-width: $screen-mid) {
-            max-width: 30rem;
+            max-width: 40rem;
+            margin: 0 $page-margin 0 auto;
         }
     }
 
@@ -70,5 +82,12 @@
         width: calc(100% + $page-margin * 2);
         margin-left: calc($page-margin * -1);
         height: auto;
+    }
+}
+
+.footnote {
+    @media all and (min-width: $screen-mid) {
+        max-width: 40rem;
+        margin: 0 $page-margin 0 auto;
     }
 }
