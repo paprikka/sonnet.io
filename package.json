@@ -34,6 +34,7 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "cross-env": "5.2.0"
+    "cross-env": "5.2.0",
+    "normalize.css": "^8.0.1"
   }
 }

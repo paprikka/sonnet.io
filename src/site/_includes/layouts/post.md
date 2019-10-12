@@ -4,14 +4,18 @@ pageClass: posts
 templateEngineOverride: njk, md
 ---
 
-<p class="date">
-  Posted as an example, on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-</p>
-<main>
+<article class="article">
+  <header>
+    <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+    <h1 class='title'>{{ title }}</h1>
+        {%- if subtitle %}
+          <p class="subtitle">{{ subtitle | safe }}</p>
+        {% endif %}
+  </header>
   {{ content | safe }}
-  <div class="footnote">
-    <p>
-      This page is part of the posts section.
-    </p>
-  </div>
-</main>
+</article>
+<aside class="footnote">
+  <p>
+    This page is part of the posts section.
+  </p>
+</aside>

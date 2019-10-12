@@ -1,12 +1,13 @@
-<header>
-  <ul class="nav">
-    <li>
-      <a href="/">home<small>where the heart is</small></a>
-    </li>
-    <li>
-      <a href="/about">about<small>all about this</small></a>
-    </li>
-  </ul>
-  <h1>{{ title }}</h1>
-  {%- if subtitle %}<p class="subtitle">{{ subtitle | safe }}</p>{% endif %}
+<header class="header">
+  <a class="header__logo" href="/"></a>
+  <nav class="header__nav">
+    <ul>
+      <li>
+        <a href="/">home</a>
+      </li>
+      <li>
+        <a href="/about">about</a>
+      </li>
+    </ul>
+  </nav>
 </header>

@@ -1,10 +1,15 @@
 /* breakpoints for media queries */
-$narrow: 400px;
-$mid: 740px;
-$wide: 1200px;
+$screen-narrow: 400px;
+$screen-mid: 740px;
+$screen-wide: 1200px;
 
-/* colours */
-$page-color: #fff;
-$text-color: #333;
-$accent-color: #f00;
-$dark-color: #000;
+$font-size: 16px;
+$baseline: 24px;
+
+$color-page: #fff;
+$color-body: #444;
+$color-accent-primary: #FF4555;
+
+$font-title: 'Playfair Display', Georgia, serif; 
+$font-body: monospace;
+$font-header: $font-title;
