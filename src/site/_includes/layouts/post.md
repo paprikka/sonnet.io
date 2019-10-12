@@ -7,10 +7,10 @@ templateEngineOverride: njk, md
 <main>
 <article class="article">
   <header class="article__header">
-    <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-    <h1 class='title'>{{ title }}</h1>
+    <time class='article__time' datetime="{{ date }}">{{ date | dateDisplay }}</time>
+    <h1 class='article__title'>{{ title }}</h1>
         {%- if subtitle %}
-          <p class="subtitle">{{ subtitle | safe }}</p>
+          <p class="article__subtitle">{{ subtitle | safe }}</p>
         {% endif %}
   </header>
   <div class="article__content">

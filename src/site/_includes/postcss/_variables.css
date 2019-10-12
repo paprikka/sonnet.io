@@ -4,14 +4,16 @@ $screen-mid: 740px;
 $screen-wide: 1200px;
 
 $font-size: 16px;
-$baseline: 24px;
+$rhythm-unit: 24px;
 
-$page-margin: 2.5rem;
+$page-margin: calc($rhythm-unit * 2);
 
 $color-page: #fff;
 $color-body: #444;
 $color-accent-primary: #FF4555;
 
+$color-link: #000;
+
 $font-title: 'Playfair Display', Georgia, serif; 
-$font-body: monospace;
+$font-body: 'Source Code Pro';
 $font-header: $font-title;

@@ -10,11 +10,7 @@
 body {
     font-family: $font-body;
     font-size: $font-size;
-}
-
-
-.header, .footer, main {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, .2);
+    line-height: $rhythm-unit;
 }
 
 main {

@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-direction: row;
+    margin-bottom: calc($rhythm-unit * 2);
 
     @media all and (min-width: $screen-mid) {
         flex-direction: column;
@@ -13,10 +14,10 @@
 
     &__logo {
         display: flex;
-        width: 1rem;
-        height: 1rem;
+        width: $rhythm-unit;
+        height: $rhythm-unit;
 
-        background: url('/images/logo.png') red;
+        background: url('/images/logo.png');
         background-size: 100%;
     }
 
@@ -36,6 +37,15 @@
             &:first-child {
                 margin-left: 0;
             }
+        }
+
+        a:link, a:visited {
+            color: $color-body;
+            text-decoration: none;
+        }
+
+        a:hover, a:active {
+            color: $color-accent-primary;
         }
     }
 }

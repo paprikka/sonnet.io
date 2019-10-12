@@ -29,6 +29,9 @@ Recently, I made an app called [Façade](http://facade.photo/), it makes rainbow
 
 The common front-matter data for all of the files in the posts section are abstracted into a `posts.json` file so that we don't need to repeat that on every file. Handy.
 
+![Luna](/images/luna.jpg)
+
+
 ## An example list
 
 Recently, I made an app called [Façade](http://facade.photo/), it makes rainbows.
