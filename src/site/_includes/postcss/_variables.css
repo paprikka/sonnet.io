@@ -4,16 +4,18 @@ $screen-mid: 740px;
 $screen-wide: 1200px;
 
 $font-size: 16px;
-$rhythm-unit: 24px;
+$font-size-mid: 18px;
+$rhythm-unit: 1.5rem;
 
 $page-margin: calc($rhythm-unit * 2);
 
 $color-page: #fff;
 $color-body: #444;
 $color-accent-primary: #FF4555;
+$color-accent-secondary: #FF4555;
 
 $color-link: #000;
 
 $font-title: 'Playfair Display', Georgia, serif; 
-$font-body: 'Source Code Pro';
+$font-body: 'Avenir Next';
 $font-header: $font-title;

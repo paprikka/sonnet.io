@@ -5,16 +5,30 @@
 @import '_header.css';
 @import '_footer.css';
 @import '_article.css';
-
+@import '_listing.css';
 
 /* main, .article, .article__content {
     background: rgba(255, 0, 0, .1);
 } */
 
+:root {
+    --font-size: $font-size;
+    --font-size-mid: $font-size-mid;
+}
+
+html {
+    font-size: var(--font-size);
+    line-height: $rhythm-unit;
+
+    @media all and (min-width: $screen-mid) {
+        font-size: var(--font-size-mid);
+        line-height: $rhythm-unit;
+    }
+}
+
 body {
     font-family: $font-body;
-    font-size: $font-size;
-    line-height: $rhythm-unit;
+    color: $color-body;
 }
 
 main {

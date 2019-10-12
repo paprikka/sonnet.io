@@ -1,6 +1,6 @@
 .article {
     @media all and (min-width: $screen-mid) {
-        font-size: 18px;
+        /* font-size: 16px; */
     }
 
     &__title {
@@ -12,6 +12,8 @@
         font-family: $font-title;
         font-weight: 400;
         font-style: italic;
+
+        color: $color-accent-secondary;
 
         @media all and (min-width: $screen-mid) {
             font-size: 6rem;
@@ -41,8 +43,9 @@
 
     &__content {
         @media all and (min-width: $screen-mid) {
-            max-width: 40rem;
-            margin: 0 $page-margin 0 auto;
+            max-width: 30rem;
+            /* margin: 0 $page-margin 0 auto; */
+            margin: 0;
         }
     }
 
@@ -75,6 +78,35 @@
         &:link, &:visited {
             color: $color-link;
             font-weight: 600;
+            text-decoration: none;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                height: 0.125rem;
+                width: 100%;
+                bottom: 0.125rem;
+                left: 0;
+                background: $color-accent-primary;
+                opacity: .1;
+                transition: .2s;
+                z-index: -1;
+            }
+
+            &:hover {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 45%;
+                    width: 100%;
+                    bottom: 0.125rem;
+                    left: 0;
+                    background: $color-accent-primary;
+                    opacity: 1;
+                    transition: .2s;
+                    z-index: -1;
+                }
+            }
         }
     }
 

@@ -1,0 +1,9 @@
+.listing {
+    list-style: none;
+
+    time {
+        opacity: .5;
+        font-size: .75rem;
+        margin-left: .5rem;
+    }
+}
