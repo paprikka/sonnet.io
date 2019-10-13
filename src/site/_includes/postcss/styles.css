@@ -15,17 +15,13 @@
 
     @media all and (min-width: $screen-mid) {
         --page-margin: $page-margin-mid;
+        --font-size: $font-size-mid;
     }
 }
 
 html {
     font-size: var(--font-size);
     line-height: $rhythm-unit;
-
-    @media all and (min-width: $screen-mid) {
-        font-size: var(--font-size-mid);
-        line-height: $rhythm-unit;
-    }
 }
 
 body {

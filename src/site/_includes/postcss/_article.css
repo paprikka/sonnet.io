@@ -3,9 +3,9 @@
 
     &__title {
         font-size: 3rem;
-        line-height: calc($rhythm-unit * 2);
+        line-height: calc($rhythm-unit * 2rem);
         padding: 0;
-        margin: calc($rhythm-unit * .2) 0  calc($rhythm-unit * .05);
+        margin: 0 0 calc($rhythm-unit * 2rem);
 
         font-family: $font-title;
         font-weight: 700;
@@ -16,8 +16,8 @@
         @media all and (min-width: $screen-mid) {
             font-size: 6rem;
             font-weight: 700;
-            line-height: calc($rhythm-unit * 4);
-            margin: calc($rhythm-unit * .25) 0  0;
+            line-height: calc($rhythm-unit * 4rem);
+            margin: 0 0 calc($rhythm-unit * 2rem);
         }
     }
     &__subtitle {
@@ -28,6 +28,10 @@
         position: relative;
         top: calc($rhythm-unit * .25);
         opacity: .5;
+
+        @media all and (min-width: $screen-mid) {
+            top: 0;
+        }
     }
 
     &__header {
@@ -41,25 +45,29 @@
     }
 
     p {
-        margin: 0 0 $rhythm-unit;
+        margin: 0 0 calc($rhythm-unit * 1rem);
+    }
+
+    code { 
+        margin: 0 0 calc($rhythm-unit * 1rem);
+        font-size: 1rem;
     }
 
     h2 {
         text-transform: uppercase;
         font-weight: 600;
-        margin: calc($rhythm-unit * 2) 0 $rhythm-unit;
-        line-height: $rhythm-unit;
+        margin: calc($rhythm-unit * 2rem) 0 calc($rhythm-unit * 1rem);
+        line-height: calc($rhythm-unit * 2rem);
     }
 
     ol, ul {
-        margin: 0 0 $rhythm-unit;
+        margin: 0 0 calc($rhythm-unit  * 1rem);
         padding: 0;
     }
-
+    
     pre {
-        margin: $rhythm-unit 0;
-        padding: calc($rhythm-unit * .5);
-        margin: calc($rhythm-unit * -.5) calc($rhythm-unit * -.5) calc($rhythm-unit * 1.5);
+        margin: calc($rhythm-unit * 1rem) 0;
+        padding: calc($rhythm-unit * 1rem);
         background: rgba(0, 0, 0, .1);
         overflow: auto;
         border:none;
@@ -110,8 +118,15 @@
 }
 
 .footnote {
-    padding: var(--page-margin) calc(var(--page-margin) * 2);
+    padding: 0 calc(var(--page-margin) * 2) calc($rhythm-unit * 2rem);
+    margin: calc($rhythm-unit * 1rem) 0;
     
+    p {
+        margin: 0 0 calc($rhythm-unit * 1rem);
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
     @media all and (min-width: $screen-mid) {
         margin: 0 5rem 0;
     }

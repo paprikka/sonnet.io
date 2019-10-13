@@ -17,8 +17,8 @@
 
     &__logo {
         display: flex;
-        width: $rhythm-unit;
-        height: $rhythm-unit;
+        width: calc($rhythm-unit * 1rem);
+        height: calc($rhythm-unit * 1rem);
 
         background: url('/images/logo.png');
         background-size: 100%;

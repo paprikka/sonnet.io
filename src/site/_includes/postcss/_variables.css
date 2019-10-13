@@ -5,10 +5,10 @@ $screen-wide: 1200px;
 
 $font-size: 16px;
 $font-size-mid: 18px;
-$rhythm-unit: 1.5rem;
+$rhythm-unit: 1.5;
 
-$page-margin: $rhythm-unit;
-$page-margin-mid: calc($rhythm-unit * 2);
+$page-margin: calc(1rem * $rhythm-unit);
+$page-margin-mid: calc(2rem * $rhythm-unit);
 
 $color-page: #fafafa;
 $color-article: rgba(0, 0, 0, .03);
