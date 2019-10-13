@@ -1,7 +1,6 @@
 .footnote {
     padding: 0 calc(var(--page-margin) * 2) calc($rhythm-unit * 2rem);
     margin: calc($rhythm-unit * 1rem) 0;
-    text-align: center;
 
     p {
         margin: 0 0 calc($rhythm-unit * 1rem);
