@@ -1,14 +1,17 @@
 .header {
+    padding: var(--page-margin);
+
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     flex-direction: row;
-    margin-bottom: calc($rhythm-unit * 2);
+
+    width: 100%;
 
     @media all and (min-width: $screen-mid) {
         flex-direction: column;
         align-items: flex-start;
-        height: calc(100vh - $page-margin * 2);
+        height: 100%;
         position: fixed;
     }
 

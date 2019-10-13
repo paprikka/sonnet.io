@@ -7,12 +7,14 @@ $font-size: 16px;
 $font-size-mid: 18px;
 $rhythm-unit: 1.5rem;
 
-$page-margin: calc($rhythm-unit * 2);
+$page-margin: $rhythm-unit;
+$page-margin-mid: calc($rhythm-unit * 2);
 
-$color-page: #fff;
+$color-page: #fafafa;
+$color-article: #fff9ed;
 $color-body: #444;
 $color-accent-primary: #FF4555;
-$color-accent-secondary: #FF4555;
+$color-accent-secondary: #0E0F99;
 
 $color-link: #000;
 

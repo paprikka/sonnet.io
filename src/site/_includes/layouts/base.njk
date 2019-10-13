@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Source+Code+Pro:400,400i,600,600i|Source+Serif+Pro:400,600&display=swap">
     <title>{{ title }}—Rafal Pastuszak</title>
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
     <div class='wrapper'>
-    {% include "header.njk" %}
-      {{ content | safe }}
+      <div class="col-left">
+        {% include "header.njk" %}
+      </div>
+      <div class="col-right">
+        {{ content | safe }}
+      </div>
     {# {% include "footer.njk" %} #}
     </div>
 
