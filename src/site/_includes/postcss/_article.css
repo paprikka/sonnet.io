@@ -46,6 +46,12 @@
 
     p {
         margin: 0 0 calc($rhythm-unit * 1rem);
+
+        &.intro {
+            font-size: 1.4rem;
+            line-height: calc($rhythm-unit * 1rem);
+            font-weight: 400;
+        }
     }
 
     code { 
