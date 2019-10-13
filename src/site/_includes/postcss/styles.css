@@ -47,7 +47,6 @@ body {
 .col-right {
     @media all and (min-width: $screen-mid) {
         width: 70vw;
-        z-index: 1;
     }
 }
 

@@ -8,7 +8,7 @@
         margin: calc($rhythm-unit * .2) 0  calc($rhythm-unit * .05);
 
         font-family: $font-title;
-        font-weight: 400;
+        font-weight: 700;
         font-style: italic;
 
         color: $color-accent-secondary;
@@ -62,7 +62,7 @@
         margin: calc($rhythm-unit * -.5) calc($rhythm-unit * -.5) calc($rhythm-unit * 1.5);
         background: rgba(0, 0, 0, .1);
         overflow: auto;
-        border-radius: 3px;
+        border:none;
     }
 
     a {
@@ -71,6 +71,7 @@
             font-weight: 600;
             text-decoration: none;
             position: relative;
+
             &::after {
                 content: '';
                 position: absolute;
