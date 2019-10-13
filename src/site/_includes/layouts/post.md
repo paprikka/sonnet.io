@@ -18,8 +18,6 @@ templateEngineOverride: njk, md
   </div>
 </article>
 <aside class="footnote">
-  <p>
-    This page is part of the posts section.
-  </p>
+  <a href="/blog">Show more posts</a>
 </aside>
 </main>

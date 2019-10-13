@@ -1,0 +1,55 @@
+.footnote {
+    padding: 0 calc(var(--page-margin) * 2) calc($rhythm-unit * 2rem);
+    margin: calc($rhythm-unit * 1rem) 0;
+    text-align: center;
+
+    p {
+        margin: 0 0 calc($rhythm-unit * 1rem);
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    &__avatar {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100rem;
+    }
+
+    a {
+        &:link, &:visited {
+            color: $color-link;
+            font-weight: 600;
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 0.125rem;
+                width: 100%;
+                bottom: 0.125rem;
+                left: 0;
+                background: $color-accent-primary;
+                opacity: .1;
+                transition: .2s;
+                z-index: -1;
+            }
+
+            &:hover {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 45%;
+                    width: 100%;
+                    bottom: 0.125rem;
+                    left: 0;
+                    background: $color-accent-primary;
+                    opacity: 1;
+                    transition: .2s;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}

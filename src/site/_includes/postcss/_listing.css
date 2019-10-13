@@ -1,9 +1,29 @@
 .listing {
+    a {
+        font-family: $font-title;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: calc($rhythm-unit * 2rem);
+    }
+
     list-style: none;
 
     time {
         opacity: .5;
         font-size: .75rem;
         margin-left: .5rem;
+    }
+
+
+    &--big {
+        a {
+            font-size: 2rem;
+            line-height: calc($rhythm-unit * 2rem);
+        }
+
+        time {
+            display: block;
+        }
     }
 }

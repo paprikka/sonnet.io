@@ -7,7 +7,7 @@ layout: layouts/intro.md
 I’ve spent the past 10+ years helping businesses to move towards digital & mobile.
 <br>
 <br>
-Recently, I made an app called Façade, it makes rainbows.
+Recently, I made an app called <a href="http://facade.photo/" target="_blank">Façade</a>, it makes rainbows.
 <br>
 <br>
 I love photography.
@@ -17,7 +17,7 @@ I write, sometimes,
 and speak Persian in my sleep. 
 </p>
 
-## Blog
+### Recent Posts
 
 <ul class="listing">
 {%- for page in collections.post -%}

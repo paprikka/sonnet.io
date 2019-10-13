@@ -67,6 +67,14 @@
         line-height: calc($rhythm-unit * 2rem);
     }
 
+    h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: calc($rhythm-unit * 2rem) 0 0;
+        line-height: calc($rhythm-unit * 2rem);
+    }
+
     ol, ul {
         margin: 0 0 calc($rhythm-unit  * 1rem);
         padding: 0;
@@ -121,20 +129,5 @@
         width: calc(100% + var(--page-margin) * 4);
         margin-left: calc(var(--page-margin) * -2);
         height: auto;
-    }
-}
-
-.footnote {
-    padding: 0 calc(var(--page-margin) * 2) calc($rhythm-unit * 2rem);
-    margin: calc($rhythm-unit * 1rem) 0;
-    
-    p {
-        margin: 0 0 calc($rhythm-unit * 1rem);
-    }
-    p:last-child {
-        margin-bottom: 0;
-    }
-    @media all and (min-width: $screen-mid) {
-        margin: 0 5rem 0;
     }
 }
