@@ -2,61 +2,26 @@
 @import '_variables.css';
 @import '_reset.css';
 
-@import '_header.css';
-@import '_footer.css';
-@import '_article.css';
-@import '_listing.css';
-
-@import '_footnote.css';
-
-:root {
-    --font-size: $font-size;
-    --font-size-mid: $font-size-mid;
-    --page-margin: $page-margin;
-
-    @media all and (min-width: $screen-mid) {
-        --page-margin: $page-margin-mid;
-        --font-size: $font-size-mid;
-    }
-}
+@import '_page-header.css';
+@import '_intro.css';
 
 html {
     font-size: var(--font-size);
-    line-height: $rhythm-unit;
+    line-height: var(--ru);
 }
 
 body {
-    font-family: $font-body;
-    color: $color-body;
-}
-
-.col-left {
-    @media all and (min-width: $screen-mid) {
-        width: 30vw;
-    }
-    .header {
-        @media all and (min-width: $screen-mid) {
-            width: 30vw;
-        }
-    }
-}
-
-.col-right {
-    @media all and (min-width: $screen-mid) {
-        width: 70vw;
-    }
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 
 main {
-    grid-area: main;
-    background: $color-article;
     min-height: 100vh;
 }
 
 .wrapper {
-   @media all and (min-width: $screen-mid) {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-   }
+    padding: var(--page-margin);
+   /* @media all and (min-width: $screen-mid) {
+   } */
 }

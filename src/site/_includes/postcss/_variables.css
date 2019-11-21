@@ -1,23 +1,21 @@
-/* breakpoints for media queries */
-$screen-narrow: 400px;
-$screen-mid: 740px;
-$screen-wide: 1200px;
+:root {
+    --screen-narrow: 400px;
+    --screen-mid: 740px;
+    --screen-wide: 1200px;
 
-$font-size: 16px;
-$font-size-mid: 18px;
-$rhythm-unit: 1.5;
+    --font-size: 12px;
+    --ru: 1.5;
+    --font-body: 'EB Garamond', serif;
 
-$page-margin: calc(1rem * $rhythm-unit);
-$page-margin-mid: calc(2rem * $rhythm-unit);
+    --page-margin: calc(2rem * var(--ru));
+    --page-margin-mid: calc(2rem * var(--ru));
 
-$color-page: #fafafa;
-$color-article: rgba(0, 0, 0, .0);
-$color-body: #444;
-$color-accent-primary: #FF4555;
-$color-accent-secondary: #0E0F99;
+    --color-bg: #FFF4F4;
+    --color-text: #3E3E3E;
 
-$color-link: #000;
 
-$font-title: 'Playfair Display', Georgia, serif; 
-$font-body: 'Open Sans';
-$font-header: $font-title;
+    @media all and (min-width: var(--screen-mid)) {
+        --page-margin: var(--page-margin-mid);
+        --font-size: var(--font-size-mid);
+    }
+}

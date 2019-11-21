@@ -4,7 +4,6 @@ pageClass: posts
 templateEngineOverride: njk, md
 ---
 
-<main>
 <article class="article">
   <header class="article__header">
     <time class='article__time' datetime="{{ date }}">{{ date | dateDisplay }}</time>
@@ -20,4 +19,3 @@ templateEngineOverride: njk, md
 <aside class="footnote">
   <a href="/blog">Show more posts</a>
 </aside>
-</main>
