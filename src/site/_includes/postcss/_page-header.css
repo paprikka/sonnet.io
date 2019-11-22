@@ -20,4 +20,16 @@
     a {
         color: var(--color-body);
     }
+
+    @media all and (min-width: 400px) {
+        text-align: left;
+        line-height: calc(var(--ru) * 2rem);
+        font-size: 2vw;
+        padding: 0;
+        border: none;
+
+        li:first-child {
+            margin-left: -1rem;
+        }
+    }
 }

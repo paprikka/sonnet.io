@@ -23,6 +23,10 @@
         }
     }
 
+    & .layout-spacer {
+        display: none;
+    }
+
     & .page-header {
         order: 2;
     }
@@ -51,5 +55,70 @@
         font-size: 3rem;
         line-height: calc(var(--ru) * 3rem);
         &::after { content: '❦'; }
+    }
+
+    /* TODO: replace with vars */
+    @media all and (min-width: 400px) {
+        align-items: stretch;
+
+        min-height: calc(100vh - 2 * var(--page-margin));
+
+        background: url(/images/bg.png);
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+
+        & .layout-spacer {
+            display: block;
+            flex: 1;
+            order: 3;
+        }
+
+        &__header {
+            order: 1;
+            text-align: left;
+            position: relative;
+            
+            h1 {
+                font-size: 8vw;
+                font-weight: 500;
+                margin: 0 0 .25em;
+                line-height: 1em;
+                br {
+                    display: none;
+                }
+            }
+
+            h2 {
+                opacity: .5;
+                display: block;
+                font-size: 2vw;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 7vw;
+                left: 36.5vw;
+                font-weight: 200;
+                font-style: italic;
+            }
+        }
+
+        & .page-header {
+            order: 4;
+        }
+
+        &__content {
+            order: 2;
+            max-width: 70vw;
+        }
+
+        p {
+            font-size: 3vw;
+            line-height: calc(var(--ru) * 1em);
+            margin: calc(var(--ru) * .5em) 0;
+        }
+
+        hr { display: none; }
     }
 }

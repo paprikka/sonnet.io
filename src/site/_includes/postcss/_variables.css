@@ -8,7 +8,7 @@
     --font-body: 'EB Garamond', serif;
 
     --page-margin: calc(2rem * var(--ru));
-    --page-margin-mid: calc(2rem * var(--ru));
+    --page-margin-mid: calc(3rem * var(--ru));
 
     --color-bg: #FFF4F4;
     --color-text: #3E3E3E;
