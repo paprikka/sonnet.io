@@ -8,7 +8,7 @@
         order: 1;
         text-align: center;
         h1 {
-            font-size: calc(4rem);
+            font-size: calc(3.8rem);
             line-height: calc(var(--ru) * 3rem);
             font-weight: 400;
             font-style: italic;
