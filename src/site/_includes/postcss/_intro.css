@@ -54,6 +54,7 @@
         border: none;
         font-size: 3rem;
         line-height: calc(var(--ru) * 3rem);
+        height: calc(var(--ru) * 3rem);
         &::after { content: '❦'; }
     }
 
