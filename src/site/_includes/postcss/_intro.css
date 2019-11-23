@@ -1,6 +1,5 @@
 .intro {
     /* line-height: calc(var(--ru) * 1rem); */
-
     display: flex;
     flex-direction: column;
 
@@ -58,23 +57,27 @@
         &::after { content: '❦'; }
     }
 
-    /* TODO: replace with vars */
-    @media all and (min-width: 400px) {
-        align-items: stretch;
-
-        min-height: calc(100vh - 2 * var(--page-margin));
-
-        background: url(/images/bg.png);
-        background-size: 30%;
-        background-repeat: no-repeat;
-        background-position-x: right;
-        background-position-y: bottom;
-
-        & .layout-spacer {
-            display: block;
-            flex: 1;
-            order: 3;
+    @media all and (min-width: $screen-narrow) {
+        &__header {
+            h1 {
+                font-size: 8rem;
+                line-height: calc(var(--ru) * 6rem);
+            }
         }
+
+        &__content {
+            p {
+                font-size: 2.5rem;
+                line-height: calc(var(--ru) * 2.5rem);
+            }
+        }
+    }
+
+
+    /* TODO: replace with vars */
+    @media all and (min-width: $screen-mid) {
+        align-items: stretch;
+        min-height: calc(100vh - 2 * var(--page-margin));
 
         &__header {
             order: 1;
@@ -107,15 +110,17 @@
 
         & .page-header {
             order: 4;
+            position: absolute;
+            bottom: var(--page-margin);
         }
 
         &__content {
             order: 2;
-            max-width: 70vw;
+            max-width: 60vw;
         }
 
         p {
-            font-size: 3vw;
+            font-size: 2.5vw;
             line-height: calc(var(--ru) * 1em);
             margin: calc(var(--ru) * .5em) 0;
         }

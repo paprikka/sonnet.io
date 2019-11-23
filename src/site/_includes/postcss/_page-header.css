@@ -20,8 +20,9 @@
     a {
         color: var(--color-body);
     }
+    @media all and (min-width: $screen-narrow) {}
 
-    @media all and (min-width: 400px) {
+    @media all and (min-width: $screen-mid) {
         text-align: left;
         line-height: calc(var(--ru) * 2rem);
         font-size: 2vw;

@@ -22,9 +22,9 @@ main {
 
 .wrapper {
     padding: var(--page-margin);
-    /* @media all and (min-width: 400px) {
-        padding: var(--page-margin-mid);
-    } */
+    @media all and (min-width: 400px) { 
+        --page-margin: var(--page-margin-mid);
+    }
 }
 
 

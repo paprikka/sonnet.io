@@ -1,7 +1,9 @@
+$screen-narrow: 430px;
+$screen-mid: 800px;
+$screen-wide: 1200px;
+
 :root {
-    --screen-narrow: 400px;
-    --screen-mid: 740px;
-    --screen-wide: 1200px;
+    
 
     --font-size: 12px;
     --ru: 1.5;
