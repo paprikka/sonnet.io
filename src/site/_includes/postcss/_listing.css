@@ -9,7 +9,7 @@
 
     h1 {
         font-size: 4rem;
-        line-height: calc(var(--ru) * 4rem);
+        line-height: calc(var(--ru) * 6rem);
         margin: 0;
         font-weight: 600;
     }
@@ -30,12 +30,42 @@
 
     hr {
         padding: 0;
-        margin: calc(var(--ru) * 1rem) 0 0;
+        margin: calc(var(--ru) * 2rem) 0 0;
         text-align: center;
         border: none;
         font-size: 3rem;
         line-height: calc(var(--ru) * 3rem);
         height: calc(var(--ru) * 3rem);
         &::after { content: '❦'; }
+    }
+
+    @media all and (min-width: $screen-narrow) {
+        text-align: left;
+
+        h1 {
+            font-size: 6rem;
+            line-height: calc(var(--ru) * 8rem);
+        }
+
+        ul {
+            overflow-x: hidden;
+        }
+
+        li {
+            font-size: 3rem;
+            line-height: calc(var(--ru) * 4rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        hr{
+            margin: calc(var(--ru) * 2rem) 0 0;
+        }
+
+        time {
+            display: block;
+            font-size: 2rem;
+        }
     }
 }

@@ -35,23 +35,7 @@
     }
     @media all and (min-width: $screen-narrow) {}
 
-    @media all and (min-width: $screen-mid) {
-        text-align: left;
-        line-height: calc(var(--ru) * 2rem);
-        font-size: 2vw;
-        padding: 0;
-        border: none;
-
-        li:first-child {
-            margin-left: -1rem;
-        }
-    }
-
     &__logo {
-        display: none;
-    }
-
-    &__spacer {
         display: none;
     }
 
