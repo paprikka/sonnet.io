@@ -1,0 +1,41 @@
+.listing {
+    text-align: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: calc(var(--ru) * 4rem);
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    li {
+        font-size: 2rem;
+        line-height: calc(var(--ru) * 3rem);
+    }
+
+    a {
+        color: var(--color-text);
+    }
+
+    time {
+        font-size: 1rem;
+        display: none;
+    }
+
+    hr {
+        padding: 0;
+        margin: calc(var(--ru) * 1rem) 0 0;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        line-height: calc(var(--ru) * 3rem);
+        height: calc(var(--ru) * 3rem);
+        &::after { content: '❦'; }
+    }
+}
