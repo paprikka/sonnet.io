@@ -8,6 +8,8 @@
 @import '_blog.css';
 @import '_blog-header.css';
 @import '_listing.css';
+@import '_post.css';
+@import '_footnote.css';
 
 html {
     font-size: var(--font-size);

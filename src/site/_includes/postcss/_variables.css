@@ -3,8 +3,6 @@ $screen-mid: 800px;
 $screen-wide: 1200px;
 
 :root {
-    
-
     --font-size: 12px;
     --ru: 1.5;
     --font-body: 'EB Garamond', serif;

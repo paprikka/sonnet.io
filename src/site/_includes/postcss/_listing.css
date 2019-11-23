@@ -9,9 +9,10 @@
 
     h1 {
         font-size: 4rem;
+        font-style: italic;
         line-height: calc(var(--ru) * 6rem);
         margin: 0;
-        font-weight: 600;
+        font-weight: 500;
     }
     
     li {

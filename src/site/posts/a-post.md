@@ -46,7 +46,7 @@ Recently, I made an app called [Façade](http://facade.photo/), it makes rainbow
 - section are abstracted into a
 
 
-It looks like this:
+### It looks like this:
 
 ```js
 {

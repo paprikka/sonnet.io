@@ -1,0 +1,12 @@
+.footnote {
+    font-size: 2rem;
+    line-height: calc(var(--ru) * 2rem);
+    text-align: center;
+    margin: calc(var(--ru) * 2rem) 0 0;
+
+    a {
+        color: var(--color-text);
+        font-weight: 500;
+        font-style: italic;
+    }
+}
