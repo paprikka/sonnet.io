@@ -29,8 +29,6 @@
     }
 
     &__content {
-        overflow-x: hidden;
-
         p {
             font-size: 2rem;
             line-height: calc(var(--ru) * 2rem);
@@ -87,6 +85,7 @@
             font-size: 1.5rem;
             line-height: calc(var(--ru) * 2rem);
             margin: calc(var(--ru) * 2rem) 0;
+            overflow-x: auto;
         }
 
     }
