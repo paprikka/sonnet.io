@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
     <meta name="description" content="Rafał Pastuszak is an experienced startup consultant specialised in web, mobile, emerging technologies and human-centred design. Click to find out more.">
-
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
@@ -30,16 +29,14 @@
 
     <main class='wrapper'>
       {{ content | safe }}
-      {# {% include "footer.njk" %} #}
     </main>
 
     {% set js %}
     {% include "js/core.js" %}
-    {% include "js/hello.js" %}
     {% endset %}
     <script>
       {{ js | jsmin | safe }}
     </script>
-
+    {% include "analytics.njk" %}
   </body>
 </html>
