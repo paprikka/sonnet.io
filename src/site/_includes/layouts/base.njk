@@ -26,17 +26,9 @@
       {{ title }}{% if title%} · {% endif %}Rafal Pastuszak</title>
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
-
     <main class='wrapper'>
       {{ content | safe }}
     </main>
-
-    {% set js %}
-    {% include "js/core.js" %}
-    {% endset %}
-    <script>
-      {{ js | jsmin | safe }}
-    </script>
     {% include "analytics.njk" %}
   </body>
 </html>

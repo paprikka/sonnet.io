@@ -7,8 +7,9 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
-    "build": "cross-env ELEVENTY_ENV=prod eleventy",
-    "seed": "cross-env ELEVENTY_ENV=seed eleventy"
+    "build": "rm -rf dist/ && cross-env ELEVENTY_ENV=prod eleventy",
+    "seed": "cross-env ELEVENTY_ENV=seed eleventy",
+    "deploy": "npm run build && netlify deploy --prod"
   },
   "repository": {
     "type": "git",
