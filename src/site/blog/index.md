@@ -1,4 +1,4 @@
 ---
-title: Hej!
+title: Blog
 layout: layouts/blog.njk
 ---
