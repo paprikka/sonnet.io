@@ -39,6 +39,10 @@
             color: var(--color-text);
             font-weight: 600;
             font-style: italic;
+
+            &:hover, &:active {
+                color: var(--color-link);
+            }
         }
 
         h2 {
