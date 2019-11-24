@@ -9,11 +9,16 @@ pageClass: intro
     <h1>Latest posts</h1>
     <ul>
     {%- for page in collections.post -%}
+    {% if (page.data.hidden != true) %}
     <li>
         <a href="{{ page.url }}">{{ page.data.title }}</a>
         <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
     </li>
+    {% endif %}
     {%- endfor -%}
+      <li>
+        <a target="_blank" href="https://medium.com/@rafal">Archive (medium.com)</a>
+      </li>
     </ul>
     <hr>
   </section>

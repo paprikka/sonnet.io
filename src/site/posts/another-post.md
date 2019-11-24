@@ -1,6 +1,7 @@
 ---
 title: Another post page
 date: 2018-03-28
+hidden: true
 ---
 
 Another simple page.

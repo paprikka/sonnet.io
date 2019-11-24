@@ -1,6 +1,7 @@
 ---
 title: Hello, this is Façade
 date: 2016-04-29
+hidden: true
 ---
 
 ## What is Façade?

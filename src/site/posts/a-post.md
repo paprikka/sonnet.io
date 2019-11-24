@@ -1,6 +1,7 @@
 ---
 title: Design Verbs, Not Nouns
 date: 2018-03-21
+hidden: true
 ---
 
 I’ve spent the past 10+ years [helping businesses](https://uk.linkedin.com/in/rafalpast) to move towards digital & mobile.
