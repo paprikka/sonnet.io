@@ -3,6 +3,11 @@
     display: flex;
     flex-direction: column;
 
+    &__decor {
+        display: none;
+        order: 10;
+    }
+
     &__header {
         order: 1;
         text-align: center;
@@ -79,6 +84,22 @@
         align-items: stretch;
         min-height: calc(100vh - 2 * var(--page-margin));
 
+        &__decor {
+            display: block;
+            width: calc(100vw - 60vw - 2 * var(--page-margin));
+            height: calc(100% - 30vh);
+            position: absolute;
+            user-select: none;
+            right: var(--page-margin);
+            bottom: calc(var(--page-margin) - 5%);
+            background: url(/images/bg.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+
+            animation: 1s 1s intro-decor__entry both;
+        }
+
         &__header {
             order: 1;
             text-align: left;
@@ -126,5 +147,17 @@
         }
 
         hr { display: none; }
+    }
+}
+
+@keyframes intro-decor__entry {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
     }
 }
