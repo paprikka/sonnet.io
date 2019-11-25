@@ -100,8 +100,6 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: bottom right;
-
-            animation: 1s 1s intro-decor__entry both;
         }
 
         &__header {
@@ -151,17 +149,5 @@
         }
 
         hr { display: none; }
-    }
-}
-
-@keyframes intro-decor__entry {
-    from {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    to {
-        opacity: 1;
-        visibility: visible;
     }
 }
