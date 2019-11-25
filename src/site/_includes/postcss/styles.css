@@ -18,6 +18,11 @@ html {
 
 body {
     font-family: var(--font-body);
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+
     color: var(--color-text);
     background-color: var(--color-bg);
 }
