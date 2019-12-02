@@ -73,6 +73,21 @@
             font-size: 2rem;
         }
 
+        blockquote {
+            margin: 0 0 0 1rem;
+            font-style: italic;
+
+            & p {
+                font-size: 2.5rem;
+                line-height: calc(var(--ru) * 2rem);
+            /* margin: calc(var(--ru) * 1rem) 0; */
+            }
+            
+            @media all and (min-width: $screen-narrow) {
+                margin-left: 4rem;
+            }
+        }
+
 
         hr {
             padding: 0;
