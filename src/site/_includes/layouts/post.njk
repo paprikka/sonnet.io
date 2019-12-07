@@ -8,6 +8,7 @@ templateEngineOverride: njk, md
   {% include "header-blog.njk" %}
 <article class="post">
   <header class="post__header">
+  {%- if heroURL %} <img src="{{ heroURL }}" alt="{{ title }}" class="post__hero"/> {% endif %}
     <time class='post__time' datetime="{{ date }}">{{ date | dateDisplay }}</time>
     <h1 class='post__title'>{{ title }}</h1>
         {%- if subtitle %}
