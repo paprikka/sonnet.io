@@ -2,7 +2,9 @@
 title: Ulysses
 date: 2019-12-01
 hidden: false
-heroURL: /images/ulysses-headline.png
+heroURL: /images/hero-ulysses.png
+thumbnail: /images/hero-ulysses-social.png
+description: "Ulysses is a writing tool that helps you enter a state of flow."
 ---
 
 > <a href="https://ulysses.sonnet.io" target="_blank">Ulysses</a> is a writing tool that helps you enter a state of flow. 
@@ -15,6 +17,8 @@ heroURL: /images/ulysses-headline.png
 2. you can edit only a character at a time
 3. only a few last lines are visible as you type, fading away and losing their importance
 4. you can download and review your text when you’re done writing
+
+![Ulysses](/images/ulysses-fox.png)
 
 I created Ulysses to help me improve my writing habit and find a moment in my day to spend some time with my own thoughts. Editing in Ulysses is hard, so writing can be easier. Generally, as I use it, the annoying bits of the UX quickly fade and since the only thing I could do is to write, I’m focused enough to think about something in depth. For me, it is a freeing experience.
 
