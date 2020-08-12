@@ -42,7 +42,6 @@
         padding: calc(var(--ru) * 2rem);
         text-align: center;
         display: block;
-        /* text-decoration: none; */
         border: 1px solid var(--color-text-fade);
         position: relative;
 
