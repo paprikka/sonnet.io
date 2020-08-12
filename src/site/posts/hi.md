@@ -3,8 +3,7 @@ title: "Come and say hi"
 date: 2020-08-11
 hidden: false
 heroURL: /images/hi/hero.png
-thumbnail: /images/hi/hero-social.png
-
+thumbnail: /images/hi/hero-social.jpg
 ---
 
 > Are you working on something new, exciting or weird?
