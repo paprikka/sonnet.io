@@ -21,7 +21,7 @@
         font-style:italic;
 
         @media all and (min-width: $screen-narrow) {
-            
+
             font-size: 6rem;
             font-weight: 500;
             line-height: calc(var(--ru) * 4rem);
@@ -32,6 +32,30 @@
     &__time {
         font-size: 2rem;
         line-height: calc(var(--ru) * 2rem);
+    }
+
+    &__cta {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: calc(var(--ru) * 2rem);
+        margin: calc(var(--ru) * 2rem) 0;
+        padding: calc(var(--ru) * 2rem);
+        text-align: center;
+        display: block;
+        /* text-decoration: none; */
+        border: 1px solid var(--color-text-fade);
+        position: relative;
+
+        &::after {
+            background: var(--color-bg);
+            color: var(--color-link);
+            content: '❦';
+            position: absolute;
+            top: calc(var(--ru) * -1rem);
+            left: 50%;
+            transform: translateX(-50%);
+            font-style: normal;
+        }
     }
 
     &__content {
@@ -107,7 +131,7 @@
                 font-size: 2.5rem;
                 line-height: calc(var(--ru) * 2rem);
             }
-            
+
             @media all and (min-width: $screen-narrow) {
                 margin-left: 4rem;
             }
