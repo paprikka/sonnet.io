@@ -1,6 +1,6 @@
 ---
 title: "Come and say hi"
-date: 2019-08-11
+date: 2020-08-11
 hidden: false
 heroURL: /images/hi/hero.png
 thumbnail: /images/hi/hero-social.png
