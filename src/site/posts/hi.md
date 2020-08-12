@@ -3,7 +3,7 @@ title: "Come and say hi"
 date: 2019-08-11
 hidden: false
 heroURL: /images/hi/hero.png
-thumbnail: /images/hero-ulysses-social.png
+thumbnail: /images/hi/hero-social.png
 
 ---
 
@@ -25,7 +25,7 @@ A few days later I might text you back with a solution to your problem.
 
 Honestly though, I'm just curious to see who you are and what you've been up to.
 
-<strong><a href="https://calendly.com/hey_hey" target="_blank" rel="noopener">Come and say hi</a></strong>
+<a class="post__cta" href="https://calendly.com/hey_hey" target="_blank" rel="noopener">Come and say hi</a>
 
 <h3 id="topics">Example topics</h3>
 
@@ -36,7 +36,7 @@ Honestly though, I'm just curious to see who you are and what you've been up to.
 - Design Thinking, Human-Centred Design
 - Photography (film, digital, medium and small format)
 - Mental health
-- The Web Platform (browsers, standards, Google being an utter <span title="donkey">🐴</span>, the history of the Web)
+- The Web Platform (browsers, standards, Google being an utter <span title="It's an ass">🐴</span>, the history of the Web)
 - Emerging Technologies (AR, VR, ML/NLP)
 - Pair programming (I'd love to [pair with you](https://calendly.com/hey_hey/60min) on your own problem)
 - Agile/XP, TDD, pair programming
