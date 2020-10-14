@@ -8,7 +8,7 @@ thumbnail: /images/hi/hero-social.jpg
 
 > Are you working on something new, exciting or weird?
 
-Are you learning a new piece tech or just looking for someone to bounce off an idea that has been haunting you for some time?
+Are you learning about a new piece tech or just looking for someone to bounce off an idea that has been haunting you for some time?
 
 Brilliant!
 
