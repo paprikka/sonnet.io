@@ -3,7 +3,7 @@ title: "Reactive Hole"
 date: 2021-03-01
 hidden: false
 heroURL: /images/reactive-hole/hero.png
-thumbnail: /images/hi/hero-social.jpg
+thumbnail: /images/reactive-hole/hero-social.png
 ---
 
 In the past few weeks I've been messing with turning some of my doodles into little apps.
