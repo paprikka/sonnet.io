@@ -12,7 +12,7 @@ Here's a (fairly) private and (mostly) secure P2P transfer thingy:
 
 <video src='/images/reactive-hole/bird_sfw.mp4' muted autoplay loop controls></video>
 
-You can check it out [here](https://reactive-hole.vercel.app/bls4w4tcd9f00000), and here (source).
+You can check it out <a href='https://reactive-hole.vercel.app/bls4w4tcd9f00000' target='_blank' rel="noopener">here</a>, and here (<a href='https://github.com/paprikka/reactive-hole' target='_blank' rel="noopener">source</a>).
 
 What are the other tools/digital products that are so simple, so low-tech that we'd choose them over the alternatives purely because of their aesthetics or how they make us feel?
 
