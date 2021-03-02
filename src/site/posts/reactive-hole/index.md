@@ -1,9 +1,9 @@
 ---
-title: "Reactive hole"
+title: "Reactive Hole"
 date: 2021-03-01
-hidden: true
-# heroURL: /images/hi/hero.png
-# thumbnail: /images/hi/hero-social.jpg
+hidden: false
+heroURL: /images/reactive-hole/hero.png
+thumbnail: /images/hi/hero-social.jpg
 ---
 
 In the past few weeks I've been messing with turning some of my doodles into little apps.
@@ -12,14 +12,12 @@ Here's a (fairly) private and (mostly) secure P2P transfer thingy:
 
 <video src='/images/reactive-hole/bird_sfw.mp4' muted autoplay loop controls></video>
 
-I wonder what are the other tools/digital products that are so simple, so low-tech that we'd choose them over the alternatives purely because of their aesthetics or how they make us feel.
+You can check it out [here](https://reactive-hole.vercel.app/bls4w4tcd9f00000), and here (source).
 
-I'm not talking about anything more complex than the digital version of a coffee mug or a keychain.
+What are the other tools/digital products that are so simple, so low-tech that we'd choose them over the alternatives purely because of their aesthetics or how they make us feel?
 
-<!--
-### By default, these objects:
+I'm not talking about anything more complex than the digital version of a coffee mug or a keychain. Neither serves an important purpose and both are anything but irreplaceable. I don't care whether the thing in front of me is pretty or ugly, playful or boring. What I care about is whether it feels mine.
 
-- serve a (simple) purpose
-- are completely replaceable
+This might sound like I'm procrastinating (likely) or talking about the experience economy (also, likely). But, what I really have in mind are toys.
 
-We pick them because: they're pretty _or_ ugly, playful _or_ boring. As long as they feel unique to us, we're happy to make a choice. The choice doesn't really matter though, the functionality is the same. We make the choice meaningful by attributing value to certain features (objectively important or not) that these items posess. This is the experience economy at its finest. -->
+Now, if you were to build a toy (not a <a href='https://apps.apple.com/gb/app/tommy-the-toe/id1498417487' target="_blank" rel="noopener" title="Ugh, especially not one that starts as a 1 day project and ends up taking 3 months">game</a>), and not a tool, [what would that be](/posts/hi)?
