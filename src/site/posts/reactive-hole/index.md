@@ -20,4 +20,4 @@ I'm not talking about anything more complex than the digital version of a coffee
 
 This might sound like I'm procrastinating (likely) or talking about the experience economy (also, likely). But, what I really have in mind are toys.
 
-Now, if you were to build a toy (not a <a href='https://apps.apple.com/gb/app/tommy-the-toe/id1498417487' target="_blank" rel="noopener" title="Ugh, especially not one that starts as a 1 day project and ends up taking 3 months">game</a>), and not a tool, [what would that be](/posts/hi)?
+Now, if you were to build a toy (not a <a href='https://apps.apple.com/gb/app/tommy-the-toe/id1498417487' target="_blank" rel="noopener" title="Ugh, especially not one that starts as a 1 day project and ends up taking 3 months">game</a> and not a tool), [what would that be](/posts/hi)?
