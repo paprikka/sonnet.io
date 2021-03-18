@@ -1,7 +1,7 @@
 ---
 title: "Pair Programming with Snakes"
 date: 2021-03-16
-hidden: false
+hidden: true
 heroURL: /images/snakes/intro.png
 thumbnail: /images/snakes/intro.png
 ---
