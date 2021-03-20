@@ -15,7 +15,7 @@ Pair Development is one of those habits that many of us practice in one form or 
 
 This post lies somewhere between those two points. It's not an introduction to Pair Development, but a short description of a few dynamics that are often skipped during training, the things that we discover once we start practicing it ourselves. For tried and tested theoretical resources, check the footer. 
 
-But, if you came here for *practical* and *opinionated* pairing advice as well as snakes wearing fancy hats, you came to the right place, my friend.
+Now, if you came here for *practical* and *opinionated* pairing advice as well as snakes wearing fancy hats, you came to the right place, my friend.
 
 
 ### An Ideal Pairing day
@@ -51,7 +51,7 @@ After and hour or so they pair up again, connect the two pieces and continue wor
 
 ![](/images/snakes/04.png)
 
-Generally, snakes shouldn't be pairing for longer than a day. So, just after the standup one team member is replaced by another. This cycle repeats on the following day, creating a pattern like this:
+Generally, snakes shouldn't be pairing for longer than a day. Hence, just after the standup one team member is replaced by another. This cycle repeats on the following day, creating a pattern like this:
 
 ![](/images/snakes/rotations.png)
 
@@ -69,7 +69,7 @@ Some problems just require more focused time, be it due to their complexity or t
 
 ![](/images/snakes/05.png)
 
-Yellow and Green had some difficulties with setting up the environment when starting, so they got some help from a Cyan snake, one well versed in the pythonic scriptures. They might not understand everything to the same extent, but at least now they know the required incantations. Cyan can move on to her previous task.
+Yellow and Green had some difficulties with setting up the environment, so they got some help from a Cyan snake, one well versed in the pythonic scriptures. They might not understand everything to the same extent, but at least now they know the required incantations. Cyan can move on to her previous task.
 
 Key points here: Cyan had the time to help, Cyan gave them just enough context to continue working on the story. Maybe tomorrow Cyan will jump in an pair with one of them and learn more about their domain.
 
@@ -93,9 +93,12 @@ Efficient teams have high level of trust, so this isn't something that sohuld be
 ![](/images/snakes/07.png)
 
 
-Yellow mobbed with an entire rainbow of snakes and moved on to working solo for a while. In fact, most of them spend half of the day on workin solo. They joined back again in the afternoon. It seemed chaotic from a distance. Bless this mess.
+Yellow mobbed with an entire rainbow of snakes and moved on to working solo for a while. In fact, most of them spend half of the day on independent work. They joined back again in the afternoon. It seemed chaotic from a distance. 
 
-In Ideal Pairing Day can often look just like this because we're chaotic by nature. 
+
+What's important? Taking frequent breaks, listening to your partner, being present (so, not staring at your phone), reflection on what works and what needs to be improved, deliberate practice--all of these things require our attention.
+
+An Ideal Pairing Day can often seem chaotic because we're chaotic by nature. Bless this mess.
 
 <!-- Because, an ideal pairing day is one when you balance working with someone and solo, take frequent breaks, learn which problems lend themselves better to working solo. An ideal pairing day is when you feel like you've learned something from your buddy.  -->
 
@@ -115,20 +118,33 @@ In Ideal Pairing Day can often look just like this because we're chaotic by natu
 <!-- Pairing is two people working together on the same task. -->
 
 
-To me the most valuable thing about pairing is the short feedback loop.
+**To me the most valuable thing about pairing is the short feedback loop.**
+
+Here's how it works:
+
 We split our thinking into two modes: the *What?* and the *How?*.
-One of us deals with the short-term, tactical decisions while the other one focuses on the long-term, stragetic choices.
-Although we the same goal in mind but approach it using two different lenses.
+One of us deals with the short-term, tactical decisions while the other one focuses on the long-term, stragetic choices. Although we the same goal in mind but approach it using two different lenses.
+
+Flow, *being in the zone* are all great things. I'm saying that without sarcasm, believe me, [I keep trying to make apps for that](). 
+
+But then, interesting things happen when we're forced to verbalise our thinking process this way. This not only reduces an entire category of errors, improves knowledge sharing, but also, and I think that's crucial, it makes our code more a record of a **conversation** between **two** engineers instead of an **internal** **monologue**.  
+
+Think of the last messy piece of code you had to work with. Chances are that **internal monologue** would be a fitting description. 
+
+// Alternative: And what is messy, difficult code, if not the latter?
+
 
 <!-- Verbalising your thinking process and working in tandem with someone who's not living in your head,  -->
 
-Flow, *being in the zone* are all great things (believe me, [I keep trying to make apps for that]()), but communicating efficiently and playing mental pingpong with another human being are not only genuinely fun things to do, but one of the most powerful things humans can do.
+
+
+<!-- However, communicating efficiently and playing mental pingpong with another human being are not only genuinely fun things to do, but one of the most powerful things humans can do. -->
 
 ---
 
 ### Credits and resources:
 
-*Many of the structures described here come from the work of [Gel Goldsby](https://twitter.com/UnrulyGel), my old colleague from Unruly. Thank you, Gel.*
+*The inspiration for this post come from the diagrams created by my old colleague from Unruly, [Gel Goldsby](https://twitter.com/UnrulyGel). I had so much fun writing this, thank you, Gel.❤️*
 
 - [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
 - [How Pair Programming Works—excerpt + commentary](https://www.infoq.com/news/2010/01/how-pair-programming-works/)
