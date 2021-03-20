@@ -106,14 +106,20 @@ An Ideal Pairing Day can often seem chaotic because we're chaotic by nature. Ble
 
 <style>
 .rotate {
-    animation: spin-those-snakes 3s 1s linear infinite both;
+    text-align: center;
+}
+.rotate img {
+    max-width: 40rem;
+    animation: spin-those-snakes 6s 1s linear infinite both;
 }
 @keyframes spin-those-snakes {
-    from{ transform: scale(.6) rotate(0); }
-    to { transform: scale(.6) rotate(360deg); }
+    from{ transform: rotate(0); }
+    to { transform: rotate(-360deg); }
 }
 </style>
-<img src='/images/snakes/circle.png' alt='snakes' class='rotate'/>
+<div class='rotate'>
+    <img src='/images/snakes/circle.png' alt='snakes' class='rotate'/>
+</div>
 
 <!-- Pairing is two people working together on the same task. -->
 
