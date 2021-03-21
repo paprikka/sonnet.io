@@ -4,7 +4,7 @@ date: 2021-03-21
 hidden: false
 heroURL: /images/snakes/intro.png
 thumbnail: /images/snakes/intro-social.jpg
-description: "Practical and opinionated pairing tips explained with sneaks wearing hats."
+description: "Practical and opinionated pairing tips explained with snakes wearing hats."
 ---
 
 *OK, this was supposed to be a longer post, but I'm trying to learn to get things like this out quickly, instead of yak shaving and eventually letting them fester in drafts. So, here we go. This one’s about pair development.*
