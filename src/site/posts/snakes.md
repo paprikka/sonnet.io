@@ -138,7 +138,7 @@ Think of the last messy piece of code you had to work with. Chances are that “
 
 *[Alexandra Ciufudean](https://uk.linkedin.com/in/alexandra-ciufudean-36b65514a) edited this article and translated it into Human.*
 
-*The inspiration for this post come from the diagrams created by my old colleague from Unruly, [Gel Goldsby](https://twitter.com/UnrulyGel). I had so much fun writing this, thank you, Gel.❤️*
+*The inspiration for this post came from the diagrams created by my old colleague from Unruly, [Gel Goldsby](https://twitter.com/UnrulyGel). I had so much fun writing this, thank you, Gel.❤️*
 
 - [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
 - [How Pair Programming Works—excerpt + commentary](https://www.infoq.com/news/2010/01/how-pair-programming-works/)
