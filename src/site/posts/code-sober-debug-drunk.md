@@ -18,8 +18,8 @@ Testing allows me to split hard problems into chunks small enough to fit in my h
 > 1. Writing code is easier than reading it.
 > 2. If your code is hard to write now it will be almost impossible to read later.
 
-This is a paraphrase as I can't find the original quote, but I think it sums the issue pretty well. Structure your code in a way that a more tired, less focused, "drunk" version of you would understand. Tests help with this because they make the intent behind the code more obvious. 
+This is a paraphrase as I can't find the original quote, but I think it sums the issue pretty well. Structure your code in a way that a more tired, less focused, "drunk" version of you would understand.
 
-Test cases describe the use cases and, more importantly, the code written following TDD tends to be simpler and less abstract.
+Tests help with this because they make the intent behind the code more obvious. First, test cases document the use cases. What's more important is that the code written following TDD tends to be simpler and less abstract.
 
 The simpler and more boring the code is, the more satisfied I am with my work. If we're working together, the last thing I want to do is to make your life harder. It's in the interest of both of us to be able to focus on something more rewarding than untangling spaghetti such as, you know, building stuff. 
