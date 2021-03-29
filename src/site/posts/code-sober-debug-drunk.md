@@ -20,6 +20,6 @@ Testing allows me to split hard problems into chunks small enough to fit in my h
 
 This is a paraphrase as I can't find the original quote, but I think it sums the issue pretty well. Structure your code in a way that a more tired, less focused, "drunk" version of you would understand. Tests help with this because they make the intent behind the code more obvious. 
 
-Test cases describe the use cases and, more importantly, in my experience the code itself tends to be simpler and less abstract.
+Test cases describe the use cases and, more importantly, the code written following TDD tends to be simpler and less abstract.
 
 The simpler and more boring the code is, the more satisfied I am with my work. If we're working together, the last thing I want to do is to make your life harder. It's in the interest of both of us to be able to focus on something more rewarding than untangling spaghetti such as, you know, building stuff. 
