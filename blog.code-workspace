@@ -18,6 +18,7 @@
 		"workbench.editor.labelFormat": "short",
 		"workbench.editor.showTabs": false,
 		"telemetry.enableCrashReporter": false,
-		"telemetry.enableTelemetry": false
+		"telemetry.enableTelemetry": false,
+		"markdown.preview.fontSize": 13
 	},
 }
