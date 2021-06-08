@@ -1,75 +1,79 @@
 .listing {
-    text-align: center;
+  text-align: center;
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-style: italic;
+    line-height: calc(var(--ru) * 6rem);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  li {
+    font-size: 2rem;
+    line-height: calc(var(--ru) * 3rem);
+  }
+
+  a {
+    color: var(--color-text);
+    whitespace: no-wrap;
+    &:hover,
+    &:active {
+      color: var(--color-link);
     }
+  }
+
+  time {
+    font-size: 1rem;
+    display: none;
+  }
+
+  hr {
+    padding: 0;
+    margin: calc(var(--ru) * 2rem) 0 0;
+    text-align: center;
+    border: none;
+    font-size: 3rem;
+    line-height: calc(var(--ru) * 3rem);
+    height: calc(var(--ru) * 3rem);
+    &::after {
+      content: "❦";
+    }
+  }
+
+  @media all and (min-width: $screen-narrow) {
+    text-align: left;
 
     h1 {
-        font-size: 4rem;
-        font-style: italic;
-        line-height: calc(var(--ru) * 6rem);
-        margin: 0;
-        font-weight: 500;
+      font-size: 6rem;
+      line-height: calc(var(--ru) * 8rem);
     }
-    
+
+    ul {
+      overflow-x: hidden;
+    }
+
     li {
-        font-size: 2rem;
-        line-height: calc(var(--ru) * 3rem);
-    }
-
-    a {
-        color: var(--color-text);
-        &:hover, &:active {
-            color: var(--color-link);
-        }
-    }
-
-    time {
-        font-size: 1rem;
-        display: none;
+      font-size: 3rem;
+      line-height: calc(var(--ru) * 4rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
     }
 
     hr {
-        padding: 0;
-        margin: calc(var(--ru) * 2rem) 0 0;
-        text-align: center;
-        border: none;
-        font-size: 3rem;
-        line-height: calc(var(--ru) * 3rem);
-        height: calc(var(--ru) * 3rem);
-        &::after { content: '❦'; }
+      margin: calc(var(--ru) * 2rem) 0 0;
     }
 
-    @media all and (min-width: $screen-narrow) {
-        text-align: left;
-
-        h1 {
-            font-size: 6rem;
-            line-height: calc(var(--ru) * 8rem);
-        }
-
-        ul {
-            overflow-x: hidden;
-        }
-
-        li {
-            font-size: 3rem;
-            line-height: calc(var(--ru) * 4rem);
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        hr{
-            margin: calc(var(--ru) * 2rem) 0 0;
-        }
-
-        time {
-            display: block;
-            font-size: 2rem;
-        }
+    time {
+      display: block;
+      font-size: 2rem;
     }
+  }
 }
