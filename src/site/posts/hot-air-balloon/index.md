@@ -29,6 +29,6 @@ It should work fine as a background for Mural, Miro, Figma Jam board or whatever
 
 ---
 
-\* There's still a bunch of businesses on the Square Mile with ponies hidden in their documentation. The more JIRA you use, the more ponies you get.
+\* There's still a bunch of businesses in the Square Mile with ponies hidden in their documentation. The more JIRA you use, the more ponies you get.
 
 PS. Speaking of facilitation materials, if you're looking for something less developer-oriented check out the [Hyper Island Toolbox](https://toolbox.hyperisland.com).
