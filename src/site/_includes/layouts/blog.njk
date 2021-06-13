@@ -3,19 +3,19 @@ layout: layouts/base.njk
 pageClass: intro
 ---
 
-<article class="blog container container--full">
+<article class="blog container">
   {% include "header-blog.njk" %}
   <section class="listing">
-    <h1>Latest posts</h1>
-    <ul>
-    {%- for page in collections.post | reverse-%}
-    {% if (page.data.hidden != true) %}
-    <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-        <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
-    </li>
-    {% endif %}
-    {%- endfor -%}
+    <h1>Blog</h1>
+    <ul class='listing__posts'>
+      {%- for page in collections.post | reverse-%}
+        {% if (page.data.hidden != true) %}
+          <li>
+            <a href="{{ page.url }}">{{ page.data.title }}</a>
+            <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+          </li>
+        {% endif %}
+      {%- endfor -%}
       <li>
         <a target="_blank" href="https://medium.com/@rafal">Archive (medium.com)</a>
       </li>

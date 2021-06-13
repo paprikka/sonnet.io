@@ -1,61 +1,73 @@
 .blog-header {
-    line-height: calc(var(--ru) * 2rem);
-    font-size: 2rem;
-    padding: calc(var(--ru) * 1rem - 1px) 0;
-    border-top: 1px solid var(--color-text);
-    border-bottom: 1px solid var(--color-text);
-    margin-bottom: calc(var(--ru) * 2rem);
-    
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+  line-height: calc(var(--ru) * 2rem);
+  font-size: 2rem;
+  padding: calc(var(--ru) * 1rem) 0;
+  margin-bottom: calc(var(--ru) * 2rem);
 
-    li {
-        display: inline-block;
-        padding: 0 1rem;
-    }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    &__logo {
-        a {
-            display: block;
-            height: 3rem;
-            width: 3rem;
-            background: url(/images/logo.svg);
-            background-size: 100%;
-        }
-    }
+  li {
+    display: inline-block;
+    padding: 0 1rem;
+  }
 
+  &__logo {
     a {
-        color: var(--color-body);
-        &:hover, &:active {
-            color: var(--color-link);
-        }
+      display: block;
+      height: 3rem;
+      width: 5rem;
+      background: url(/images/logo.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      opacity: 0.9;
     }
-    @media all and (min-width: $screen-narrow) {}
+  }
+
+  a {
+    color: var(--color-body);
+    &:hover,
+    &:active {
+      color: var(--color-link);
+    }
+  }
+  @media all and (min-width: $screen-narrow) {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
 
     &__logo {
-        display: none;
+      a {
+        height: 4rem;
+        width: 8rem;
+      }
     }
+  }
 
-    &--blog {
-        &__logo {
-            flex: 10;
-            display: block;
-            width: 100%;
-            color: var(--color-text);
-            
-            font-weight: 400;
-            font-style: italic;
-            font-size: 4rem;
-            
-            a {
-                text-decoration: none;
-            }
-        }
+  &__logo {
+    display: none;
+  }
+
+  &--blog {
+    &__logo {
+      flex: 10;
+      display: block;
+      width: 100%;
+      color: var(--color-text);
+
+      font-weight: 400;
+      font-style: italic;
+      font-size: 4rem;
+
+      a {
+        text-decoration: none;
+      }
     }
+  }
 }

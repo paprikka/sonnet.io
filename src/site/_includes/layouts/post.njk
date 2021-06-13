@@ -3,9 +3,9 @@ layout: layouts/base.njk
 pageClass: posts
 templateEngineOverride: njk, md
 ---
-
+{% include "header-blog.njk" %}
 <div class="container container--full">
-  {% include "header-blog.njk" %}
+  
 <article class="post">
   <header class="post__header">
   {%- if heroURL %} <img src="{{ heroURL }}" alt="{{ title }}" class="post__hero"/> {% endif %}

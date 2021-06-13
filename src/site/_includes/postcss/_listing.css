@@ -2,27 +2,36 @@
   text-align: center;
 
   ul {
-    margin: 0;
+    margin: 0 auto calc(var(--ru) * 2rem);
     padding: 0;
     list-style: none;
+    max-width: 40rem;
   }
 
   h1 {
     font-size: 4rem;
-    font-style: italic;
-    line-height: calc(var(--ru) * 6rem);
-    margin: 0;
-    font-weight: 500;
+    line-height: calc(var(--ru) * 4rem);
+    margin: 0 0 calc(var(--ru) * 2rem);
+    font-weight: 600;
+    text-align: left;
   }
 
   li {
-    font-size: 2rem;
-    line-height: calc(var(--ru) * 3rem);
+    font-weight: 600;
+    margin-bottom: calc(var(--ru) * 2rem);
+    text-align: left;
+    overflow: visible;
   }
 
   a {
+    font-size: 3rem;
+    line-height: calc(var(--ru) * 2rem);
     color: var(--color-text);
     whitespace: no-wrap;
+    display: block;
+    word-break: break-word;
+    text-decoration: none;
+    font-weight: 600;
     &:hover,
     &:active {
       color: var(--color-link);
@@ -30,13 +39,15 @@
   }
 
   time {
-    font-size: 1rem;
-    display: none;
+    font-size: 1.5rem;
+    line-height: calc(var(--ru) * 2rem);
+    opacity: 0.6;
+    font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   }
 
   hr {
     padding: 0;
-    margin: calc(var(--ru) * 2rem) 0 0;
+    margin: 0;
     text-align: center;
     border: none;
     font-size: 3rem;
@@ -50,30 +61,19 @@
   @media all and (min-width: $screen-narrow) {
     text-align: left;
 
+    & {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
     h1 {
-      font-size: 6rem;
-      line-height: calc(var(--ru) * 8rem);
+      font-size: 8rem;
+      line-height: calc(var(--ru) * 10rem);
+      text-align: center;
     }
 
     ul {
-      overflow-x: hidden;
-    }
-
-    li {
-      font-size: 3rem;
-      line-height: calc(var(--ru) * 4rem);
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    hr {
-      margin: calc(var(--ru) * 2rem) 0 0;
-    }
-
-    time {
-      display: block;
-      font-size: 2rem;
+      margin: 0 0 calc(var(--ru) * 4rem);
     }
   }
 }

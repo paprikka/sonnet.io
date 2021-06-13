@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i&display=swap"
-      rel="stylesheet"
-    />
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link 
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet">
     {% include "meta.njk" %}
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const remoteLinks = document.querySelectorAll(
-          'a[href^="//"], a[href^="http"]'
-        );
+        const remoteLinks = document.querySelectorAll('a[href^="//"], a[href^="http"]');
 
         [...remoteLinks].forEach((anchor) => {
           anchor.target = "_blank";
