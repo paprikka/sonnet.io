@@ -27,4 +27,4 @@ As always, it should work fine as a background for Mural, Miro, Figma Jam board 
 
 ---
 
-PS. <a href='/images/starfish/making-of-nsfw.mp4' target='_blank' title="I'm burnt out">Making-of video</a> (nsfw, shitpost warning)
+PS. An (nsfw) making-of video can be found <a href='/images/starfish/making-of-nsfw.mp4' target='_blank' title="I'm burnt out">here</a>.
