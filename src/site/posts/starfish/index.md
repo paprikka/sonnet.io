@@ -21,4 +21,4 @@ Now, although I'm a fan of Funretros, I still believe that my Starfish is superi
 
 ---
 
-PS. The making-of video can be found <a href='/images/starfish/making-of-nsfw.mp4' target='_blank' title="I'm burnt out">here</a>. It's cursed, remember I warned you.
+PS. The making-of video can be found <a href='/images/starfish/making-of-nsfw.mp4' target='_blank' title="I'm burnt out" class="umami--click--cursed-starfish">here</a>. It's cursed, remember I warned you.
