@@ -26,8 +26,8 @@
 
     &__time {
         position: relative;
-        top: calc($rhythm-unit * .25);
-        opacity: .5;
+        top: calc($rhythm-unit * 0.25);
+        opacity: 0.5;
 
         @media all and (min-width: $screen-mid) {
             top: 0;
@@ -55,7 +55,7 @@
         }
     }
 
-    code { 
+    code {
         margin: 0 0 calc($rhythm-unit * 1rem);
         font-size: 1rem;
     }
@@ -75,21 +75,23 @@
         line-height: calc($rhythm-unit * 2rem);
     }
 
-    ol, ul {
-        margin: 0 0 calc($rhythm-unit  * 1rem);
+    ol,
+    ul {
+        margin: 0 0 calc($rhythm-unit * 1rem);
         padding: 0;
     }
-    
+
     pre {
         margin: calc($rhythm-unit * 1rem) 0;
         padding: calc($rhythm-unit * 1rem);
-        background: rgba(0, 0, 0, .1);
+        background: rgba(0, 0, 0, 0.1);
         overflow: auto;
-        border:none;
+        border: none;
     }
 
     a {
-        &:link, &:visited {
+        &:link,
+        &:visited {
             color: $color-link;
             font-weight: 600;
             text-decoration: none;
@@ -103,8 +105,8 @@
                 bottom: 0.125rem;
                 left: 0;
                 background: $color-accent-primary;
-                opacity: .1;
-                transition: .2s;
+                opacity: 0.1;
+                transition: 0.2s;
                 z-index: -1;
             }
 
@@ -118,7 +120,7 @@
                     left: 0;
                     background: $color-accent-primary;
                     opacity: 1;
-                    transition: .2s;
+                    transition: 0.2s;
                     z-index: -1;
                 }
             }

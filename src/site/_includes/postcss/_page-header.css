@@ -22,11 +22,13 @@
     a {
         color: var(--color-body);
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
             color: var(--color-link);
         }
     }
-    @media all and (min-width: $screen-narrow) {}
+    @media all and (min-width: $screen-narrow) {
+    }
 
     @media all and (min-width: $screen-mid) {
         text-align: left;

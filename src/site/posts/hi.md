@@ -1,5 +1,5 @@
 ---
-title: "Come and say hi"
+title: 'Come and say hi'
 date: 2020-08-11
 hidden: false
 heroURL: /images/hi/hero.png
@@ -30,20 +30,20 @@ Honestly though, I'm just curious to see who you are and what you've been up to.
 
 (In no specific order)
 
-- Product Development, from MVP to enterprise (prototyping workflows and scale)
-- Privacy, the impact of AdTech on our society
-- Design Thinking, Human-Centred Design
-- Photography (film, digital, medium and small format)
-- Mental health
-- The Web Platform (browsers, standards, Google being an utter <span title="It's an ass">🐴</span>, the history of the Web)
-- Emerging Technologies (AR, VR, ML/NLP)
-- Pair programming (I'd love to [pair with you](https://calendly.com/hey_hey/60min) on your own problem)
-- Agile/XP, TDD, pair programming
-- AdTech, Pharma, Publishing, SaaS
-- Software Engineering (web, mobile, AR, backend, game-dev, infra)
-- Linguistics incl. NLP
-- Game Development (Unity, C#, web) and Game Design (methodologies and tools)
-- How to make an amazing Cacio e Pepe (and why 🇮🇹 + 🇰🇷 = ❤️)
-- How to draw poorly but regularly
-- Being ~~an engineer, lead, CTO or consultant~~ confused human working for Startups, scale-ups and enterprise
-- Remote work, living abroad
+-   Product Development, from MVP to enterprise (prototyping workflows and scale)
+-   Privacy, the impact of AdTech on our society
+-   Design Thinking, Human-Centred Design
+-   Photography (film, digital, medium and small format)
+-   Mental health
+-   The Web Platform (browsers, standards, Google being an utter <span title="It's an ass">🐴</span>, the history of the Web)
+-   Emerging Technologies (AR, VR, ML/NLP)
+-   Pair programming (I'd love to [pair with you](https://calendly.com/hey_hey/60min) on your own problem)
+-   Agile/XP, TDD, pair programming
+-   AdTech, Pharma, Publishing, SaaS
+-   Software Engineering (web, mobile, AR, backend, game-dev, infra)
+-   Linguistics incl. NLP
+-   Game Development (Unity, C#, web) and Game Design (methodologies and tools)
+-   How to make an amazing Cacio e Pepe (and why 🇮🇹 + 🇰🇷 = ❤️)
+-   How to draw poorly but regularly
+-   Being ~~an engineer, lead, CTO or consultant~~ confused human working for Startups, scale-ups and enterprise
+-   Remote work, living abroad

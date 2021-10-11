@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: geometricPrecision;
@@ -33,11 +33,10 @@ main {
 
 .wrapper {
     padding: var(--page-margin);
-    @media all and (min-width: 400px) { 
+    @media all and (min-width: 400px) {
         --page-margin: var(--page-margin-mid);
     }
 }
-
 
 ::selection {
     color: var(--color-bg);

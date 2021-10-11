@@ -1,7 +1,8 @@
-.flex-spacer { flex: 1; }
+.flex-spacer {
+    flex: 1;
+}
 
 .container {
-
 }
 
 .container--full {

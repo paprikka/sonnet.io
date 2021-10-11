@@ -4,7 +4,7 @@ date: 2019-12-01
 hidden: false
 heroURL: /images/hero-ulysses.png
 thumbnail: /images/hero-ulysses-social.png
-description: "Ensō is a writing tool that helps you enter a state of flow."
+description: 'Ensō is a writing tool that helps you enter a state of flow.'
 ---
 
 > <a href="https://enso.sonnet.io" target="_blank">Ensō</a> is a writing tool that helps you enter a state of flow.
@@ -24,9 +24,9 @@ I created Ensō to help me improve my writing habit and find a moment in my day 
 
 ### You might use Ensō to:
 
-- develop your writing habit
-- improve fluency in your native language, or when learning a new one
-- think aloud (but quietly, so just think I guess?)
+-   develop your writing habit
+-   improve fluency in your native language, or when learning a new one
+-   think aloud (but quietly, so just think I guess?)
 
 You may keep it on the side of your screen during the day and jot down your thoughts as impromptu notes—you know, the ones you'll never bother reading again, but write down anyway, so you can retain and organise information, or just clear your head.
 

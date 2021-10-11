@@ -1,5 +1,5 @@
 ---
-title: "Reactive Hole"
+title: 'Reactive Hole'
 date: 2021-03-01
 hidden: false
 heroURL: /images/reactive-hole/hero.png

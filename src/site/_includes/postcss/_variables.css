@@ -3,20 +3,20 @@ $screen-mid: 800px;
 $screen-wide: 1200px;
 
 :root {
-  --font-size: 12px;
-  --ru: 1.5;
-  --font-body: "EB Garamond", serif;
+    --font-size: 12px;
+    --ru: 1.5;
+    --font-body: 'EB Garamond', serif;
 
-  --page-margin: calc(2rem * var(--ru));
-  --page-margin-mid: calc(3rem * var(--ru));
+    --page-margin: calc(2rem * var(--ru));
+    --page-margin-mid: calc(3rem * var(--ru));
 
-  --color-bg: #fff4f4;
-  --color-text: #3e3e3e;
-  --color-text-fade: #3e3e3e88;
-  --color-link: #e00202;
+    --color-bg: #fff4f4;
+    --color-text: #3e3e3e;
+    --color-text-fade: #3e3e3e88;
+    --color-link: #e00202;
 
-  @media all and (min-width: var(--screen-mid)) {
-    --page-margin: var(--page-margin-mid);
-    --font-size: var(--font-size-mid);
-  }
+    @media all and (min-width: var(--screen-mid)) {
+        --page-margin: var(--page-margin-mid);
+        --font-size: var(--font-size-mid);
+    }
 }

@@ -1,73 +1,73 @@
 .blog-header {
-  line-height: calc(var(--ru) * 2rem);
-  font-size: 2rem;
-  padding: calc(var(--ru) * 1rem) 0;
-  margin-bottom: calc(var(--ru) * 2rem);
+    line-height: calc(var(--ru) * 2rem);
+    font-size: 2rem;
+    padding: calc(var(--ru) * 1rem) 0;
+    margin-bottom: calc(var(--ru) * 2rem);
 
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-  li {
-    display: inline-block;
-    padding: 0 1rem;
-  }
+    li {
+        display: inline-block;
+        padding: 0 1rem;
+    }
 
-  &__logo {
+    &__logo {
+        a {
+            display: block;
+            height: 3rem;
+            width: 5rem;
+            background: url(/images/logo.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+        }
+    }
+
     a {
-      display: block;
-      height: 3rem;
-      width: 5rem;
-      background: url(/images/logo.png);
-      background-size: 100%;
-      background-repeat: no-repeat;
-      opacity: 0.9;
+        color: var(--color-body);
+        &:hover,
+        &:active {
+            color: var(--color-link);
+        }
     }
-  }
+    @media all and (min-width: $screen-narrow) {
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
 
-  a {
-    color: var(--color-body);
-    &:hover,
-    &:active {
-      color: var(--color-link);
+        &__logo {
+            a {
+                height: 4rem;
+                width: 8rem;
+            }
+        }
     }
-  }
-  @media all and (min-width: $screen-narrow) {
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
 
     &__logo {
-      a {
-        height: 4rem;
-        width: 8rem;
-      }
+        display: none;
     }
-  }
 
-  &__logo {
-    display: none;
-  }
+    &--blog {
+        &__logo {
+            flex: 10;
+            display: block;
+            width: 100%;
+            color: var(--color-text);
 
-  &--blog {
-    &__logo {
-      flex: 10;
-      display: block;
-      width: 100%;
-      color: var(--color-text);
+            font-weight: 400;
+            font-style: italic;
+            font-size: 4rem;
 
-      font-weight: 400;
-      font-style: italic;
-      font-size: 4rem;
-
-      a {
-        text-decoration: none;
-      }
+            a {
+                text-decoration: none;
+            }
+        }
     }
-  }
 }

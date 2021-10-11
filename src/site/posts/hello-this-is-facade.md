@@ -32,7 +32,6 @@ You can have up to 5 different sources of light (you can assign them to differen
 
 ![Luna — In this case we used her notebook (a mid-range HP with a low-DPI screen) as a secondary source of light.](/images/facade/aaron-1.jpeg)
 
-
 ## What now?
 
 Follow us on Twitter or FB to get updates with content created by users to find some inspiration. We’re going to have some really cool stuff there in the next few weeks.
@@ -45,5 +44,5 @@ Have fun, and share the colours!
 
 ---
 
-- PS. We haven’t fixed the lamp and we’re probably not going to anyway.
-- PPS. None of this could’ve happened without the help of my wonderful Lady, Luna.
+-   PS. We haven’t fixed the lamp and we’re probably not going to anyway.
+-   PPS. None of this could’ve happened without the help of my wonderful Lady, Luna.

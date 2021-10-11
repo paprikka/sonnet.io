@@ -43,7 +43,8 @@
             font-style: italic;
             color: var(--color-text);
 
-            &:hover, &:active {
+            &:hover,
+            &:active {
                 color: var(--color-link);
             }
         }
@@ -63,7 +64,9 @@
         font-size: 3rem;
         line-height: calc(var(--ru) * 3rem);
         height: calc(var(--ru) * 3rem);
-        &::after { content: '❦'; }
+        &::after {
+            content: '❦';
+        }
     }
 
     @media all and (min-width: $screen-narrow) {
@@ -81,7 +84,6 @@
             }
         }
     }
-
 
     /* TODO: replace with vars */
     @media all and (min-width: $screen-mid) {
@@ -106,11 +108,11 @@
             order: 1;
             text-align: left;
             position: relative;
-            
+
             h1 {
                 font-size: 8vw;
                 font-weight: 500;
-                margin: 0 0 .25em;
+                margin: 0 0 0.25em;
                 line-height: 1em;
                 br {
                     display: none;
@@ -118,7 +120,7 @@
             }
 
             h2 {
-                opacity: .5;
+                opacity: 0.5;
                 display: block;
                 font-size: 2vw;
                 margin: 0;
@@ -145,9 +147,11 @@
         p {
             font-size: 2.5vw;
             line-height: calc(var(--ru) * 1em);
-            margin: calc(var(--ru) * .5em) 0;
+            margin: calc(var(--ru) * 0.5em) 0;
         }
 
-        hr { display: none; }
+        hr {
+            display: none;
+        }
     }
 }

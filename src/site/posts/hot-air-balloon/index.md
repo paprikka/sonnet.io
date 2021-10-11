@@ -1,10 +1,10 @@
 ---
-title: "Short: Retrofuturoretrospectives"
+title: 'Short: Retrofuturoretrospectives'
 date: 2021-06-07
 hidden: false
 heroURL: /images/hero/hot-air-balloon.png
 thumbnail: /images/hero/hot-air-balloon-social.png
-description: "A retrospective template"
+description: 'A retrospective template'
 ---
 
 <style>
@@ -20,8 +20,8 @@ If your retrospectives feel a bit repetitive or you're working with a team you d
 
 And, feel free to use the template I made!
 
-- <a target='_blank' href='/images/hot-air-balloon/borders.png'>Version A (borders)</a>
-- <a target='_blank' href='/images/hot-air-balloon/no_borders.png'>Version B (plain)</a>
+-   <a target='_blank' href='/images/hot-air-balloon/borders.png'>Version A (borders)</a>
+-   <a target='_blank' href='/images/hot-air-balloon/no_borders.png'>Version B (plain)</a>
 
 It should work fine as a background for Mural, Miro, Figma Jam board or whatever is your jam (fig's mine).
 

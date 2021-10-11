@@ -1,172 +1,172 @@
 .post {
-  &__header {
-    text-align: center;
-    margin-top: calc(var(--ru) * 3rem);
+    &__header {
+        text-align: center;
+        margin-top: calc(var(--ru) * 3rem);
 
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    @media all and (min-width: $screen-narrow) {
-      margin-top: calc(var(--ru) * 4rem);
-    }
-  }
-
-  &__title {
-    font-size: 4rem;
-    font-weight: 500;
-    line-height: calc(var(--ru) * 3rem);
-    margin: 0 0 calc(var(--ru) * 3rem);
-    font-style: italic;
-
-    @media all and (min-width: $screen-narrow) {
-      font-size: 6rem;
-      font-weight: 500;
-      line-height: calc(var(--ru) * 4rem);
-      margin: 0 0 calc(var(--ru) * 4rem);
-    }
-  }
-
-  &__time {
-    font-size: 2rem;
-    line-height: calc(var(--ru) * 2rem);
-  }
-
-  &__cta {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: calc(var(--ru) * 2rem);
-    margin: calc(var(--ru) * 2rem) 0;
-    padding: calc(var(--ru) * 2rem);
-    text-align: center;
-    display: block;
-    border: 1px solid var(--color-text-fade);
-    position: relative;
-
-    &::after {
-      background: var(--color-bg);
-      color: var(--color-link);
-      content: "❦";
-      position: absolute;
-      top: calc(var(--ru) * -1rem);
-      left: 50%;
-      transform: translateX(-50%);
-      font-style: normal;
-    }
-  }
-
-  &__content {
-    p {
-      font-size: 2rem;
-      line-height: calc(var(--ru) * 2rem);
-      margin: calc(var(--ru) * 1rem) 0;
-
-      &.small {
-        font-size: 1.5rem;
-        line-height: calc(var(--ru) * 1rem);
-      }
-    }
-
-    a {
-      color: var(--color-text);
-      font-weight: 600;
-      font-style: italic;
-
-      &:hover,
-      &:active {
-        color: var(--color-link);
-      }
-    }
-
-    h2 {
-      font-size: 3rem;
-      font-weight: 500;
-      line-height: calc(var(--ru) * 2rem);
-      margin: calc(var(--ru) * 2rem) 0 calc(var(--ru) * 1rem);
-    }
-
-    h3 {
-      font-size: 2.5rem;
-      font-weight: 500;
-      line-height: calc(var(--ru) * 2rem);
-      margin: calc(var(--ru) * 2rem) 0 calc(var(--ru) * 1rem);
-    }
-
-    img,
-    video {
-      margin: 0;
-      vertical-align: bottom;
-      margin-left: calc(var(--page-margin) * -1);
-      width: calc(100% + calc(var(--page-margin) * 2));
-      height: auto;
-    }
-
-    ol,
-    ul {
-      margin: 0;
-      padding: 0;
-      font-size: 2rem;
-      margin-bottom: calc(var(--ru) * 2rem);
-    }
-
-    ul {
-      list-style: none;
-      li {
-        position: relative;
-        &::before {
-          display: inline-block;
-          width: 2rem;
-          content: "–";
-          margin-left: -2rem;
-          opacity: 0.5;
+        img {
+            width: 100%;
+            height: auto;
         }
-      }
+
+        @media all and (min-width: $screen-narrow) {
+            margin-top: calc(var(--ru) * 4rem);
+        }
     }
 
-    blockquote {
-      margin: calc(var(--ru) * 2rem) 0;
-      font-style: italic;
+    &__title {
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: calc(var(--ru) * 3rem);
+        margin: 0 0 calc(var(--ru) * 3rem);
+        font-style: italic;
 
-      & p {
-        font-size: 2.5rem;
+        @media all and (min-width: $screen-narrow) {
+            font-size: 6rem;
+            font-weight: 500;
+            line-height: calc(var(--ru) * 4rem);
+            margin: 0 0 calc(var(--ru) * 4rem);
+        }
+    }
+
+    &__time {
+        font-size: 2rem;
         line-height: calc(var(--ru) * 2rem);
-      }
-
-      @media all and (min-width: $screen-narrow) {
-        margin-left: 4rem;
-      }
     }
 
-    hr {
-      padding: 0;
-      margin: calc(var(--ru) * 2rem) 0;
-      text-align: center;
-      border: none;
-      font-size: 3rem;
-      line-height: calc(var(--ru) * 3rem);
-      height: calc(var(--ru) * 3rem);
-      &::after {
-        content: "❦";
-      }
+    &__cta {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: calc(var(--ru) * 2rem);
+        margin: calc(var(--ru) * 2rem) 0;
+        padding: calc(var(--ru) * 2rem);
+        text-align: center;
+        display: block;
+        border: 1px solid var(--color-text-fade);
+        position: relative;
+
+        &::after {
+            background: var(--color-bg);
+            color: var(--color-link);
+            content: '❦';
+            position: absolute;
+            top: calc(var(--ru) * -1rem);
+            left: 50%;
+            transform: translateX(-50%);
+            font-style: normal;
+        }
     }
 
-    pre {
-      font-size: 1.5rem;
-      line-height: calc(var(--ru) * 2rem);
-      margin: calc(var(--ru) * 2rem) 0;
-      overflow-x: auto;
-    }
+    &__content {
+        p {
+            font-size: 2rem;
+            line-height: calc(var(--ru) * 2rem);
+            margin: calc(var(--ru) * 1rem) 0;
 
-    details {
-      display: inline;
-      &::before {
-        display: none;
-      }
-    }
+            &.small {
+                font-size: 1.5rem;
+                line-height: calc(var(--ru) * 1rem);
+            }
+        }
 
-    summary {
-      display: inline;
+        a {
+            color: var(--color-text);
+            font-weight: 600;
+            font-style: italic;
+
+            &:hover,
+            &:active {
+                color: var(--color-link);
+            }
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: calc(var(--ru) * 2rem);
+            margin: calc(var(--ru) * 2rem) 0 calc(var(--ru) * 1rem);
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: calc(var(--ru) * 2rem);
+            margin: calc(var(--ru) * 2rem) 0 calc(var(--ru) * 1rem);
+        }
+
+        img,
+        video {
+            margin: 0;
+            vertical-align: bottom;
+            margin-left: calc(var(--page-margin) * -1);
+            width: calc(100% + calc(var(--page-margin) * 2));
+            height: auto;
+        }
+
+        ol,
+        ul {
+            margin: 0;
+            padding: 0;
+            font-size: 2rem;
+            margin-bottom: calc(var(--ru) * 2rem);
+        }
+
+        ul {
+            list-style: none;
+            li {
+                position: relative;
+                &::before {
+                    display: inline-block;
+                    width: 2rem;
+                    content: '–';
+                    margin-left: -2rem;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        blockquote {
+            margin: calc(var(--ru) * 2rem) 0;
+            font-style: italic;
+
+            & p {
+                font-size: 2.5rem;
+                line-height: calc(var(--ru) * 2rem);
+            }
+
+            @media all and (min-width: $screen-narrow) {
+                margin-left: 4rem;
+            }
+        }
+
+        hr {
+            padding: 0;
+            margin: calc(var(--ru) * 2rem) 0;
+            text-align: center;
+            border: none;
+            font-size: 3rem;
+            line-height: calc(var(--ru) * 3rem);
+            height: calc(var(--ru) * 3rem);
+            &::after {
+                content: '❦';
+            }
+        }
+
+        pre {
+            font-size: 1.5rem;
+            line-height: calc(var(--ru) * 2rem);
+            margin: calc(var(--ru) * 2rem) 0;
+            overflow-x: auto;
+        }
+
+        details {
+            display: inline;
+            &::before {
+                display: none;
+            }
+        }
+
+        summary {
+            display: inline;
+        }
     }
-  }
 }
