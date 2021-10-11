@@ -1,1 +1,3 @@
-{% if description %}{{ description }}{% else %}Rafał Pastuszak is an experienced startup consultant specialised in web, mobile, emerging technologies and human-centred design. Click to find out more.{% endif %}
+{% if description %}{{ description }}
+{% else %}{{site.description}}
+{% endif %}
