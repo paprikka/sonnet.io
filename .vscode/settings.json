@@ -1,8 +1,14 @@
 {
-  "[markdown]": {
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 70,
-    "editor.quickSuggestions": false,
-    "editor.fontSize": 24
-  }
+    "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 70,
+        "editor.quickSuggestions": false,
+        "editor.fontSize": 24
+    },
+    "files.associations": {
+        "*.css": "postcss"
+    },
+    "emmet.includeLanguages": {
+        "postcss": "css"
+    }
 }
