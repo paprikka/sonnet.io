@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+pageClass: intro
+---
+
+<article class="blog container">
+  {% include "header-blog.njk" %}
+  <section class="listing listing--wide">
+    <h1>Notes</h1>
+    {# <h2>What is it lorem  ipsum dolor sit amet</h2> #}
+    <ul class='listing__posts'>
+      {%- for page in collections.note | reverse-%}
+        {% if (page.data.hidden != true) %}
+          <li class='note-card'>
+            <header class='note-card__header'>
+              <a class='note-card__title' href="{{ page.url }}">{{ page.data.title }}</a>
+              <time class='note-card__time' datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+            </header>
+
+            <section class='note-card__preview'>
+              {{ page.data.content | safe}}
+            </section>
+            
+            <div class='share-tools'>
+              <button data-share-url='{{site.rootUrl}}{{ page.url }}' class='share-page-button'>Share</button>
+              <a href="{{ page.url }}">Link</a>
+            </div>
+          </li>
+        {% endif %}
+      {%- endfor -%}
+    </ul>
+    <hr />
+  </section>
+</article>
+
+<script>
+(()=>{
+  const init = () => {
+    const shareLegacy = (url) => {
+      if (!window.ClipboardItem)
+        return Promise.reject(new Error("Clipboard access not supported"));
+      const text = url;
+      const type = "text/plain";
+      const blob = new Blob([text], { type });
+      const data = [new ClipboardItem({ [type]: blob })];
+
+      return navigator.clipboard.write(data);
+    };
+
+
+
+    const buttons = document.querySelectorAll('.share-page-button')
+    if(!buttons.length) return
+
+    [...buttons].forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.innerText = 'copied'
+        shareLegacy(btn.getAttribute('data-share-url'))
+      })  
+    })
+  }
+  document.addEventListener('DOMContentLoaded', init)
+})()
+</script>

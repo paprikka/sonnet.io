@@ -10,6 +10,7 @@
 @import '_listing.css';
 @import '_post.css';
 @import '_footnote.css';
+@import '_note-card.css';
 
 html {
     font-size: var(--font-size);
