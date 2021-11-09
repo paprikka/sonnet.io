@@ -1,0 +1,4 @@
+{
+    "layout": "layouts/cemetery-entry.njk",
+    "tags": ["cemetery-entry"]
+}

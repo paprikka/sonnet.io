@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+pageClass: intro
+---
+
+<article class="blog container">
+  {% include "header-blog.njk" %}
+  <section class="listing">
+    <h1>Cemetery</h1>
+    <p>
+      Cemeteries are alive and as much as humans, contain their own personalities, idiosyncracies. Cemetery documents the progress of some of my experiments. Most of them never reached a conclusion or made money (at least directly), but all of them contributed to the following ones.
+    </p>
+    <ul class='listing__posts'>
+      {%- for page in collections['cemetery-items'] | reverse-%}
+        {% if (page.data.hidden != true) %}
+          <li>
+            <a href="{{ page.url }}">{{ page.data.title }}</a>
+            <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+          </li>
+        {% endif %}
+      {%- endfor -%}
+    </ul>
+    <hr>
+  </section>
+</article>
