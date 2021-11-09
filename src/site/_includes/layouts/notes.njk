@@ -21,7 +21,7 @@ pageClass: intro
               {{ page.data.content | safe}}
             </section>
             
-            <div class='share-tools'>
+            <div class='note-actions'>
               <button data-share-url='{{site.rootUrl}}{{ page.url }}' class='share-page-button'>Share</button>
               <a href="{{ page.url }}">Link</a>
             </div>
@@ -59,6 +59,11 @@ pageClass: intro
       })  
     })
   }
-  document.addEventListener('DOMContentLoaded', init)
+
+  if(document.readyState === 'complete') {
+    init()
+  } else {
+    document.addEventListener('DOMContentLoaded', init)
+  }
 })()
 </script>
