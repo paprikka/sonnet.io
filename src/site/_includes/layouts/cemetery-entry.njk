@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+pageClass: posts
+templateEngineOverride: njk, md
+---
+{% include "header-blog.njk" %}
+<div class="container container--full">
+  
+<article class="post">
+  <header class="post__header">
+  {%- if heroURL %} <img src="{{ heroURL }}" alt="{{ title }}" class="post__hero"/> {% endif %}
+    <time class='post__time' datetime="{{ date }}">{{ date | dateDisplay }}</time>
+    <h1 class='post__title'>{{ title }}</h1>
+        {%- if subtitle %}
+          <p class="post__subtitle">{{ subtitle | safe }}</p>
+        {% endif %}
+  </header>
+  <div class="post__content">
+    {{ content | safe }}
+  </div>
+</article>
+<aside class="footnote">
+  <a href="/blog">Show more posts</a> or <a href="https://calendly.com/hey_hey" target="_blank" rel="noopener">say hi</a>.
+
+</aside>
+</div>
