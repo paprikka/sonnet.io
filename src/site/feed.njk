@@ -16,6 +16,7 @@ eleventyExcludeFromCollections: true
     {% endif %}
     <id>{{ site.rootUrl }}/</id>
     {%- for post in collections.post | reverse -%}
+    {% if (post.data.hidden != true) %}
         {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.rootUrl) }}{% endset %}
         <entry>
             <title>{{ post.data.title }}</title>
@@ -28,5 +29,6 @@ eleventyExcludeFromCollections: true
             ]]>
             </content>
         </entry>
+        {% endif %}
     {%- endfor -%}
 </feed>
