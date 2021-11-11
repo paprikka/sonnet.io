@@ -6,6 +6,15 @@ const postcss = require('postcss')
 // also used to define the output filename in our output /css folder.
 const fileName = 'styles.css'
 
+const transform = postcss([
+    require('postcss-import'),
+    require('precss'), // seems like putting it at the beginning of arg list triggers a bunch of false negatives coming from postcss...
+    require('postcss-mixins'),
+    require('postcss-color-mix'),
+    require('postcss-simple-vars'),
+    require('cssnano'),
+])
+
 module.exports = class {
     async data() {
         const rawFilepath = path.join(
@@ -20,14 +29,7 @@ module.exports = class {
     }
 
     async render({ rawCss, rawFilepath }) {
-        return await postcss([
-            // require('postcss-comment'),
-            require('precss'),
-            require('postcss-import'),
-            require('postcss-mixins'),
-            require('postcss-color-mix'),
-            require('cssnano'),
-        ])
+        return await transform
             .process(rawCss, { from: rawFilepath })
             .then((result) => result.css)
     }
