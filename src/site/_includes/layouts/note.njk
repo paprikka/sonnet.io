@@ -2,10 +2,10 @@
 layout: layouts/base.njk
 pageClass: posts
 templateEngineOverride: njk, md
+titlePrefix: "Note: "
 ---
 {% include "header-blog.njk" %}
 <div class="container container--full">
-  
 <article class="post">
   <header class="post__header">
   {%- if heroURL %} <img src="{{ heroURL }}" alt="{{ title }}" class="post__hero"/> {% endif %}
