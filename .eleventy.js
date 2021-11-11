@@ -18,6 +18,8 @@ module.exports = function (config) {
     // minify the html output
     config.addTransform('htmlmin', require('./src/utils/minify-html.js'))
 
+    config.addShortcode('excerpt', require('./scripts/excerpt'))
+
     // compress and combine js files
     config.addFilter('jsmin', function (code) {
         const UglifyJS = require('uglify-js')
