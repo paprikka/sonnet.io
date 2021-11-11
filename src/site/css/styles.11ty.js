@@ -15,7 +15,7 @@ module.exports = class {
         return {
             permalink: `css/${fileName}`,
             rawFilepath,
-            rawCss: await fs.readFileSync(rawFilepath),
+            rawCss: fs.readFileSync(rawFilepath),
         }
     }
 
