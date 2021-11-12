@@ -151,11 +151,27 @@
             }
         }
 
-        pre {
-            font-size: 1.5rem;
-            line-height: calc(var(--ru) * 2rem);
-            margin: calc(var(--ru) * 2rem) 0;
+        pre,
+        pre[class*='language-'] {
+            font-size: 1.25rem;
+            line-height: calc(var(--ru) * 1rem);
+            margin-left: calc(var(--page-margin) * -1);
+            padding: calc(var(--ru) * 1rem);
+
+            border: none;
+            border-radius: 0;
+            /* border-top: 1px solid var(--color-text);
+            border-bottom: 1px solid var(--color-text); */
+
+            width: calc(100% + calc(var(--page-margin) * 2));
             overflow-x: auto;
+
+            /* background: transparent;
+
+            .highlight-line,
+            code {
+                background: transparent;
+            } */
         }
 
         details {

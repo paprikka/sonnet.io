@@ -11,6 +11,7 @@
 @import '_post.css';
 @import '_footnote.css';
 @import '_note-card.css';
+@import '_syntax.css';
 
 html {
     font-size: var(--font-size);
