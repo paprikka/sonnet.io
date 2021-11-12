@@ -3,7 +3,7 @@ title: 'useRainbow()'
 date: 2021-11-12
 heroURL: /images/hero/code-sober-debug-drunk-hero.png
 thumbnail: /images/hero/code-sober-debug-drunk-hero-social.jpg
-hidden: false
+hidden: true
 description: 'Practical snapshot testing tips'
 ---
 
