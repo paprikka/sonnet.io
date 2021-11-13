@@ -12,6 +12,7 @@
 @import '_footnote.css';
 @import '_note-card.css';
 @import '_syntax.css';
+@import '_use-rainbow.css';
 
 html {
     font-size: var(--font-size);

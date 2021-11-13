@@ -46,13 +46,16 @@ How does this work? In short, I translate the scrollPosition into the hue in HSL
 
 There are different ways of describing colours in CSS, the two main ones being RBG (e.g. #ff8800 or rgb(255, 200, 00)) and HSL.
 
+// todo
+
 When using RGB we just add the values of the base colour components to achieve the final colour, 100% red + 0 green + 0 blue = red, 100% red, 100% green = yellow and 100% red, green, blue === white.
 
 We're used to this approach but, but specifying colours in terms of hues, saturation and luminosity seems more natural, especially if you come from design background. Or, you know, are a human being using human language. We've gotten used to RGB as developers, but in spoken language using it feels unnatural and confusing.
 
 HSL is often much easier to work with. For instance if I want to make a colour slightly colder, I can just move the hue slider a bit towards blue and I should get closer to what I have in mind. [*1]
 
-// image
+<div class='canvas-example--rgb-hsl'></div>
+<script type='module' src='/js/use-rainbow/use-rainbow-example-0.js'></script>
 
 So, what did I mean by saying:
 
