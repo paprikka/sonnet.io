@@ -3,7 +3,7 @@
         "editor.wordWrap": "bounded",
         "editor.wordWrapColumn": 70,
         "editor.quickSuggestions": false,
-        "editor.fontSize": 24
+        "editor.fontSize": 18
     },
     "files.associations": {
         "*.css": "postcss"
