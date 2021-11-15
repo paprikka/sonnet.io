@@ -22,7 +22,7 @@ const template = `
             </g>
         </svg>
     </div>
-    <form class='rgb-picker__controls'>
+    <form class='canvas-example__controls'>
         <label>
             <span class='rgb-picker__label-text'>Red</span>
             <input name='red' type="range" min=0 max=255 value=255></input>

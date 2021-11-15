@@ -15,7 +15,7 @@ const template = `
         </div>
 
     </div>
-    <form class='hsl-picker__controls'>
+    <form class='canvas-example__controls'>
         <label>
             <span class='hsl-picker__label-text'>Hue</span>
             <input name='hue' type="range" min=0 max=360 value=0></input>
@@ -40,6 +40,10 @@ export const makeHSLPicker = (parent) => {
     )
 
     const render = () => {
+        // yes, this could be a single function
+        // and yes, this would make the code much more hard to read
+        // an yeesss, I did rewrite it and then decided to revert and use
+        // the stupid simple way:)
         const firstRingFill = `conic-gradient(
             from 30deg,
             hsl(0deg, ${state.saturation}%, ${state.lightness}%),
@@ -52,7 +56,6 @@ export const makeHSLPicker = (parent) => {
             hsl(0deg, ${state.saturation}%, ${state.lightness}%)
         )`
 
-        console.log(firstRingFill)
         parent.querySelector(
             '.hsl-picker__ring-layer:nth-child(1)'
         ).style.background = firstRingFill

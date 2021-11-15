@@ -64,7 +64,8 @@ So, what did I mean by saying:
 
 I meant that every time we detect a scroll event, I try to map it to an angle on the hue circle.
 
-// image
+<div class='canvas-example--scroll-preview'></div>
+<script type='module' src='/js/use-rainbow/use-rainbow-example-1.js'></script>
 
 I don't want to go through all colours, just the ones that seem to look okay-ish with my design (e.g. purple reminds me of cemeteries or 100% red would make me hungry).
 
