@@ -66,7 +66,7 @@ To see how this works in practice, try maxing out the blue colour in the example
 
 The first thing that stands out is that all tones are shifted towards blue and the overall brightness of the picture is increased. In the case of the effect we're discussing, that would be undesirable.
 
-Now, let's try to do the same with the HSL colour circle. Drag the slider to the left, by ca. 90 degrees:
+Now, let's try to do the same with the HSL colour circle. Drag the slider to the left, by **ca. 90 degrees:**
 
 <div class='embed example-hue-shift-hsl'></div>
 
