@@ -71,11 +71,27 @@
         a {
             color: var(--color-text);
             font-weight: 600;
-            font-style: italic;
 
             &:hover,
             &:active {
                 color: var(--color-link);
+            }
+
+            &:not(.footnote) {
+                font-style: italic;
+            }
+
+            &.footnote {
+                vertical-align: super;
+                font-size: 0.75em;
+                text-decoration: none;
+
+                &:before {
+                    content: '[';
+                }
+                &:after {
+                    content: ']';
+                }
             }
         }
 
@@ -95,11 +111,13 @@
 
         img,
         video {
-            margin: 0;
-            vertical-align: bottom;
-            margin-left: calc(var(--page-margin) * -1);
-            width: calc(100% + calc(var(--page-margin) * 2));
-            height: auto;
+            &:not(.embed img, .embed video) {
+                margin: 0;
+                vertical-align: bottom;
+                margin-left: calc(var(--page-margin) * -1);
+                width: calc(100% + calc(var(--page-margin) * 2));
+                height: auto;
+            }
         }
 
         ol,
@@ -135,6 +153,14 @@
 
             @media all and (min-width: $screen-narrow) {
                 margin-left: 4rem;
+            }
+        }
+
+        cite {
+            display: block;
+
+            &:before {
+                content: '—';
             }
         }
 
@@ -174,6 +200,11 @@
             } */
         }
 
+        code:not(pre code) {
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
         details {
             display: inline;
             &::before {
@@ -183,6 +214,24 @@
 
         summary {
             display: inline;
+        }
+
+        .color-swatch {
+            padding: 0 0.25em 0.1em;
+            white-space: pre;
+            --sbg: transparent;
+            /* font-size: 0.8em; */
+        }
+        .color-swatch:before {
+            content: '';
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            background: var(--sbg);
+            border-radius: 100rem;
+            position: relative;
+            top: 0.2em;
+            margin-right: 0.2em;
         }
     }
 }
