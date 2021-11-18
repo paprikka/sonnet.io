@@ -93,9 +93,9 @@ When/if I realise that performance is a problem, especially with more content do
 -   removing the unnecessary call to `getBoundingClientRect` on every scroll handler call
 -   deferring or throttling background colour changes using `requestAnimationFrame`
 
-I expect the first improvement to have some impact, but the benefits of the second should be negligible.
+I expect the first improvement to have some impact, but the benefits of the second one should be negligible.
 
-Measure before optimising. Obsessing about the performance only makes sense when issues become noticeable, be it through a drop in framerate or battery impact. Your iPhone Pro has more computing power than an average low-end laptop, so it's a good idea to test on those devices too. It's good to have a crappy old Android phone exacly for that purpose if you can spare a few quid.
+Measure before optimising. Obsessing about the performance only makes sense when issues become noticeable, be it through a drop in framerate or battery impact. Your iPhone Pro has more computing power than many low-end laptops, so it's a good idea to test on those devices too. It's good to have a crappy old Android phone exacly for that purpose if you can spare a few quid.
 
 ### Perceptually uniform colour spaces
 
@@ -146,7 +146,7 @@ You might've noticed that in the previous illustrations some fully saturated col
 
 _For now_, this isn't an issue as I've _just_ put this thing online and titles serve a secondary purpose. But there's a solution to the problem and it's not overly complicated: use a perceptually uniform colour space. There's a bunch of libraries that do it out of the box, both in JS/TS and CSS/SASS/`<pick your CSS flavour here>`. [`hsluv`](https://www.hsluv.org) seems like a good starting point.
 
-## Accessiblity
+### Accessiblity
 
 Note that I'll be focusing on the visual effect itself and not discussing the rest of the site (e.g. alt tags, document structure, etc...). I'd like to focus on contrast, colour blindness and people who rely on `prefers-reduced-motion`. The site is a living document, there's always so much to improve. For instance, contrast can be an issue in a few, non-critical places. I'm happy to accept feedback and implement it: [hit me up!](/posts/hi).
 
@@ -178,7 +178,8 @@ Now, go out, pet your cat and make some shit!
 <hr>
 
 PS. Check [https://www.cameronsworld.net/](https://www.cameronsworld.net/)
-PPS. Interactive diagram code can be found here: https://github.com/paprikka/use-rainbow-article-examples
+
+PPS. The code for interactive diagrams can be found here: https://github.com/paprikka/use-rainbow-article-examples
 
 ### Footnotes
 
