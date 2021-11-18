@@ -1,6 +1,6 @@
 ---
 title: 'useRainbow()'
-date: 2021-11-12
+date: 2021-11-18
 heroURL: /images/hero/use-rainbow.png
 thumbnail: /images/hero/use-rainbow-social.jpg
 hidden: false
