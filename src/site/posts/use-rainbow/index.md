@@ -3,7 +3,7 @@ title: 'useRainbow()'
 date: 2021-11-12
 heroURL: /images/hero/use-rainbow.png
 thumbnail: /images/hero/use-rainbow-social.jpg
-hidden: true
+hidden: false
 description: 'A quick note about the rainbow effect used on potato.horse and colour spaces'
 ---
 
@@ -20,8 +20,6 @@ Some asked me how this effect was implemented (including going as far as reading
 So, here's a quick gist, followed up with some context:
 
 ```typescript
-import { useEffect } from 'react'
-
 export const useRainbowBg = () =>
     useEffect(() => {
         const cb = () => {
@@ -32,12 +30,11 @@ export const useRainbowBg = () =>
                 contentHeight / viewportHeight
             )
             const from = 51
-            const to = 219
             const progress =
                 window.scrollY / (viewportHeight * viewportsPerRotation)
+            const h = (from + 360 * progress) % 360
 
-            const h = from + (to - from) * progress
-            document.body.style.backgroundColor = `hsl(${h}deg 100% 50%)`
+            document.body.style.backgroundColor = `hsl(${h}deg, 100%, 50%)`
         }
         window.addEventListener('scroll', cb, { passive: true })
         return () => window.removeEventListener('scroll', cb)
@@ -70,12 +67,12 @@ Now, let's try to do the same with the HSL colour circle. Drag the slider to the
 
 <div class='embed example-hue-shift-hsl'></div>
 
-In this scenario using HSL not only turns Susan into a vampire, but also maintains a similar<a href='#footnote-2' class='footnote'>2</a> level of brightness. And that's exactly what I'm looking for.
+In this scenario using HSL not only _turns Susan into a vampire_, but also maintains a similar<a href='#footnote-2' class='footnote'>2</a> level of brightness. And that's exactly what I'm looking for.
 
 So, what did I mean by saying:
 
 > How does this work? In short, I map the _scroll position_ into the _hue_ in the HSL colour notation.
-> <cite>Rafal, 2 days ago</cite>
+> <cite>Rafal, 2 days earlier</cite>
 
 I meant that every time we detect a scroll event, I try to map it to an angle on the hue circle:
 

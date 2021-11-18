@@ -187,8 +187,8 @@
       })]
     });
   };
-  const label = "_label_8idl3_1";
-  const container$7 = "_container_8idl3_17";
+  const label = "_label_11anf_1";
+  const container$7 = "_container_11anf_17";
   var styles$8 = {
     label,
     container: container$7
@@ -513,17 +513,56 @@
       children: jsx(HSLPicker, {})
     })]
   });
-  const container$2 = "_container_12w8w_1";
-  const rgbOverlay = "_rgbOverlay_12w8w_30";
-  const hslOverlay = "_hslOverlay_12w8w_31";
-  const vampireOverlay = "_vampireOverlay_12w8w_32";
-  const isVampire = "_isVampire_12w8w_56";
+  const container$2 = "_container_1pnfb_1";
+  const baseImage = "_baseImage_1pnfb_24";
+  const rgbOverlay = "_rgbOverlay_1pnfb_31";
+  const hslOverlay = "_hslOverlay_1pnfb_32";
+  const vampireOverlay = "_vampireOverlay_1pnfb_33";
+  const isVampire = "_isVampire_1pnfb_58";
   var styles$2 = {
     container: container$2,
+    baseImage,
     rgbOverlay,
     hslOverlay,
     vampireOverlay,
     isVampire
+  };
+  const RGBSusan = ({
+    red,
+    green,
+    blue,
+    showTeeth
+  }) => {
+    const overlayColor = `rgb(${red}, ${green}, ${blue})`;
+    return jsxs("div", {
+      className: `${styles$2.container} ${showTeeth ? styles$2.isVampire : ""}`,
+      children: [jsx("div", {
+        className: styles$2.baseImage
+      }), jsx("div", {
+        className: styles$2.rgbOverlay,
+        style: {
+          backgroundColor: overlayColor
+        }
+      }), jsx("div", {
+        className: styles$2.vampireOverlay
+      })]
+    });
+  };
+  const HSLSusan = ({
+    hue,
+    showTeeth
+  }) => {
+    return jsxs("div", {
+      className: `${styles$2.container} ${showTeeth ? styles$2.isVampire : ""}`,
+      children: [jsx("div", {
+        className: styles$2.baseImage,
+        style: {
+          filter: `hue-rotate(${hue}deg)`
+        }
+      }), jsx("div", {
+        className: styles$2.vampireOverlay
+      })]
+    });
   };
   const Susan = ({
     red,
@@ -535,25 +574,19 @@
     if (typeof blue === "undefined" && typeof hue === "undefined")
       return null;
     const mode = typeof blue === "undefined" ? "hsl" : "rgb";
-    const saturation = 100;
-    const luminosity = 50;
-    const overlayColor = mode === "rgb" ? `rgb(${red}, ${green}, ${blue})` : `hsl(${hue}deg, ${saturation}%, ${luminosity}%)`;
-    return jsxs("div", {
-      className: `${styles$2.container} ${showTeeth ? styles$2.isVampire : ""}`,
-      children: [mode === "rgb" ? jsx("div", {
-        className: styles$2.rgbOverlay,
-        style: {
-          backgroundColor: overlayColor
-        }
-      }) : jsx("div", {
-        className: styles$2.hslOverlay,
-        style: {
-          backdropFilter: `hue-rotate(${hue}deg)`
-        }
-      }), jsx("div", {
-        className: styles$2.vampireOverlay
-      })]
-    });
+    if (mode === "rgb")
+      return jsx(RGBSusan, {
+        red,
+        green,
+        blue,
+        showTeeth
+      });
+    if (mode === "hsl")
+      return jsx(HSLSusan, {
+        hue,
+        showTeeth
+      });
+    return null;
   };
   const container$1 = "_container_eukpr_1";
   var styles$1 = {
@@ -607,7 +640,7 @@
       className: styles.container,
       children: [jsx(Susan, {
         hue: h,
-        showTeeth: Math.abs(h - targetH) < 5
+        showTeeth: Math.abs(h - targetH) < 10
       }), jsx("br", {}), jsx("div", {
         className: styles.controls,
         children: jsx(Controls, {
