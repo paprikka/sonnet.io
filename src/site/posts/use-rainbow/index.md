@@ -179,7 +179,7 @@ Now, go out, pet your cat and make some shit!
 
 PS. Check [https://www.cameronsworld.net/](https://www.cameronsworld.net/)
 
-PPS. The code for interactive diagrams can be found here: https://github.com/paprikka/use-rainbow-article-examples
+PPS. The code for interactive diagrams can be found [here](https://github.com/paprikka/use-rainbow-article-examples)
 
 ### Footnotes
 
