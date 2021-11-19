@@ -183,7 +183,7 @@ PPS. The code for interactive diagrams can be found [here](https://github.com/pa
 
 ### Footnotes
 
-1. <span id='footnote-1'></span>hence the K component in CMYK meaning black. Using B would be confusing as it means black in other colour models.
+1. <span id='footnote-1'></span>hence the K component in CMYK meaning black. Using B would be confusing as it means blue in other colour models.
 2. <span id='footnote-2'></span>it's not perfect, since the perceptual colour space differs from what's described using RGB/HSL.
 
 <style>
