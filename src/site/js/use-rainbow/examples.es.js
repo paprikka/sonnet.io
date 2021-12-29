@@ -130,7 +130,7 @@ const mockPara = "_mockPara_1ubiw_15";
 const containerOverlay = "_containerOverlay_1ubiw_33";
 const beforeWindow = "_beforeWindow_1ubiw_43";
 const afterWindow = "_afterWindow_1ubiw_44";
-const window = "_window_1ubiw_59";
+const window$1 = "_window_1ubiw_59";
 const windowHeader = "_windowHeader_1ubiw_80";
 var styles$9 = {
   container: container$8,
@@ -139,7 +139,7 @@ var styles$9 = {
   containerOverlay,
   beforeWindow,
   afterWindow,
-  window,
+  window: window$1,
   windowHeader
 };
 var mockImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAAB6CAYAAAClZ1HsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOXSURBVHgB7d1PK3RtAMfxH92TiIWFiEmKKaUk5UUoK2WhWFhbUEJhiZWNvZCVhWRlowgvwFayUCI2k6JMBudxne5H9+K56zGaXyfn+6mr5s9u+s75c52Zc1VEHwQYVQowIzrYER3siA52RAc7ooMd0cGO6GBHdLAjOtgRHeyIDnZEBzuigx3RwY7oYEd0sCM62BEd7IgOdkQHO6KDHdHBjuhgR3SwIzrYER3siA52RAc7ovvhLi8vlTSJiy6fz2tpaUkbGxt6fX0VSjM1NaW6ujrlcjktLi4qUaKEGRgYCPfLi8fY2Fj0/v4e4WsKhUKUzWajioqK+HPs7e2NkiRxW7qbm5vPx2Frt7W1JXxNJpNRc3Nz2KDEz9va2pQkv5QwIyMjOjs7+3z+/PwsfE1lZaW2t7e1vr6uYrGo6elpJUlFFCXv9q+rq6taW1vTxy5Cm5ubamxsFH6OREYXvL29xd/Yj+MS4WdJbHT4uZingx3RwY7oYEd0sCM62BEd7IgOdkQHO6KDHdHBjuhgR3SwIzrYER3siA52RAc7ooMd0cGO6GBHdLAjOtgRHeyIDnZEBzuigx3RwY7oYEd0sCM62BEd7IgOdkQHO6KDHdHBjuhgR3SwIzrYER3siA52RAc7ooMd0SleflQsHOST6uhCaHt7exoeHtbQ0JAODg6IzyFKqZeXl+gjts8FjcPIZDLRwsJChPJK7YJ0y8vLmp+fj1dZDKsthlUX/7W/v6/+/n6hPFK5ew3fs5WVlc/HfwYX7OzsCOWTyugeHh7i8Te3t7dC+aQyuvr6ejU1Nf31/dbWVqF8Unv2Oj4+/p+v19bWamZmRiif1EY3NzeniYkJVVVVxScTYXR2durk5ETt7e1C+aR+OfXz83NdXV2ppaUljq2mpkYor9RHBz8ug8GO6ErAlMr3EN0X3d/fq6OjQ8fHx0JpiO5/Coe+19fXGhwcVENDg/r6+oTSEN1vd3d32t3djcOKfv/UKYxisajT01PNzs6qu7tbj4+POjw85Cz3G34JsaOjI42OjsYX/3t6euKrFmFXenFxoUKhoFwuF08aT05Oqrq6WigdUyZ/yOfz8S9Mwpbt6elJ2WxWXV1d8a40TByHCWR8H9HBjmM62BEd7IgOdkQHO6KDHdHBjuhgR3SwIzrYER3siA52RAc7ooMd0cGO6GBHdLAjOtgRHeyIDnZEBzuigx3RwY7oYBf+4c//XmH1D1RVnUOH0sVGAAAAAElFTkSuQmCC";
@@ -180,8 +180,8 @@ const Browser = ({
     })]
   });
 };
-const label = "_label_11anf_1";
-const container$7 = "_container_11anf_17";
+const label = "_label_oy74x_1";
+const container$7 = "_container_oy74x_18";
 var styles$8 = {
   label,
   container: container$7
@@ -438,7 +438,12 @@ const HSLPicker = () => {
   y(() => {
     if (!containerEl.current)
       return;
-    setRect(containerEl.current.getBoundingClientRect());
+    const onResize = () => setRect(containerEl.current.getBoundingClientRect());
+    window.addEventListener("resize", onResize);
+    onResize();
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
   }, [containerEl.current]);
   y(() => {
     if (!rect)

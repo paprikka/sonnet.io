@@ -208,23 +208,24 @@ html {
 ._windowHeader_1ubiw_80 span:nth-child(3) {
     background-color: rgb(161, 252, 119);
 }
-._label_11anf_1 {
+._label_oy74x_1 {
     margin: 0 0 calc(var(--ru) * 1rem);
     display: block;
     color: var(--color-text);
 }
 
-._label_11anf_1 input {
+._label_oy74x_1 input {
     font-family: var(--font-body);
     display: block;
     width: 100%;
 }
 
-._label_11anf_1 span {
+._label_oy74x_1 span {
     font-size: 1.5rem;
+    font-family: var(--font-body);
 }
 
-._container_11anf_17 {
+._container_oy74x_18 {
     margin-bottom: calc(var(--ru) * 1rem);
 }
 
