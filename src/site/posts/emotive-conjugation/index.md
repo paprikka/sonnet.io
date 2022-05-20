@@ -2,10 +2,33 @@
 title: 'Emotive Conjugation'
 date: 2022-05-18
 hidden: false
-heroURL: /images/hero/hot-air-balloon.png
-thumbnail: /images/hero/hot-air-balloon-social.png
-description: 'Exploring attribution bias, GPT-3, and pickles'
+heroURL: /images/emotive-conjugation/hero.png
+thumbnail: /images/emotive-conjugation/social.jpg
+description: 'Exploring attribution bias, GPT-3, and ancient pickling techniques'
 ---
+
+<style>
+    .post {
+        --pickle: #959e00;
+    }
+    .emotive-gpt-3 {
+        padding: 0;
+        margin: 0;
+    }
+    .emotive-gpt-3 p, 
+    .emotive-gpt-3-legend {
+        font-style: italic;
+    }
+    .emotive-gpt-3 em,
+    .emotive-gpt-3-legend em {
+        font-weight: bold;
+        color: var(--pickle);
+    }
+    :is(.emotive-gpt-3 em, .emotive-gpt-3-legend em):before {
+        /* content: '🥒 '; */
+    }
+</style>
+
 
 > I am firm, you are obstinate, he is a pig-headed fool.
 
@@ -13,7 +36,7 @@ Also, good morning/afternoon (wherever, whenever you are)!
 
 Here’s something you’ve never heard before: we’re more charitable when explaining our own behaviour vs. the behaviour of the others. Emotive conjugation illustrates that by mimicking the grammatical conjugation of irregular verbs. Here’s an example:
 
-![Pickles](https://placehold.co/600x200)
+![Pickles](/images/emotive-conjugation/reasons-pickles-were-forgotten.png)
 
 The term was mentioned for the first time in the 1940s by Bertrand Russel, during a BBC radio show called The Brains Trust.
 
@@ -23,11 +46,14 @@ As you already can see, emotive conjugation is a tool that allows us to express 
 
 A true 0.1x engineer is a lazy one. So, let’s shove some instructions into GPT-3 to see what happens. We’ll start with some prompts and tweak the settings a little bit:
 
-// TODO:
-Prompts are in cursive, and the completed text is in green.
 
 ### First attempt
 
+<p class='emotive-gpt-3-legend small'>
+Note: Prompts are in cursive, <em>and the completed text is in bold</em>.
+</p>
+
+<section class='emotive-gpt-3'>
 <p>
 I am firm, you are obstinate, he is a pig-headed fool. <br/>
 I am righteously indignant, you are annoyed, he is making a fuss over nothing.<br/>
@@ -40,10 +66,13 @@ I was motivated, you were uninspired, he was apathetic.</em><br/>
 I forgot, <em>you neglected, he ignored</em>
 </p>
 
+</section>
+
 ### Examples improved
 
 We’ve increased the temperature a bit and added a small frequency penalty to get slightly diverse input.
 
+<section class='emotive-gpt-3'>
 <p>
 My idea was groundbreaking, <em>his was unoriginal, and yours was just stupid.</em><br/>
 I’m an excellent driver, <em>you’re a terrible driver, he’s the worst driver in the world.</em><br/>
@@ -71,10 +100,11 @@ I'm always right, <em>you're always wrong, he's always wrong.</em><br/>
 <p>
     My idea was groundbreaking, <em>his was unoriginal, and yours was just stupid.</em>
 </p>
+</section>
 
 Side note: it’s amusing that mentioning a 10x dev resulted in the following prompts being quite toxic. Who would’ve thought?
 
-![Greek philosopher, with a pickle for his head, holding a pickle-themed artefact in his hand](https://placehold.co/300x700)
+![Greek philosopher, with a pickle for his head, holding a pickle-themed artefact in his hand](/images/emotive-conjugation/10x-engineer.png)
 
 A true 10x developer
 
