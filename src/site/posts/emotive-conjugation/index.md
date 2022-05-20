@@ -104,9 +104,14 @@ I'm always right, <em>you're always wrong, he's always wrong.</em><br/>
 
 Side note: it’s amusing that mentioning a 10x dev resulted in the following prompts being quite toxic. Who would’ve thought?
 
-![Greek philosopher, with a pickle for his head, holding a pickle-themed artefact in his hand](/images/emotive-conjugation/10x-engineer.png)
-
+<figure>
+<img src='/images/emotive-conjugation/10x-engineer.png' alt='Greek philosopher, with a pickle for his head, holding a pickle-themed artefact in his hand'>
+<figcaption>
 A true 10x developer
+</figcaption>
+</figure>
+
+
 
 Brilliant! We’ve successfully automated <s>that one guy in your office</s> emotive conjugation. I must admit, I’m much less pessimistic about using GPT-3 as a copy generation tool. Here’s the [preset](https://beta.openai.com/playground/p/8u7mkUfwLarNeBgsjiHMQhUM?model=text-davinci-002), in case you wanna give it a go. 
 
