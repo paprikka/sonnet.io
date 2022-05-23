@@ -27,7 +27,7 @@ description: 'Exploring attribution bias, GPT-3, and ancient pickling techniques
     }
     .emotive-gpt-3 em,
     .emotive-gpt-3-legend em {
-        font-weight: bold;
+        font-weight: 600;
         color: var(--pickle);
     }
     :is(.emotive-gpt-3 em, .emotive-gpt-3-legend em):before {
@@ -152,7 +152,7 @@ I'm always right, <em>you're always wrong, he's always wrong.</em><br/>
 <p>
     My implementation is perfect, <em>yours is inadequate, his is completely wrong.</em><br/>
 <em>I was thinking about the problem, you were daydreaming, he was asleep on the job.</em><br/>
-<em>I am not going to stoop to his level, you will stoop to mine, he will <strong>wallow in the gutter</strong> (sic!).</em><br/>
+<em>I am not going to stoop to his level, you will stoop to mine, he will <strong>wallow in the gutter</strong>.</em> (sic!)<br/>
 </p>
  
 <p>
