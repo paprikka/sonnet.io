@@ -3,10 +3,11 @@
         "editor.wordWrap": "bounded",
         "editor.wordWrapColumn": 70,
         "editor.quickSuggestions": false,
-        "editor.fontSize": 18
+        "editor.fontSize": 15
     },
     "files.associations": {
-        "*.css": "postcss"
+        "*.css": "postcss",
+        "*.md": "nunjucks"
     },
     "emmet.includeLanguages": {
         "postcss": "css"
