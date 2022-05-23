@@ -35,6 +35,16 @@ module.exports = function (config) {
 
     config.addPlugin(pluginRss)
 
+    config.addPairedShortcode("figure", (content, src, alt) => {
+        return `
+        <figure>
+            <img src='${src}' alt='${alt}' loading='lazy'>
+            <figcaption>${content}</figcaption>
+        </figure>
+        `.trim()        
+    })
+
+
     // make the seed target act like prod
     env = env == 'seed' ? 'prod' : env
     return {
