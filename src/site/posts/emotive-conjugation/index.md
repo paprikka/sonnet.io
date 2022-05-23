@@ -27,7 +27,37 @@ description: 'Exploring attribution bias, GPT-3, and ancient pickling techniques
     :is(.emotive-gpt-3 em, .emotive-gpt-3-legend em):before {
         /* content: '🥒 '; */
     }
+    .emotive-rant{
+        transition: 1s all;
+        opacity: 1;
+    }
+    .emotive-rant--hidden{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .emotive-rant__cta{
+        appearance: none;
+        background: none;
+        border: none;
+        color: var(--color-text);
+        font-weight: 600;
+        cursor: pointer;
+    font-style: italic;
+    text-decoration: underline;
+    }
+    .emotive-rant__cta:hover,
+    .emotive-rant__cta:active { color: var(--color-link); }
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const el = document.querySelector('.emotive-rant__cta')
+       el.onclick=()=>{
+           el.remove()
+           document.querySelector('.emotive-rant').classList.remove('emotive-rant--hidden')
+       } 
+    })
+</script>
 
 > I am firm, you are obstinate, he is a pig-headed fool.
 
@@ -128,7 +158,7 @@ Please remember, this is a powerful tool, and we should use it <span class="emot
 
 Chances are you’ve heard about attribution bias before. The general idea is that we constantly make _attributions_: judgments and assumptions about why people act in a certain way. We tend to be much more compassionate when judging our own decisions than the choices or actions of others.
 
-Some familiar examples of attribution bias might involve a driver cutting you off abruptly (_He’s reckless! Why doesn’t he drive the way I do?!_), or… a fellow engineer, <span class='emotive__rant'>hidden behind the lines of git diffs in your code editor, with their pythonic incantations invoking the wrong, forbidden abstractions, throwing at you nothing else but the cursed spaghetti, which now you, the 10x engineer in a shiny full plate armour, need to fix. Why didn’t they think of using Typescript? How come they didn’t read that carefully crafted tweet you wrote about co-locating code? And, what’s the point of passive-aggressive messages on Slack if no one pays attention? Didn’t they hear that the old Object-oriented gods are dead, their temples and towers toppled by the blinding light of lambda calculus. Our Church was built and named after [its founder](https://en.wikipedia.org/wiki/Alonzo_Church). Hey, are you still listening?</span>
+Some familiar examples of attribution bias might involve a driver cutting you off abruptly (_He’s reckless! Why doesn’t he drive the way I do?!_), or… a fellow engineer, hidden behind the lines of git diffs in your code editor, with their pythonic incantations invoking the wrong<button class='emotive-rant__cta'>[...] click to expand rant.</button><span class='emotive-rant emotive-rant--hidden'>, forbidden abstractions, throwing at you nothing else but the cursed spaghetti, which now you, the 10x engineer in a shiny full plate armour, need to fix. Why didn’t they think of using Typescript? How come they didn’t read that carefully crafted tweet you wrote about co-locating code? And, what’s the point of passive-aggressive messages on Slack if no one pays attention? Didn’t they hear that the old Object-oriented gods are dead, their temples and towers toppled by the blinding light of lambda calculus. Our Church was built and named after [its founder](https://en.wikipedia.org/wiki/Alonzo_Church). Hey, are you still listening?</span>
 
 Humans are social creatures, and I like to think that we’re not inherently as selfish as the media soup would like us to think. Most of us don’t think less of others, but we have a tendency to take cognitive shortcuts.
 
