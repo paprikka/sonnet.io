@@ -1,7 +1,7 @@
 ---
 title: 'Emotive Conjugation'
 date: 2022-05-18
-hidden: false
+hidden: true
 heroURL: /images/emotive-conjugation/hero.png
 thumbnail: /images/emotive-conjugation/social.jpg
 description: 'Exploring attribution bias, GPT-3, and ancient pickling techniques'
