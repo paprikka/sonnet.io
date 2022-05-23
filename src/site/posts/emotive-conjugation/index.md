@@ -15,7 +15,13 @@ description: 'Exploring attribution bias, GPT-3, and ancient pickling techniques
         padding: 0;
         margin: 0;
     }
-    .emotive-gpt-3 p, 
+    @media all and (min-width: 430px) {
+        .emotive-gpt-3 { padding-left: 3rem; }
+    }
+    .emotive-gpt-3 p{
+        font-style: italic;
+        font-size: 1.75rem;
+    }
     .emotive-gpt-3-legend {
         font-style: italic;
     }
