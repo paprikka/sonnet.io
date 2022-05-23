@@ -246,7 +246,7 @@ So let’s take a look at a few practical tools that might improve this situatio
 
 {%
     picture
-    '/images/emotive-conjugation/sharing-dill.png',
+    '/images/emotive-conjugation/sharing-dill.jpg',
     'Two consenting pickles sharing a bag of dill'
 %}
 
@@ -298,6 +298,6 @@ See you soon!
 
 {%
     picture
-    '/images/emotive-conjugation/tomato-hugs.png',
+    '/images/emotive-conjugation/tomato-hugs.jpg',
     'A pickle and a tomato in a warm embrace'
 %}
