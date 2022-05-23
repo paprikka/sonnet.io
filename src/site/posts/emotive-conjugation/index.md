@@ -54,6 +54,26 @@ description: 'Exploring attribution bias, GPT-3, and ancient pickling techniques
     }
     .emotive-rant__cta:hover,
     .emotive-rant__cta:active { color: var(--color-link); }
+    @media all and (min-width: 700px) {
+        .post__content .post__quote--pickled {
+            position: relative;
+            margin-left: 0;
+            padding-left: 11rem;
+        }
+        .post__content .post__quote--pickled:after{
+            content: '';
+            background-position: 0 bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('/images/emotive-conjugation/quote-bg.png');
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            width: 10rem;
+            z-index: -1;
+        }
+    }
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -187,7 +207,7 @@ Now, if you’re a software engineer or anyone collaborating with people on solv
 
 You’re communicating with ghosts, because they’re not _here_ and they’re not _now_. The artefact in front of you lacks the context of the thought process of the person coming up with the solution, with all of its undocumented details and constraints: they were working with a legacy system, they had to rush, they were afraid of looking stupid (so they over-abstracted everything), they were tired. In a sense, this problem is as old as writing itself (assuming that the god Teuth gave us writing):
 
-<figure class='post__quote'>
+<figure class='post__quote post__quote--pickled'>
     <blockquote cite="https://www.huxley.net/bnw/four.html">
         <p>
             And when they [thoughts, ideas] have been once written down they are tumbled about anywhere among those who may or may not understand them, and know not to whom they should reply, to whom not: and, if they are maltreated or abused, they have no parent to protect them; and they cannot protect or defend themselves.
