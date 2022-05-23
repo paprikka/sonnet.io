@@ -120,7 +120,7 @@
             }
         }
 
-        figure {
+        .post__figure {
             &:not(.embed img, .embed video, .embed figure) {
                 margin: calc(var(--ru) * 1rem) 0;
                 margin-left: calc(var(--page-margin) * -1);
@@ -164,7 +164,8 @@
             }
         }
 
-        blockquote {
+        & > blockquote,
+        .post__quote {
             margin: calc(var(--ru) * 2rem) 0;
             font-style: italic;
 
@@ -175,6 +176,15 @@
 
             @media all and (min-width: $screen-narrow) {
                 margin-left: 4rem;
+            }
+        }
+
+        .post__quote {
+            blockquote {
+                margin: 0;
+            }
+            figcaption {
+                font-size: 2rem;
             }
         }
 

@@ -37,12 +37,17 @@ module.exports = function (config) {
 
     config.addPairedShortcode("figure", (content, src, alt) => {
         return `
-        <figure>
+        <figure class='post__figure'>
             <img src='${src}' alt='${alt}' loading='lazy'>
             <figcaption>${content}</figcaption>
         </figure>
         `.trim()        
     })
+
+    config.addShortcode(
+        "picture",
+        (src, alt) => `<p><img loading='lazy' src='${src}' alt='${alt}'/></p>`.trim()
+    )
 
 
     // make the seed target act like prod
