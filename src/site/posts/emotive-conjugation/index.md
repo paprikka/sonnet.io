@@ -296,6 +296,14 @@ And if that doesn’t work, fall back to Hanlon’s razor:
 
 See you soon!
 
+---
+
+### Credits
+
+_[Alexandra Ciufudean](https://uk.linkedin.com/in/alexandra-ciufudean-36b65514a) edited this article and translated it into Human._
+
+_The inspiration for this article came from a chat with [Morgan Friedman](https://westegg.com)._
+
 {%
     picture
     '/images/emotive-conjugation/tomato-hugs.jpg',
