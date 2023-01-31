@@ -33,6 +33,8 @@ async function imageShortcode(
         decoding: 'async',
     }
 
+    console.log(`[image] save ${src} to ${outputDir}...`)
+    console.log({ metadata, imageAttributes })
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
     return Image.generateHTML(metadata, imageAttributes)
 }
