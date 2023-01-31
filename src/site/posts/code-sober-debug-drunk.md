@@ -1,7 +1,7 @@
 ---
 title: 'Code sober, debug drunk'
 date: 2021-03-28
-heroURL: /images/hero/code-sober-debug-drunk-hero.png
+heroURL: ./src/site/images/hero/code-sober-debug-drunk-hero.png
 thumbnail: /images/hero/code-sober-debug-drunk-hero-social.jpg
 hidden: false
 description: 'Practical snapshot testing tips'

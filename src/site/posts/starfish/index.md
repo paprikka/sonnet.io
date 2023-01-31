@@ -2,7 +2,7 @@
 title: 'No Such Thing as a Fish'
 date: 2021-07-04
 hidden: false
-heroURL: /images/hero/starfish.png
+heroURL: ./src/site/images/hero/starfish.png
 thumbnail: /images/hero/starfish-social.jpg
 description: 'A retrospective template'
 ---

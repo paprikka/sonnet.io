@@ -2,7 +2,7 @@
 title: 'Come and say hi'
 date: 2020-08-11
 hidden: false
-heroURL: /images/hi/hero.png
+heroURL: ./src/site/images/hi/hero.png
 thumbnail: /images/hi/hero-social.jpg
 ---
 

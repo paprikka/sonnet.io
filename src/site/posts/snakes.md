@@ -2,7 +2,7 @@
 title: 'Pair Programming with Snakes'
 date: 2021-03-21
 hidden: false
-heroURL: /images/snakes/intro.png
+heroURL: ./src/site/images/snakes/intro.png
 thumbnail: /images/snakes/intro-social.jpg
 description: 'Practical and opinionated pairing tips explained with snakes wearing hats.'
 ---

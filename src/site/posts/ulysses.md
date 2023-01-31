@@ -2,7 +2,7 @@
 title: Ensō
 date: 2019-12-01
 hidden: false
-heroURL: /images/hero-ulysses.png
+heroURL: ./src/site/images/hero-ulysses.png
 thumbnail: /images/hero-ulysses-social.png
 description: 'Ensō is a writing tool that helps you enter a state of flow.'
 ---

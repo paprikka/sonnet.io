@@ -1,7 +1,7 @@
 ---
 title: 'useRainbow()'
 date: 2021-11-18
-heroURL: /images/hero/use-rainbow.png
+heroURL: ./src/site/images/hero/use-rainbow.png
 thumbnail: /images/hero/use-rainbow-social.jpg
 hidden: false
 description: 'A quick note about the rainbow effect used on potato.horse and colour spaces'

@@ -22,7 +22,7 @@ async function imageShortcode(
     const metadata = await Image(getResolvedSrc(src, this.page), {
         widths: [600, 1200],
         formats: ['avif', 'webp', 'jpeg'],
-        outputDir: './src/site/images/opt',
+        outputDir: './dist/images/opt',
         urlPath: '/images/opt',
     })
 
@@ -33,10 +33,10 @@ async function imageShortcode(
         decoding: 'async',
     }
 
-    console.log(`[image] save ${src} to ${outputDir}...`)
-    console.log({ metadata, imageAttributes })
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes)
+    const meta = Image.generateHTML(metadata, imageAttributes)
+
+    console.log(`Saving ${JSON.stringify(metadata, null, 2)}`)
+    return meta
 }
 
 module.exports = function (config) {

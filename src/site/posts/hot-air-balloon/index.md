@@ -2,7 +2,7 @@
 title: 'Short: Retrofuturoretrospectives'
 date: 2021-06-07
 hidden: false
-heroURL: /images/hero/hot-air-balloon.png
+heroURL: ./src/site/images/hero/hot-air-balloon.png
 thumbnail: /images/hero/hot-air-balloon-social.png
 description: 'A retrospective template'
 ---

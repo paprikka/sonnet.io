@@ -8,12 +8,12 @@ templateEngineOverride: njk, md
   
 <article class="post">
   <header class="post__header">
-  {%- if heroURL %} <img src="{{ heroURL }}" alt="{{ title }}" class="post__hero"/> {% endif %}
+    {%- if heroURL %}{% pic heroURL, title %}{% endif %}
     <time class='post__time' datetime="{{ date }}">{{ date | dateDisplay }}</time>
     <h1 class='post__title'>{{ title }}</h1>
-        {%- if subtitle %}
-          <p class="post__subtitle">{{ subtitle | safe }}</p>
-        {% endif %}
+    {%- if subtitle %}
+    <p class="post__subtitle">{{ subtitle | safe }}</p>
+    {% endif %}
   </header>
   <div class="post__content">
     {{ content | safe }}
