@@ -34,8 +34,6 @@ async function imageShortcode(
     }
 
     const meta = Image.generateHTML(metadata, imageAttributes)
-
-    console.log(`Saving ${JSON.stringify(metadata, null, 2)}`)
     return meta
 }
 
