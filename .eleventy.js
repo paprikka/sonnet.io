@@ -3,12 +3,23 @@ const pluginRss = require('@11ty/eleventy-plugin-rss')
 
 const Image = require('@11ty/eleventy-img')
 
+const path = require('path')
+const getResolvedSrc = (src, page) => {
+    const isRemote = !src.startsWith('.')
+    if (isRemote) return src
+
+    const isColocated = !isRemote && !src.startsWith('./src')
+    if (!isColocated) return src
+
+    return path.resolve(page.inputPath, '../', src)
+}
+
 async function imageShortcode(
     src,
     alt,
     sizes = '(min-width: 1200px) 60rem, 100vw'
 ) {
-    const metadata = await Image(src, {
+    const metadata = await Image(getResolvedSrc(src, this.page), {
         widths: [600, 1200],
         formats: ['avif', 'webp', 'jpeg'],
         outputDir: './src/site/images/opt',
