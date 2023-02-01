@@ -15,7 +15,7 @@
         line-height: calc(var(--ru) * 4rem);
         margin: 0 0 calc(var(--ru) * 2rem);
         font-weight: 600;
-        text-align: left;
+        text-align: center;
     }
 
     &__post {
@@ -29,7 +29,6 @@
         font-size: 3rem;
         line-height: calc(var(--ru) * 2rem);
         color: var(--color-text);
-        whitespace: no-wrap;
         display: block;
         word-break: break-word;
         text-decoration: none;

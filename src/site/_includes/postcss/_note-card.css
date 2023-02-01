@@ -1,11 +1,16 @@
 .note-card {
-    --b: 1px solid rgba(0, 0, 0, 0.2);
+    --b: 1px dashed rgba(0, 0, 0, 0.1);
     margin-bottom: calc(var(--ru) * 5rem);
-    border: var(--b);
+    border: none;
     padding: calc(var(--ru) * 2rem) 1rem 1rem;
     position: relative;
     transition: 0.2s border-color;
     background-color: var(--color-bg);
+
+    & p {
+      font-size: 1.5rem;  
+      line-height: calc(var(--ru) * 1.5rem);
+    }
 
     &__share-button {
         --w: 3rem;
@@ -46,6 +51,7 @@
     &__header {
         width: 100%;
         position: absolute;
+        padding: 0;
         top: -2rem;
         left: 0;
         display: flex;
@@ -57,11 +63,10 @@
     &__title {
         text-align: center;
         font-size: 2rem;
-        padding: 0 1rem;
+        padding: 0;
         line-height: calc(var(--ru) * 2rem);
         color: var(--color-text);
         background-color: var(--color-bg);
-        whitespace: no-wrap;
         display: block;
         word-break: break-word;
         text-decoration: none;
@@ -84,11 +89,12 @@
     }
 
     &__time {
-        text-align: center;
+        text-align: left;
         display: block;
         font-size: 1rem;
         line-height: calc(var(--ru) * 1rem);
         opacity: 0.6;
+        font-weight: 600;
         font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
     }
 
@@ -102,6 +108,26 @@
         img {
             max-width: 100%;
             height: auto;
+            vertical-align: bottom;
+        }
+
+        picture {
+            display: block;
+            position: relative;
+            left: -1rem;
+            width: calc(100% + 2rem);
+            right: -1rem;
+            display: block;
+            background-color: red;
+            
+        }
+
+        pre[class*="language-"]  {
+            font-size: 1rem;
+            position: relative;
+            left: -1rem;
+            right: -1rem;
+            
         }
 
         p {
@@ -121,6 +147,7 @@
             }
         }
 
+
         @media all and (min-width: $screen-narrow) {
             font-size: 2rem;
             line-height: calc(var(--ru) * 2rem);
@@ -130,8 +157,8 @@
 
 .note-actions {
     display: flex;
-    button,
-    a {
+    & button,
+    & a {
         margin: 0;
         margin-right: 1rem;
         color: inherit;
