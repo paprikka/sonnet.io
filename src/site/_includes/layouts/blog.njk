@@ -6,7 +6,7 @@ pageClass: intro
 <article class="blog container">
   {% include "header-blog.njk" %}
   <section class="listing">
-    <h1>Blog</h1>
+    <h1>Writing</h1>
     <ul class='listing__posts'>
       {%- for page in collections.post | reverse-%}
         {% if (page.data.hidden != true) %}
