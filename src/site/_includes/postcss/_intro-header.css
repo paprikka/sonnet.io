@@ -1,4 +1,4 @@
-.page-header {
+.intro-header {
     line-height: calc(var(--ru) * 2rem);
     font-size: 2rem;
     padding: calc(var(--ru) * 1rem - 1px) 0;
