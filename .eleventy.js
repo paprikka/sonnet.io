@@ -71,6 +71,18 @@ module.exports = function (config) {
 
     config.addPlugin(pluginRss)
 
+    async function renderFig(content, src, alt) {
+        const imgHTML = await imageShortcode.bind(this)(src, alt)
+        return `
+        <figure class='post__figure'>
+            ${imgHTML}
+            <figcaption>${content}</figcaption>
+        </figure>
+        `.trim()
+    }
+    // TODO: merge into one shortcode after publishing the post
+    config.addPairedAsyncShortcode('fig', renderFig)
+
     config.addPairedShortcode('figure', (content, src, alt) => {
         return `
         <figure class='post__figure'>
