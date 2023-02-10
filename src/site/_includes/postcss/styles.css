@@ -16,6 +16,7 @@
 html {
     font-size: var(--font-size);
     line-height: var(--ru);
+    background-color: var(--color-bg);
 }
 
 body {
