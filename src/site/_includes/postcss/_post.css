@@ -56,6 +56,26 @@
         }
     }
 
+    &__tip-jar {
+        padding: calc(var(--ru) * 2rem);
+        text-align: center;
+        display: block;
+        border: 1px solid var(--color-text-fade);
+        position: relative;
+
+        &::after {
+            font-size: 3rem;
+            background: var(--color-bg);
+            color: var(--color-link);
+            content: '❦';
+            position: absolute;
+            top: calc(var(--ru) * -1.5rem);
+            left: 50%;
+            transform: translateX(-50%);
+            font-style: normal;
+        }
+    }
+
     &__content {
         p {
             font-size: 2rem;
