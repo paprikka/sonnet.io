@@ -1,8 +1,8 @@
 ---
 title: 'Sit.'
 date: 2023-02-10
-heroURL: ./src/site/posts/sit/imgs/hero.png
-thumbnail: /images/hero/use-rainbow-social.jpg
+heroURL: ./src/site/posts/sit/imgs/sit.png
+thumbnail: /images/hero/sit-social.jpg
 hidden: false
 description: 'A quick note about the rainbow effect used on potato.horse and colour spaces'
 ---
@@ -13,7 +13,7 @@ Before you read on, [open the app](https://sit.sonnet.io) and check it out for y
 
 This page isn’t going anywhere, I’ll wait for you here.
 
-{% pic "./imgs/thread.png", "Thread" %}
+{% pic "./imgs/thread.png", "A long (2-3 screen heights) red thread. When you follow it, you notice that in the middle it turns into text 'keep scrolling'. At the end of the thread there is a head on which the thread rests, forming a tiny messy pile." %}
 
 Glad to have you back. Did you cheat?
 
@@ -30,15 +30,17 @@ I’ve always loved the idea of simple, atomic (as “[indivisible](https://www.
 
 Some of my other projects, like [Ensō](https://enso.sonnet.io), [Façade](http://facade.photo), and the [goat telling me to slow down when I talk too fast](https://twitter.com/rafalpast/status/1272945933228167169?s=20), also follow the same principle. So let’s focus on the specifics: why are we talking about _Sit._, and not, say, _Squanch_?
 
-### Reason #1: Time
+## Reason #1: Time
 
 > "Live Slow, Die Old"<br>
 > <cite>an ancient Doom Metal koan</cite>
 
 In the past decade the Web has become a sort of a [shitty metaverse](https://www.theatlantic.com/magazine/archive/2023/03/tv-politics-entertainment-metaverse/672773/). Every step you take is watched and assessed in terms of its monetisation potential, every interaction is meant to extract value from you. Fine, IndieWeb and Mastodon are making things marginally better, but there’s so much more to be done outside of their little bubbles (which I love dearly).
 
-{% pic "./imgs/shitty-metaverse.png", "" %}
-_An artist's interpretation of my Twitter feed, the colours depicted are not accurate._
+
+{% fig './imgs/shitty-metaverse.png', 'A messy hand-drawn illustration with a variety of characters screaming at each other using cheesy social media hashtags or conspiracy theory quotes (e.g. "peppa the pig did a nazi salute!", "#blessed", "I have no mouth but I must scream").' %}
+An artist's interpretation of my Twitter feed, the colours depicted are not accurate.
+{% endfig %}
 
 
 Just like advertising, which assumes consent by default, most of the Web in its current shape robs you of your time. You can withdraw consent, but only after we’ve shown you the brain parasite.
@@ -57,19 +59,20 @@ What I wanted to build was the opposite. I wanted to give you a little of your t
 
 I hope you chose the latter. If not, I do hope that since you've read this far I’m giving you something worth your time. Just like anyone else I want to feel useful.
 
-{% pic "./imgs/foot.png", "" %}
-*Have you ever wasted 10 minutes of your life  scrolling through Twitter, only to forget why you’re there in the first place? Spoiler: you were looking for something else, but got lost on the way.*
+{% fig "./imgs/foot.png", "An unfinished drawing of a foot. It's done using a single line which takes the shape of a foot, but eventually turns into a scribbled text saying 'ah whatever fuck it' followed by a poorly drawn logo of a bird, flying away. The bird looks a little bit like the logo of Twitter." %}
+Have you ever wasted 10 minutes of your life  scrolling through Twitter, only to forget why you’re there in the first place? Spoiler: you were looking for something else, but got lost on the way.
+{% endfig %}
 
 A funny thing can happen when you use _Sit._ When you just sit and do nothing, every minute  drags on into what feels like infinity. But when you mindlessly watch TikTok or doomscroll through Twitter on the other hand, hyperspace seems to bend in the opposite direction: I blink and the pasta is overcooked, I blink again and the light in the kitchen is different, cooler, the shadows have moved. Are we really alive if we’re not here? 
 
 When you open _Sit._, I don’t try to fill your brain with anything. It’s just you and your thoughts. That can get uncomfortable. But when you finish, for some strange reason you feel better.
 
-_Alternative title for reason #1: the time I want back._
+> Alternative title for reason #1: the time I want back.
 
 The two other reasons I built _Sit._ are more trivial and less likely to generate a rant.
 
 
-## Motivation
+## Reason #2: Motivation
 
 I’ve decided to drop full time work and move back to personal projects, which means I’m still figuring out a structure for my day, which means it’s easy to get stuck in a rut.
 
@@ -84,9 +87,9 @@ Iterative methodologies like Agile are not only useful because they allow us to 
 > Alternative title for reason #2: <br/>
 > I’m stuck, pass the shovel, not this one, the small one.
 
-{% pic "./imgs/shovel.png", ""  %}
+{% pic "./imgs/shovel.png", "A simple border made of a bunch of tiny shovels in a row, forming a horizontal line. One of the shovels is gold."  %}
 
-## Black dog
+## Reason #3: Black dog
 
 The final reason will sound trivial, but it’s one of those trivial things worth repeating till they’ve finally carved into our brains: mental health is important. 
 
@@ -98,7 +101,7 @@ I’m interested in mental health both from a professional and personal point of
 There’s so much low hanging fruit here. 
 
 
-### I have _very specific_ clock needs. 
+### Reason #3.1: I have _very specific_ clock needs. 
 
 I don’t want to be wise. I want to be clockwise.
 
@@ -106,20 +109,19 @@ _But seriously_ now. Another big reason why _Sit._ is built this way is habit re
 
 I try to meditate every day in the morning. For me it’s a form of mental hygiene and a “spiritual” practice only in terms of connecting with something bigger than us (nature, not religion). One of the types of meditation I practise, called [shi-nè](https://en.wikipedia.org/wiki/Samatha-vipassana), is quite challenging because it involves learning how to detach yourself from the voice in your head _without_ focusing on anything else in particular like breath or music.
 
-{% pic "./imgs/floating.png", "" %}
-_Be comfortable with being, sitting down, uninvolved.<br>
-There’s no anchor, but there isn’t anywhere to go, either._
-
+{% fig "./imgs/floating.png", "A red ballon with a face peeking out of a hole in the ground, looking up longingly towards a bunch of tiny people, dressed as if they were going to work, holding suitcases. One of those characters looks like an angel. They have little pieces of thread attached to their feet, which makes them resemble balloons." %}
+Be comfortable with being, sitting down, uninvolved.<br>
+There’s no anchor, but there isn’t anywhere to go, either.
+{% endfig %}
 
 > The simple instruction for shi-ne is to maintain presence of awareness without focusing on anything, that is, remain uninvolved with whatever arises in mind
 > <cite>[source](https://vajrayananow.com/shi-ne-meditation)</cite>
-
-{% pic "./imgs/away.png", "" %}
 
 The  point here is that this  can quickly get both frustrating and boring. Our brain constantly looks for things to focus on, it abhors a vacuum. So the positive effects of this exercise take time to manifest. And maintaining a habit that initially feels _unpleasant_ is hard. 
 
 Remember earlier when I said that although sitting down and doing nothing can be unpleasant at first, when you finish for some strange reason you feel better? It turns out,  you benefit from habits more if you take some time to reflect on them after you’re done. It also makes them easier to stick, by teaching us to associate reward with an initially annoying  activity. 
 
+{% pic "./imgs/away.png", "A red ballon with a face peeking out of a hole in the ground, looking up longingly towards a little black hole in the ceiling. It looks as if another balloon just escaped through that hole, since we can still see a little thread in it. Perhaps it's the same baloon, looking at himself from the past." %}
 
 That’s why the timer in _Sit._ is gentler than a regular snooze button. It lets me wind down and reflect without aggressively throwing me back into my regular routine like an alarm clock would. And it gives me more control over my meditation schedule: I still know how much time has passed but I can afford to spend another minute or two on it .
 
@@ -130,14 +132,13 @@ That’s why the timer in _Sit._ is gentler than a regular snooze button. It let
 
 How did it go? 
 
-{% pic "./imgs/feedback.png", "" %}
+{% pic "./imgs/feedback.png", "Screenshots of feedback and testimonials given by the users of Sit. The feedback is overall very positive and people seem happy that they had an excuse to rest for a few minutes. Most of the men commented asking if Sit could also provide additional features such as standing. I feel like they're missing the point." %}
 
-So far the users of _Sit._ “wasted” a combined few days’ worth of work by sitting down and doing nothing_._ Someone wrote a [short article](https://wtf.microsiervos.com/misc/sentarse-y-no-hacer-nada.html) about it, and I received warm comments from people who apparently needed to be distracted from their distractions. 
+So far the users of _Sit._ “wasted” a combined few days’ worth of work by sitting down and doing _nothing_. Someone wrote a [short article](https://wtf.microsiervos.com/misc/sentarse-y-no-hacer-nada.html) about it, and I received warm comments from people who apparently needed to be distracted from their distractions. 
 
 I put all of those wasted minutes together into one imaginary person. Imagine you sent someone you like on a spa vacation for a few days. Now imagine that that hypothetical person is a perfect sphere.
 
-{% pic "./imgs/ecce-homo.png", "" %}
-_A human_
+{% fig "./imgs/ecce-homo.png", "A large pink circle, with a tiny face in the middle. It has rosy cheecks." %}A human{% endfig %}
 
 Listen, I know it’s not rocket science, I know it’s a small thing. But knowing that somewhere, someone sat down, watched the grass grow and had time for themselves instead of doomscrolling or crafting a world-altering post on LinkedIn… It made me feel better and let me get out of my own head. We’re simple folk here, with simple, yet mysterious needs.
 
