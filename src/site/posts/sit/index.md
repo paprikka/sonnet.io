@@ -4,7 +4,7 @@ date: 2023-02-10
 heroURL: ./src/site/posts/sit/imgs/sit.png
 thumbnail: /images/hero/sit-social.png
 hidden: false
-description: 'A quick note about the rainbow effect used on potato.horse and colour spaces'
+description: 'Notes on mental health, motivation and Agile.'
 ---
 
 > In this article I’ll be using [Sit.](https://sit.sonnet.io) as an excuse to talk about some wider ideas (motivation, mental health, iterative design processes). We’ll explain **why** it came about, but not **how**. In part 2 I’ll show you how to take an idea from a hunch into a working app. Stay tuned!
