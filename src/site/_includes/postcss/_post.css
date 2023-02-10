@@ -158,6 +158,8 @@
                     text-align: center;
                     margin: calc(var(--ru) * 1rem) 0;
                     font-size: 1.5rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
                     line-height: calc(var(--ru) * 1rem);
                 }
             }
