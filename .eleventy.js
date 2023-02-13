@@ -19,12 +19,26 @@ async function imageShortcode(
     alt,
     sizes = '(min-width: 1200px) 60rem, 100vw'
 ) {
-    const metadata = await Image(getResolvedSrc(src, this.page), {
+    const isAnimated = src.endsWith('.gif')
+    const sharedOpts = {
         widths: [600, 1200],
-        formats: ['avif', 'webp', 'jpeg'],
         outputDir: './dist/images/opt',
         urlPath: '/images/opt',
-    })
+    }
+
+    const options = isAnimated
+        ? {
+              ...sharedOpts,
+              formats: ['webp', 'gif'],
+              sharpOptions: {
+                  animated: true,
+              },
+          }
+        : {
+              ...sharedOpts,
+              formats: ['avif', 'webp', 'jpeg'],
+          }
+    const metadata = await Image(getResolvedSrc(src, this.page), options)
 
     const imageAttributes = {
         alt,
@@ -34,6 +48,13 @@ async function imageShortcode(
     }
 
     const meta = Image.generateHTML(metadata, imageAttributes)
+
+    // TODO: remove me
+    // ? temporary hack before pushing to HN
+    if (src === './src/site/posts/sit/imgs/hero.gif') {
+        console.log('=== there can be only one ===')
+        return meta.replace('height="2400"', 'height="600" data-yolo="true"')
+    }
     return meta
 }
 

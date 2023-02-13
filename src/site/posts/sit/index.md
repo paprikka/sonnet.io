@@ -1,7 +1,7 @@
 ---
 title: 'Sit.'
 date: 2023-02-10
-heroURL: ./src/site/posts/sit/imgs/sit.png
+heroURL: ./src/site/posts/sit/imgs/hero.gif
 thumbnail: /images/hero/sit-social.png
 hidden: false
 description: 'Notes on mental health, motivation and Agile.'
