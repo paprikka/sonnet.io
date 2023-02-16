@@ -189,6 +189,7 @@ Some familiar examples of attribution bias might involve a driver cutting you of
 Humans are social creatures, and I like to think that we’re not inherently as selfish as the media soup would like us to think. Most of us don’t think less of others, but we have a tendency to take cognitive shortcuts.
 
 For example, instead of malevolence, attribution bias could be [partially](https://en.wikipedia.org/wiki/Attribution_bias#Limitations_of_the_theory) explained by a lack of data: we don’t know that the driver who cut you off was tired or stressed, or that the engineer whose commits you were about to criticise was in fact _you_.
+<p id='a-ghost-story'></p>
 
 {%
     picture
