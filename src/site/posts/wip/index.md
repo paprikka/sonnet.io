@@ -3,6 +3,7 @@ title: 'Short: WiP'
 date: 2023-02-20
 heroURL: ./src/site/posts/wip/imgs/hero.png
 thumbnail: /images/hero/wip-social.png
+description: 'Practical tips on applying divergent and convergent modes of thinking in your work, sponsored by W. Herzog and 2 particularly smart rodents.'
 hidden: false
 ---
 
