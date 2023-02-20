@@ -85,6 +85,15 @@ Understand the two different modes of thinking when exploring and narrowing down
 
 PS. [Alexandra Ciufudean](https://uk.linkedin.com/in/alexandra-ciufudean-36b65514a) edited and translated this article into human. She also came up with the idea of using ~~my childhood trauma~~ one of my favourite cartoons as a metaphor.
 
+<br>
+<br>
+
+<section class='post__tip-jar'>
+<p>
+    Psst! If you liked this post, consider <a href='https://rafal.ck.page/products/tip'>buying me a coffee</a>.
+</p>
+</section>
+
 ### Footnotes
 
 1. <span id='footnote-1'></span> These are real examples found after spending less than a minute sampling the commit history of a randomly selected project.
