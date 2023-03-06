@@ -1,31 +1,56 @@
 .footnote {
+    padding: calc(var(--ru) * 2rem);
+    text-align: center;
+    display: block;
+    border: 1px solid var(--color-text-fade);
+    position: relative;
+    
     background-color: var(--color-bg);
     color: var(--color-text);
     font-size: 2rem;
     line-height: calc(var(--ru) * 2rem);
-    margin: calc(var(--ru) * 2rem) 0 0;
+    margin: calc(var(--ru) * 3rem) 0 0;
+
+    &::after {
+        font-size: 3rem;
+        background: var(--color-bg);
+        color: var(--color-link);
+        content: '❦';
+        position: absolute;
+        top: calc(var(--ru) * -1.25rem);
+        left: 50%;
+        transform: translateX(-50%);
+        font-style: normal;
+    }
 
     a {
         color: var(--color-text);
-        font-weight: 500;
+        font-weight: 600;
         font-style: italic;
-    }
-
-
-    &::before {
-        content: '';
-        display: block;
-        height: 1px;
-        width: 100%;
-        background-color:black;
-        ;
     }
 
     h3 {
         font-size: 2.5rem;
         font-weight: 500;
         line-height: calc(var(--ru) * 2rem);
-        margin: calc(var(--ru) * 2rem) 0 calc(var(--ru) * 1rem);
+        margin: 0 0 calc(var(--ru) * 1rem);
+    }
+
+    nav {
+        
+        font-size: 1.5rem;
+        margin: calc(var(--ru) * 2rem) 0 0;
     }
 }
 
+.post__nav {
+    margin: calc(var(--ru) * 2rem) 0;
+    font-size: 1.5rem;
+    text-align: center;
+
+    a {
+        color: var(--color-text);
+        font-weight: 600;
+        font-style: italic;
+    }
+}
