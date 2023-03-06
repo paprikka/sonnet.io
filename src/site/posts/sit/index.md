@@ -158,13 +158,3 @@ I also offer free office hours, where I talk to random people about ideas big an
 
 
 PS. This article wouldn’t be possible without **[Alexandra Ciufudean](https://uk.linkedin.com/in/alexandra-ciufudean-36b65514a)** who translated it into human.
-
-
-<br>
-<br>
-
-<section class='post__tip-jar'>
-<p>
-    Psst! If you liked this post, consider <a href='https://rafal.ck.page/products/tip'>buying me a coffee</a>. The article took a week to write but most importantly: that sweet <em>dong!</em> sound in Sit. cost me €2.49 (!).
-</p>
-</section>

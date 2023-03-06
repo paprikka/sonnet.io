@@ -1,0 +1,60 @@
+.sharing {
+    padding: calc(var(--ru) * 2rem);
+    text-align: center;
+    display: block;
+    border-top: 1px solid var(--color-text-fade);
+    border-bottom: 1px solid var(--color-text-fade);
+    position: relative;
+    
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: 2rem;
+    line-height: calc(var(--ru) * 2rem);
+    margin: calc(var(--ru) * 6rem) 0 calc(var(--ru) * 3rem);
+
+    &::after {
+        content: '';
+        background: var(--color-bg) url(/images/janusz_separator.png);
+        background-size: cover;
+        width: 4rem;
+        height: 4rem;
+        display: block;
+        position: absolute;
+        padding: 0 .25rem;
+        top: calc(var(--ru) * -1.31rem);
+        left: 50%;
+        transform: translateX(-50%);
+        font-style: normal;
+    }
+
+    a {
+        color: var(--color-text);
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: calc(var(--ru) * 2rem);
+        margin: 0 0 calc(var(--ru) * 1rem);
+    }
+
+    nav {
+        
+        font-size: 1.5rem;
+        margin: calc(var(--ru) * 2rem) 0 0;
+    }
+}
+
+.post__nav {
+    margin: calc(var(--ru) * 2rem) 0;
+    font-size: 1.5rem;
+    text-align: center;
+
+    a {
+        color: var(--color-text);
+        font-weight: 600;
+        font-style: italic;
+    }
+}
