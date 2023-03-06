@@ -2,7 +2,8 @@
     padding: calc(var(--ru) * 2rem);
     text-align: center;
     display: block;
-    border: 1px solid var(--color-text-fade);
+    border-top: 1px solid var(--color-text-fade);
+    border-bottom: 1px solid var(--color-text-fade);
     position: relative;
     
     background-color: var(--color-bg);
@@ -12,12 +13,15 @@
     margin: calc(var(--ru) * 3rem) 0 0;
 
     &::after {
-        font-size: 3rem;
-        background: var(--color-bg);
-        color: var(--color-link);
-        content: '❦';
+        content: '';
+        background: var(--color-bg) url(/images/janusz_separator.png);
+        background-size: cover;
+        width: 4rem;
+        height: 4rem;
+        display: block;
         position: absolute;
-        top: calc(var(--ru) * -1.25rem);
+        padding: 0 .25rem;
+        top: calc(var(--ru) * -1.31rem);
         left: 50%;
         transform: translateX(-50%);
         font-style: normal;
