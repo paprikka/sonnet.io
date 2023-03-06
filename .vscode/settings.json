@@ -13,7 +13,7 @@
         "editor.formatOnSave": false
     },
     "files.associations": {
-        "*.css": "postcss",
+        "*.css": "scss",
         "*.md": "nunjucks"
     },
     "emmet.includeLanguages": {

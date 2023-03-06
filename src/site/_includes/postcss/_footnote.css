@@ -1,7 +1,8 @@
 .footnote {
+    background-color: var(--color-bg);
+    color: var(--color-text);
     font-size: 2rem;
     line-height: calc(var(--ru) * 2rem);
-    text-align: center;
     margin: calc(var(--ru) * 2rem) 0 0;
 
     a {
@@ -9,4 +10,22 @@
         font-weight: 500;
         font-style: italic;
     }
+
+
+    &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color:black;
+        ;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: calc(var(--ru) * 2rem);
+        margin: calc(var(--ru) * 2rem) 0 calc(var(--ru) * 1rem);
+    }
 }
+
