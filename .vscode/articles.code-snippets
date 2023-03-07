@@ -8,6 +8,13 @@
 		"prefix": "fsrc",
 		"body": "{% set $1 = '$2' | md %}"
 	},
+	"Smart quotes": {
+		"scope": "nunjucks,markdown",
+		"prefix": "\"\"",
+		"body": [
+			"“$1”"
+		]
+	}
 	// Place your sonnet.io workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
 	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
 	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
