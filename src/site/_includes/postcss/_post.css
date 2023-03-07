@@ -296,29 +296,4 @@
             margin-right: 0.2em;
         }
     }
-
-    .footnotes__back-link {
-        position: relative;
-        top: 0.1rem;
-        text-decoration: none;
-        font-style: normal;
-        opacity: 0.6;
-        font-size: 0.75em;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-}
-
-body {
-    counter-reset: footnotes;
-}
-
-[role='doc-noteref']::after {
-    counter-increment: footnotes;
-    content: '[' counter(footnotes) ']';
-    vertical-align: super;
-    font-size: 0.75em;
-    text-decoration: none;
 }

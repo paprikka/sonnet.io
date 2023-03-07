@@ -1,0 +1,102 @@
+.footnotes {
+    --base-font-size: 1.5rem;
+
+    p {
+        font-size: var(--base-font-size);
+        line-height: calc(var(--ru) * 1.5rem);
+        margin: calc(var(--ru) * 0.5rem) 0;
+    }
+
+    a {
+        color: var(--color-text);
+        font-weight: 600;
+
+        &:hover,
+        &:active {
+            color: var(--color-link);
+        }
+
+        /* TODO: clean and unify */
+        &:not(.footnote) {
+            font-style: italic;
+        }
+
+        &.footnote {
+            vertical-align: super;
+            font-size: 0.75em;
+            text-decoration: none;
+
+            &:before {
+                content: '[';
+            }
+            &:after {
+                content: ']';
+            }
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: calc(var(--ru) * 2rem);
+        margin: calc(var(--ru) * 2rem) 0 calc(var(--ru) * 1rem);
+    }
+
+    ol,
+    ul {
+        margin: 0;
+        padding: 0;
+        font-size: var(--base-font-size);
+        line-height: calc(var(--ru) * 1.5rem);
+        margin-bottom: calc(var(--ru) * 2rem);
+
+        li {
+            margin-bottom: calc(var(--ru) * 1rem);
+        }
+    }
+
+    ul {
+        list-style: none;
+        li {
+            position: relative;
+
+            &::before {
+                display: inline-block;
+                width: 2rem;
+                content: '–';
+                margin-left: -2rem;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__ref {
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    &__back-link {
+        position: relative;
+        top: 0.1rem;
+        text-decoration: none;
+        font-style: normal;
+        opacity: 0.6;
+        font-size: 0.75em;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+body {
+    counter-reset: footnotes;
+}
+
+[role='doc-noteref']::after {
+    counter-increment: footnotes;
+    content: '[' counter(footnotes) ']';
+    vertical-align: super;
+    font-size: 0.75em;
+    text-decoration: none;
+}
