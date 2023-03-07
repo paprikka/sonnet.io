@@ -1,5 +1,6 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
+const footnotes = require('eleventy-plugin-footnotes')
 
 const Image = require('@11ty/eleventy-img')
 
@@ -62,22 +63,17 @@ module.exports = function (config) {
     // A useful way to reference the context we are runing eleventy in
     let env = process.env.ELEVENTY_ENV
 
-    //
-    // set markdown footnote processor
-    //
-    let markdownIt = require('markdown-it')
-    let markdownItFootnote = require('markdown-it-footnote')
+    config.addPlugin(footnotes, {
+        baseClass: 'footnotes',
+    })
 
-    let options = {
-        html: true, // Enable HTML tags in source
-        linkify: true, // Autoconvert URL-like text to links
-    }
+    let markdown = require('markdown-it')({
+        linkify: true,
+    })
 
-    // configure the library with options
-    let markdownLib = markdownIt(options).use(markdownItFootnote)
-    // set the library to process markdown files
-    config.setLibrary('md', markdownLib)
-
+    config.addFilter('md', function (rawString) {
+        return markdown.renderInline(rawString)
+    })
     // Layout aliases can make templates more portable
     config.addLayoutAlias('default', 'layouts/base.njk')
 
