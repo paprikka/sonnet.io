@@ -52,6 +52,16 @@
 
         li {
             margin-bottom: calc(var(--ru) * 1rem);
+            background: transparent;
+            box-shadow: none;
+            transition: 1s background, 1s box-shadow;
+            border-radius: 0.25rem;
+
+            word-break: break-word;
+            &:target {
+                background: #ffc1075c;
+                box-shadow: 0 0 0 0.5rem #ffc1075c;
+            }
         }
     }
 
