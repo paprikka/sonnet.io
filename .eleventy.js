@@ -74,6 +74,11 @@ module.exports = function (config) {
     config.addFilter('md', function (rawString) {
         return markdown.renderInline(rawString)
     })
+
+    config.addFilter('mdblock', function (rawString) {
+        return markdown.render(rawString)
+    })
+
     // Layout aliases can make templates more portable
     config.addLayoutAlias('default', 'layouts/base.njk')
 
