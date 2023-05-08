@@ -68,7 +68,7 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
     },
     {
         title: 'Façade',
-        date: '2022-11-10',
+        date: '2016-04-24',
         demoURL: 'https://facade.photo',
         content: `
         Façade makes it easy to create studio lighting using your phone, computer or tablet. Launched in Spring 2016, also used in the Rainbotron™ (an art installation/im promptu photo studio made of furniture salvaged in Brick Lane). 
@@ -78,7 +78,91 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
 
         `,
     },
+
+    {
+        title: 'Goatspeed you! Black Phillip',
+        content: 'A simple app reminding me to speak more slowly',
+        demoURL: 'https://twitter.com/rafalpast/status/1272945933228167169',
+        date: '2020-06-14',
+    },
+    {
+        title: 'Lana!',
+        date: '2022-12-09',
+        content: 'NPM scripts with better UX',
+        demoURL: 'https://www.npmjs.com/package/lana-cli',
+    },
+    {
+        title: 'Kalam',
+        date: '2017-02-24',
+        content:
+            'Markov Chain based procedural name generator used for Storienteer',
+        demoURL: 'https://github.com/paprikka/kalam',
+    },
+    {
+        title: 'Mrr',
+        date: '2023-01-10',
+        content: 'are you ready to Mrrr?',
+        demoURL: 'https://mrr.sonnet.io',
+    },
+    {
+        title: 'Physically accurate Mrr',
+        date: '2023-01-11',
+        content: 'are you ready to Mrrr, Newton?',
+        demoURL: 'https://mrrr.vercel.app',
+    },
+    {
+        title: 'YAFTL(yet another fucking todo list)',
+        date: '2020-05-14',
+        content: 'Materials from the prototyping course I ran via Twitch',
+        demoURL: 'https://github.com/paprikka/yaftl',
+    },
+    {
+        title: 'Dotfile Paella',
+        date: '2022-11-24',
+        content:
+            'A bunch of dotfile settings I use frequently and a small group of people considers moderately useful.',
+        demoURL: 'https://github.com/paprikka/dotfile-paella',
+    },
+    {
+        title: '18 Musicians',
+        date: '2021-10-24',
+        content:
+            'Interactive Album cover for 18 Musicians by Steve Reich, performed by Eric Hall (check the site for credits)',
+        demoURL: 'https://18-musicians.vercel.app',
+    },
+    {
+        title: 'Reactive Hole',
+        date: '2021-01-30',
+        content: 'A browser-based P2P file sharing app',
+        demoURL: 'https://reactive-hole.vercel.app',
+        links: [
+            {
+                type: 'article',
+                href: 'https://sonnet.io/posts/reactive-hole/',
+            },
+            {
+                type: 'source',
+                href: 'https://github.com/paprikka/reactive-hole',
+            },
+        ],
+    },
+    {
+        title: 'Laconic',
+        date: '2020-06-15',
+        content: `Use Twitter as a CDN! Serve Pong, or the Epic of Gilgamesh from a single tweet.
+
+            Some useless [examples](https://twitter.com/rafalpast/status/1316836397903474688) (a Twitter thread)
+            `,
+        demoURL: 'https://laconic-mu.vercel.app/editor.html',
+    },
 ]
+
+// TODO projects:
+// - sulik
+// - rainbotron
+// - tommy
+// - spiritual Volleyball
+// - All Hands Meeting Simulator
 
 // write a function to:
 // - given a multiline string,
