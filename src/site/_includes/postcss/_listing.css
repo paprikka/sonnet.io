@@ -19,7 +19,6 @@
     }
 
     &__post {
-        font-weight: 600;
         margin-bottom: calc(var(--ru) * 2rem);
         text-align: left;
         overflow: visible;
@@ -43,7 +42,7 @@
         font-size: 1.5rem;
         line-height: calc(var(--ru) * 2rem);
         opacity: 0.6;
-        font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+        font-family: var(--font-secondary);
     }
 
     hr {
