@@ -122,7 +122,6 @@
         @media all and (min-width: $screen-mid) {
             margin: 0;
         }
-        https://sit.sonnet.io/
 
         &:active {
             transform: scale(0.98);
