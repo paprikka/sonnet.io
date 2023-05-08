@@ -13,24 +13,26 @@ pageClass: projects
   <ul class='projects-list'>
     {%- for project in projects.favourites -%}
     
-      {%  project.isFavourite %}
+      {%- if  project.isFavourite -%}
         <li class='projects-entry'>
           <article>
             <header>
-              <h1>{{project.title}}</h1>
+              <h1><a href='{{project.demoURL}}'>{{project.title}}</a></h1>
               <time datetime="{{ project.date }}">{{ project.date | dateDisplay }}</time>
             </header>
 
-            {%- if project.heroURL %}{% pic project.heroURL,
+            <a href="{{project.demoURL}}" class='projects-entry__thumbnail'>
+              {%- if project.heroURL %}{% pic project.heroURL,
               project.title %}
             {% endif %}
+              </a>
 
             <section class='projects-entry__content'>{{ project.content | mdblock | safe}}</section>
-            <section class="projects-entry__actions">
+            <section class="projects-actions">
               {% if (project.demoURL) %}
-              <a href='{{project.demoURL}}' class='projects-entry__link'>Launch</a>
+              <a href='{{project.demoURL}}' class='projects-actions__link'>Launch</a>
             {% else %}
-              <a href='mailto:hello@sonnet.io' class='projects-entry__link'>Contact</a>
+              <a href='mailto:hello@sonnet.io' class='projects-actions__link'>Contact</a>
             {% endif %}
             </section>
 
@@ -38,6 +40,34 @@ pageClass: projects
         </li>
       {% endif %}
     {%- endfor -%}
+  </ul>
+  <h2>Other projects</h2>
+  <ul class='projects-remaining-list'>
+    {% for project in projects.remaining %}
+      <li>
+        <header>
+          <h1><a href='{{project.demoURL}}'>{{project.title}}</a></h1>
+          <time datetime="{{ project.date }}">{{ project.date | dateDisplay }}</time>
+        </header>
+        <section class='projects-remaining-list__content'>{{ project.content | mdblock | safe}}</section>
+
+        <section class="projects-actions">
+        {% for link in project.links %}
+          {% if link.type === 'source' %}
+          <a 
+            href='{{link.url}}'
+            class='projects-actions__link projects-actions__link--secondary'>Source</a>
+          {% else %}
+          <a
+           href='{{link.url}}' 
+           class='projects-actions__link'>Open</a>
+          {% endif %}</a>
+        {% endfor %}
+        </section>
+        
+        </li>
+    {% endfor %}
+
   </ul>
   <hr>
 </div>

@@ -1,14 +1,5 @@
 /**
- * @typedef {Object} Project
- * @property {string} title - The title of the project.
- * @property {string} heroURL - The URL of the hero image.
- * @property {string} demoURL - The URL of the demo.
- * @property {boolean?} isFavourite - Whether the project is a favourite or not.
- * @property {string} content - The content of the project.
- */
-
-/**
- * @type {Project[]}
+ * @type {import('./types').Project[]}
  */
 const favourites = [
     {
@@ -49,6 +40,46 @@ Please share with a friend who needs to sit the fuck down or enjoy the experienc
     },
 ]
 
+/**
+ * @type {import('./types').RemainingProject[]}
+ */
+const remainingProjects = [
+    {
+        title: 'Medieval (Content) Farm',
+        date: '2022-04-28',
+        demoURL: 'https://tidings.potato.horse',
+        content: `We're a biased and hallucinated news source curated by a team of talented writers. Every day they scour the internet for the most interesting and relevant events of the realm.`,
+
+        links: [{ type: 'source', url: 'http://github.com' }],
+    },
+    {
+        title: 'Dall-e UI Cheap Bastard Edition™',
+        date: '2022-11-10',
+        demoURL: 'https://dall-e.sonnet.io',
+        content: `
+        A (6-10 times) cheaper Dall-e UI. I built it for my own testing purposes.
+
+More context [here](https://twitter.com/rafalpast/status/1591138659297726464/photo/1).
+
+        `,
+        links: [
+            { type: 'source', url: 'https://github.com/paprikka/dall-e-ui' },
+        ],
+    },
+    {
+        title: 'Façade',
+        date: '2022-11-10',
+        demoURL: 'https://facade.photo',
+        content: `
+        Façade makes it easy to create studio lighting using your phone, computer or tablet. Launched in Spring 2016, also used in the Rainbotron™ (an art installation/im promptu photo studio made of furniture salvaged in Brick Lane). 
+
+
+        Check out the [post launch article](goo.gl/JxpJQY) as well as the [gallery](https://500px.com/p/rafalpast/galleries/facade).
+
+        `,
+    },
+]
+
 // write a function to:
 // - given a multiline string,
 // - return the string without indentation:
@@ -68,4 +99,5 @@ const formatProject = (project) => ({
 
 module.exports = {
     favourites: favourites.map(formatProject),
+    remaining: remainingProjects.map(formatProject),
 }
