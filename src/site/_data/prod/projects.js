@@ -45,12 +45,35 @@ Please share with a friend who needs to sit the fuck down or enjoy the experienc
  */
 const remainingProjects = [
     {
-        title: 'Medieval (Content) Farm',
-        date: '2022-04-28',
-        demoURL: 'https://tidings.potato.horse',
-        content: `We're a biased and hallucinated news source curated by a team of talented writers. Every day they scour the internet for the most interesting and relevant events of the realm.`,
+        title: 'Tommy the Toe and the Chamber of Hostile Carpentry',
+        date: '2020-02-01',
+        demoURL: 'https://apps.apple.com/gb/app/tommy-the-toe/id1498417487',
+        content: `An iOS game where the initial inspiration was a broken toe of my partner. 
 
-        links: [{ type: 'source', url: 'http://github.com' }],
+        Contains hand-drawn graphics, and a custom over-engineered AI.
+
+        Check the gameplay video [here](https://www.reddit.com/r/iosgaming/comments/f4bkov/my_girlfriend_broke_a_toe_so_i_made_a_game_about/).
+        `,
+    },
+
+    {
+        title: 'How to Run an All-hands Meeting',
+        date: '2021-05-07',
+        demoURL: 'https://rafsters.itch.io/all-hands',
+        content: `A short (3-6m) walking sim recreating the experience of attending a useless corporate meeting.
+        `,
+    },
+
+    {
+        title: 'Medieval (Content) Farm',
+        date: '2023-04-28',
+        demoURL: 'https://tidings.potato.horse',
+        content: `Your biased and hallucinated news source curated by a team of talented writers. Every day they scour the internet for the most interesting and relevant events of the realm. They're so good, the thing just writes itself.
+        
+        Please read the [Why](https://tidings.potato.horse/about) section for more (serious) context.
+        `,
+
+        links: [{ type: 'article', url: 'https://tidings.potato.horse/about' }],
     },
     {
         title: 'Dall-e UI Cheap Bastard Edition™',
@@ -87,7 +110,7 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
     },
     {
         title: 'Lana!',
-        date: '2022-12-09',
+        date: '2016-03-07',
         content: 'NPM scripts with better UX',
         demoURL: 'https://www.npmjs.com/package/lana-cli',
     },
@@ -106,7 +129,7 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
     },
     {
         title: 'Physically accurate Mrr',
-        date: '2023-01-11',
+        date: '2023-01-09',
         content: 'are you ready to Mrrr, Newton?',
         demoURL: 'https://mrrr.vercel.app',
     },
@@ -118,7 +141,7 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
     },
     {
         title: 'Dotfile Paella',
-        date: '2022-11-24',
+        date: '2021-11-24',
         content:
             'A bunch of dotfile settings I use frequently and a small group of people considers moderately useful.',
         demoURL: 'https://github.com/paprikka/dotfile-paella',
@@ -183,5 +206,9 @@ const formatProject = (project) => ({
 
 module.exports = {
     favourites: favourites.map(formatProject),
-    remaining: remainingProjects.map(formatProject),
+    remaining: [
+        ...remainingProjects.sort(
+            (a, b) => new Date(b.date) - new Date(a.date)
+        ),
+    ].map(formatProject),
 }

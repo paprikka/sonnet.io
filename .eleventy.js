@@ -89,7 +89,12 @@ module.exports = function (config) {
         return JSON.stringify(val, null, 2)
     })
 
-    config.addFilter('dateDisplay', require('./src/utils/filters/date.js'))
+    const dateFormatter = require('./src/utils/filters/date.js')
+    config.addFilter('dateDisplay', dateFormatter)
+
+    config.addFilter('dateDisplayShort', (val) =>
+        dateFormatter(val, 'LLLL, yyyy')
+    )
 
     // add support for syntax highlighting
     config.addPlugin(syntaxHighlight)

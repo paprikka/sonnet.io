@@ -7,7 +7,7 @@ pageClass: projects
   {% include "header-blog.njk" %}
   <h1>Projects</h1>
 
-  <p>Some of my favourite personal projects, generally smaller in scope than my client work.<br>
+  <p>Some of my favourite personal projects, generally smaller (and weirder) in scope than my client work.<br>
     <br>For my commercial work, please <a href='mailto:hello@sonnet.io'>get&nbsp;in&nbsp;touch</a>!</p>
 
   <ul class='projects-list'>
@@ -18,7 +18,7 @@ pageClass: projects
           <article>
             <header>
               <h1><a href='{{project.demoURL}}'>{{project.title}}</a></h1>
-              <time datetime="{{ project.date }}">{{ project.date | dateDisplay }}</time>
+              <time datetime="{{ project.date }}">{{ project.date | dateDisplayShort }}</time>
             </header>
 
             <a href="{{project.demoURL}}" class='projects-entry__thumbnail'>
