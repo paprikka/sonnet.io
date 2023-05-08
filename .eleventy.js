@@ -84,6 +84,11 @@ module.exports = function (config) {
 
     // Add some utility filters
     config.addFilter('squash', require('./src/utils/filters/squash.js'))
+
+    config.addFilter('json', (val) => {
+        return JSON.stringify(val, null, 2)
+    })
+
     config.addFilter('dateDisplay', require('./src/utils/filters/date.js'))
 
     // add support for syntax highlighting
