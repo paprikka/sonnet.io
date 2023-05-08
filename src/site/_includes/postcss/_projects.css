@@ -55,19 +55,13 @@
     list-style-type: none;
 
     @media all and (min-width: $screen-mid) {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         align-items: start;
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: var(--page-margin);
     }
 }
 
 .projects-entry {
-    /* background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.7);
-    border-radius: 0.3rem; */
-
     margin-bottom: calc(var(--ru) * 5rem);
 
     @media all and (min-width: $screen-mid) {
@@ -79,6 +73,11 @@
         line-height: calc(var(--ru) * 2rem);
         font-weight: 500;
         text-align: center;
+
+        @media all and (min-width: $screen-mid) {
+            font-size: 6rem;
+            line-height: calc(var(--ru) * 4rem);
+        }
     }
 
     time {
@@ -93,6 +92,10 @@
     picture {
         display: block;
         margin: 0 calc(var(--page-margin) * -1);
+
+        @media all and (min-width: $screen-mid) {
+            margin: 0;
+        }
     }
 
     img {
@@ -105,6 +108,11 @@
 
     &__content {
         margin-bottom: calc(var(--ru) * 2rem);
+
+        @media all and (min-width: $screen-mid) {
+            max-width: 50rem;
+            margin: 0 auto 0;
+        }
 
         p {
             font-size: 1.5rem;
@@ -123,12 +131,21 @@
         }
     }
 
+    &__actions {
+        display: flex;
+
+        @media all and (min-width: $screen-mid) {
+            max-width: 50rem;
+            margin: 0 auto 0;
+        }
+    }
+
     &__link {
         --bg: var(--color-text);
         --fg: var(--color-bg);
 
         background: var(--bg);
-        border-radius: 100rem;
+        border-radius: 0.25rem;
         border: 1px solid var(--bg);
         color: var(--fg);
         display: block;
