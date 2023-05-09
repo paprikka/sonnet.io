@@ -155,3 +155,35 @@
         }
     }
 }
+
+@media all and (min-width: $screen-mid) {
+    .intro__header,
+    .intro-header,
+    .intro__content,
+    .intro__decor {
+        animation: intro-enter 0.8s ease-in var(--delay) both;
+    }
+
+    .intro__header {
+        --delay: 0s;
+    }
+    .intro-header {
+        --delay: 0.4s;
+    }
+    .intro__content {
+        --delay: 0.2s;
+    }
+    .intro__decor {
+        --delay: 0.7s;
+    }
+}
+
+@keyframes intro-enter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
