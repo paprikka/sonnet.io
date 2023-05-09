@@ -54,20 +54,20 @@ pageClass: projects
         <section class="projects-actions">
           <a 
             href='{{project.demoURL}}'
-            class='projects-actions__link'>Open</a>
+            class='projects-actions__link projects-actions__link--size-s'>Open</a>
         {% for link in project.links %}
           {% if link.type === 'source' %}
           <a 
             href='{{link.url}}'
-            class='projects-actions__link projects-actions__link--secondary'>View code</a>
+            class='projects-actions__link projects-actions__link--size-s projects-actions__link--secondary'>View code</a>
           {% elseif link.type === 'article' %}
           <a 
             href='{{link.url}}'
-            class='projects-actions__link projects-actions__link--secondary'>Read</a>
+            class='projects-actions__link projects-actions__link--size-s projects-actions__link--secondary'>Read</a>
           {% else %}
           <a
            href='{{link.url}}' 
-           class='projects-actions__link'>Open</a>
+           class='projects-actions__link projects-actions__link--size-s'>Open</a>
           {% endif %}</a>
         {% endfor %}
         </section>

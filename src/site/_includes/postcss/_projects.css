@@ -67,17 +67,6 @@
             content: '❦';
         }
     }
-
-    a:not([class]) {
-        color: var(--color-text);
-        font-weight: 600;
-        text-decoration: none;
-
-        &:hover,
-        &:active {
-            color: var(--color-link);
-        }
-    }
 }
 
 .projects-list {
@@ -106,6 +95,18 @@
         @media all and (min-width: $screen-mid) {
             font-size: 6rem;
             line-height: calc(var(--ru) * 4rem);
+        }
+
+        /* TODO: remove duplication */
+        a {
+            color: var(--color-text);
+            font-weight: 500;
+            text-decoration: none;
+
+            &:hover,
+            &:active {
+                color: var(--color-link);
+            }
         }
     }
 
@@ -163,9 +164,11 @@
             margin: calc(var(--ru) * 1rem) 0;
         }
 
+        /* TODO: remove duplication */
         a {
             color: var(--color-text);
-            font-weight: 600;
+            font-weight: 500;
+            text-decoration: none;
 
             &:hover,
             &:active {
@@ -212,7 +215,13 @@
         &--secondary {
             background: #ffffff99;
             color: var(--color-text);
-            border: 1px solid var(--color-text-fade);
+            border: 1px solid var(--color-text);
+        }
+
+        &--size-s {
+            padding: 0 1.3rem;
+            font-size: 0.9rem;
+            line-height: calc(var(--ru) * 1.5rem);
         }
 
         &:hover {
@@ -244,6 +253,18 @@
         font-weight: 500;
         text-align: left;
         overflow: visible;
+
+        /* TODO: remove duplication */
+        a {
+            color: var(--color-text);
+            font-weight: 500;
+            text-decoration: none;
+
+            &:hover,
+            &:active {
+                color: var(--color-link);
+            }
+        }
     }
 
     time {
@@ -276,8 +297,21 @@
             }
         }
     }
+
     &__content {
         margin: 0;
+
+        /* TODO: remove duplication */
+        a {
+            color: var(--color-text);
+            font-weight: 500;
+            /* text-decoration: none; */
+
+            &:hover,
+            &:active {
+                color: var(--color-link);
+            }
+        }
 
         @media all and (min-width: $screen-mid) {
             max-width: 50rem;
