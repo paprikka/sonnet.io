@@ -22,7 +22,7 @@ Please share with a friend who needs to sit the fuck down or enjoy the experienc
         demoURL: 'https://butter.sonnet.io',
         isFavourite: true,
         date: '2023-05-05',
-        content: `Butter is a browser extension that skips sponsored content in YouTube videos. It does this by watching them before you do. Because you deserve butter.`,
+        content: `Butter is a browser extension that skips sponsored content in YouTube videos by watching them before you do. Because you deserve butter.`,
     },
     {
         title: 'Ensō',
