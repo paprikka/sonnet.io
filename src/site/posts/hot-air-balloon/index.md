@@ -1,5 +1,5 @@
 ---
-title: 'Short: Retrofuturoretrospectives'
+title: 'Short: Retrofuturetrospectives'
 date: 2021-06-07
 hidden: false
 heroURL: ./src/site/images/hero/hot-air-balloon.png
