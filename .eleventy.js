@@ -93,7 +93,9 @@ module.exports = function (config) {
     config.addFilter('dateDisplay', dateFormatter)
 
     config.addFilter('dateDisplayShort', (val) =>
-        dateFormatter(val, 'LLLL, yyyy')
+        Array.isArray(val)
+            ? val.map((val) => dateFormatter(val, 'LLLL yyyy')).join(' – ')
+            : dateFormatter(val, 'LLLL yyyy')
     )
 
     // add support for syntax highlighting

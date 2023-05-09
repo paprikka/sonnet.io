@@ -1,6 +1,10 @@
 .page-projects {
     --max-width: 80rem;
 
+    &__intro {
+        text-align: center;
+    }
+
     /* TODO: unify, don't rely on the cascade */
     & > h1 {
         font-size: 4rem;
@@ -181,6 +185,7 @@
 
 .projects-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 
     @media all and (min-width: $screen-mid) {
@@ -252,6 +257,25 @@
         margin: calc(var(--ru) * 1rem) 0;
     }
 
+    ol,
+    ul {
+        margin: 0 0 calc(var(--ru) * 1rem);
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            position: relative;
+            &::before {
+                display: inline-block;
+                width: 2rem;
+                content: '–';
+                margin-left: -2rem;
+                opacity: 0.5;
+            }
+        }
+    }
     &__content {
         margin: 0;
 
