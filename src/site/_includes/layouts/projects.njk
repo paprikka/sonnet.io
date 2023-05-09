@@ -7,8 +7,8 @@ pageClass: projects
   {% include "header-blog.njk" %}
   <h1>Projects</h1>
 
-  <p>Some of my favourite personal projects, generally smaller (and weirder) in scope than my client work.<br>
-    <br>For my commercial work, please <a href='mailto:hello@sonnet.io'>get&nbsp;in&nbsp;touch</a>!</p>
+  <p class='page-projects__intro'>A selection of my personal projects and experiments.
+    <br>For my client work, see my  <a href='/cv' target='_blank'>CV</a> or <a href='mailto:hello@sonnet.io'>get&nbsp;in&nbsp;touch</a>!</p>
 
   <ul class='projects-list'>
     {%- for project in projects.favourites -%}
@@ -52,11 +52,18 @@ pageClass: projects
         <section class='projects-remaining-list__content'>{{ project.content | mdblock | safe}}</section>
 
         <section class="projects-actions">
+          <a 
+            href='{{project.demoURL}}'
+            class='projects-actions__link'>Open</a>
         {% for link in project.links %}
           {% if link.type === 'source' %}
           <a 
             href='{{link.url}}'
-            class='projects-actions__link projects-actions__link--secondary'>Source</a>
+            class='projects-actions__link projects-actions__link--secondary'>View code</a>
+          {% elseif link.type === 'article' %}
+          <a 
+            href='{{link.url}}'
+            class='projects-actions__link projects-actions__link--secondary'>Read</a>
           {% else %}
           <a
            href='{{link.url}}' 

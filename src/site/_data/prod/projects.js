@@ -9,7 +9,7 @@ const favourites = [
         isFavourite: true,
         date: '2022-12-25',
         content: `
-Sit down and do nothing.
+Sit down and do *nothing*.
 
 We spend so much time building things that steal attention &amp; extract value from users. [Sit.](https://sit.sonnet.io) does the opposite: it gives you back your time. 
 
@@ -35,7 +35,11 @@ Please share with a friend who needs to sit the fuck down or enjoy the experienc
 
         It does this by separating writing from editing and thus making it harder for you to edit yourself.
 
-        More info [here](/posts/ulysses).
+        Although the app is 100% private and we offer feature-parity between paid and free versions, we have a regular stream of new, paying users.
+
+        The user base is small and diverse, including neurodivergent individuals, budding writers, those using Ensō to process and understand their emotions, and people trying to improve their language fluency.
+        
+        Personally, I'm just really happy that 1,000,000 written words later, I still come back to it every single morning.
 `,
     },
 ]
@@ -49,8 +53,7 @@ const remainingProjects = [
         date: '2020-02-01',
         demoURL: 'https://apps.apple.com/gb/app/tommy-the-toe/id1498417487',
         content: `An iOS game where the initial inspiration was a broken toe of my partner. 
-
-        Contains hand-drawn graphics, and a custom over-engineered AI.
+        Contains hand-drawn graphics, and a custom *over*-engineered AI.
 
         Check the gameplay video [here](https://www.reddit.com/r/iosgaming/comments/f4bkov/my_girlfriend_broke_a_toe_so_i_made_a_game_about/).
         `,
@@ -80,9 +83,9 @@ const remainingProjects = [
         date: '2022-11-10',
         demoURL: 'https://dall-e.sonnet.io',
         content: `
-        A (6-10 times) cheaper Dall-e UI. I built it for my own testing purposes.
-
-More context [here](https://twitter.com/rafalpast/status/1591138659297726464/photo/1).
+        A (6-10 times) cheaper Dall-e UI, initially used for my own testing purposes.
+        
+        More context [here](https://twitter.com/rafalpast/status/1591138659297726464/photo/1).
 
         `,
         links: [
@@ -97,14 +100,13 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
         Façade makes it easy to create studio lighting using your phone, computer or tablet. Launched in Spring 2016, also used in the Rainbotron™ (an art installation/im promptu photo studio made of furniture salvaged in Brick Lane). 
 
 
-        Check out the [post launch article](goo.gl/JxpJQY) as well as the [gallery](https://500px.com/p/rafalpast/galleries/facade).
-
+        Check out the [post launch article](https://goo.gl/JxpJQY) as well as the [gallery](https://500px.com/p/rafalpast/galleries/facade).
         `,
     },
 
     {
         title: 'Goatspeed you! Black Phillip',
-        content: 'A simple app reminding me to speak more slowly',
+        content: 'A simple app reminding me to speak more slowly.',
         demoURL: 'https://twitter.com/rafalpast/status/1272945933228167169',
         date: '2020-06-14',
     },
@@ -118,25 +120,25 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
         title: 'Kalam',
         date: '2017-02-24',
         content:
-            'Markov Chain based procedural name generator used for Storienteer',
+            'Markov Chain based procedural name generator used for Storienteer.',
         demoURL: 'https://github.com/paprikka/kalam',
     },
     {
         title: 'Mrr',
         date: '2023-01-10',
-        content: 'are you ready to Mrrr?',
+        content: 'Are you ready to Mrrr?',
         demoURL: 'https://mrr.sonnet.io',
     },
     {
         title: 'Physically accurate Mrr',
         date: '2023-01-09',
-        content: 'are you ready to Mrrr, Newton?',
+        content: 'Are you ready to Mrrr, Newton?',
         demoURL: 'https://mrrr.vercel.app',
     },
     {
         title: 'YAFTL(yet another fucking todo list)',
         date: '2020-05-14',
-        content: 'Materials from the prototyping course I ran via Twitch',
+        content: 'Materials from a quick prototyping course I ran via Twitch.',
         demoURL: 'https://github.com/paprikka/yaftl',
     },
     {
@@ -170,13 +172,63 @@ More context [here](https://twitter.com/rafalpast/status/1591138659297726464/pho
         ],
     },
     {
-        title: 'Laconic',
+        title: 'Laconic! (a Twitter CDN)',
         date: '2020-06-15',
-        content: `Use Twitter as a CDN! Serve Pong, or the Epic of Gilgamesh from a single tweet.
+        content: `Serve Pong, or the Epic of Gilgamesh from a single tweet.
+        
+            > *By Grabthar’s Hammer... what a savings.*
 
             Some useless [examples](https://twitter.com/rafalpast/status/1316836397903474688) (a Twitter thread)
             `,
-        demoURL: 'https://laconic-mu.vercel.app/editor.html',
+        demoURL: 'https://laconic.sonnet.io/editor.html',
+        links: [{ type: 'article', url: require('./laconic-url') }],
+    },
+    {
+        title: 'Sulik',
+        date: '2014-02-01',
+        content: `A proof-of-concept voice assistant using voice recognition, sophisticated text-to-speech services and Wolfram Alpha trying to act as a more geeky Siri. Pitched as an *HTML 5* (not AI!) voice assistant, because that was the buzzword du jour in 2014.
+
+        Seems like I was onto something, since 9 years later OpenAI [released their Wolfram Alpha plugin](https://writings.stephenwolfram.com/2023/03/chatgpt-gets-its-wolfram-superpowers/).`,
+        demoURL: 'https://github.com/paprikka/sulik',
+    },
+    {
+        title: 'Return to Castle Kittenstein',
+        date: '2016-06-02',
+        content: `A purely browser-based augmented reality (dance!) game where you get a chance to fight an evil army of kittens with bananas, glowsticks and body paint.
+        `,
+        demoURL: `https://photos.google.com/share/AF1QipNvmuU36hIiBmWuWYEbyXQstq6b2kZadtZJbmifOEu80IEQ_6HNsKXIsrmVrGLXaQ?key=OUNNUXdMVFExeDFhVFViYjhXcVA0c3JWbElFS2VB`,
+        links: [
+            { type: 'source', url: 'https://github.com/paprikka/kittenstein' },
+        ],
+    },
+    {
+        title: 'Haiku',
+        date: '2013-10-09',
+        content: `
+        A minimalist, collaborative presentation tool:
+        
+        1. Drag and drop a bunch of pictures or text into your browser
+        2. Share a link
+        3. Control the presentation from your phone.
+        `,
+        demoURL: 'https://github.com/paprikka/haiku',
+    },
+    {
+        title: 'Rainbotron',
+        date: '2016-04-25',
+        content: `
+            An art installation/impromptu photo studio made of furniture salvaged in Brick Lane. WebSockets meets Spotify meets your grandma's old wardrobe.
+            `,
+        demoURL: 'https://500px.com/photo/151829029/aaron-by-rafal-pastuszak',
+    },
+
+    {
+        title: 'Werework',
+        date: ['2016-04-25', '2018-04-25'],
+        content: `
+        I was a host and co-founder of Werework—a creative tech speakeasy based in London. We'd meet (almost!) every full moon to drink, eat, talk, and play with digital experiments.
+        `,
+        demoURL: 'https://medium.com/werework-thinks',
     },
 ]
 
@@ -201,14 +253,19 @@ const formatted = (str) =>
 const formatProject = (project) => ({
     ...project,
     content: formatted(project.content),
-    date: new Date(project.date),
+    date: Array.isArray(project.date)
+        ? project.date.map((d) => new Date(d))
+        : new Date(project.date),
 })
 
 module.exports = {
     favourites: favourites.map(formatProject),
     remaining: [
-        ...remainingProjects.sort(
-            (a, b) => new Date(b.date) - new Date(a.date)
-        ),
+        ...remainingProjects.sort((a, b) => {
+            const dateA = new Date(Array.isArray(a.date) ? a.date[0] : a.date)
+            const dateB = new Date(Array.isArray(b.date) ? b.date[0] : b.date)
+
+            return dateB - dateA
+        }),
     ].map(formatProject),
 }

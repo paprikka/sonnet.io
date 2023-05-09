@@ -8,7 +8,7 @@ export type RemainingProject = {
 
 export type Project = {
     title: string
-    date: string
+    date: string | [string, string]
     content: string
     demoURL: string
     isFavourite: boolean
