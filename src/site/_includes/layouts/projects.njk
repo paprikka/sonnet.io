@@ -7,33 +7,35 @@ pageClass: projects
   {% include "header-blog.njk" %}
   <h1>Projects</h1>
 
-  <p class='page-projects__intro'>A selection of my personal projects and experiments.
+  <p class='page-projects__intro'>A selection of my personal projects, experiments and toys.
     <br>For my client work, see my  <a href='/cv' target='_blank'>CV</a> or <a href='mailto:hello@sonnet.io'>get&nbsp;in&nbsp;touch</a>!</p>
 
   <ul class='projects-list'>
     {%- for project in projects.favourites -%}
-    
+
       {%- if  project.isFavourite -%}
         <li class='projects-entry'>
           <article>
             <header>
-              <h1><a href='{{project.demoURL}}'>{{project.title}}</a></h1>
+              <h1>
+                <a href='{{project.demoURL}}'>{{project.title}}</a>
+              </h1>
               <time datetime="{{ project.date }}">{{ project.date | dateDisplayShort }}</time>
             </header>
 
             <a href="{{project.demoURL}}" class='projects-entry__thumbnail'>
               {%- if project.heroURL %}{% pic project.heroURL,
-              project.title %}
-            {% endif %}
-              </a>
+                project.title %}
+              {% endif %}
+            </a>
 
             <section class='projects-entry__content'>{{ project.content | mdblock | safe}}</section>
             <section class="projects-actions">
               {% if (project.demoURL) %}
-              <a href='{{project.demoURL}}' class='projects-actions__link'>Open</a>
-            {% else %}
-              <a href='mailto:hello@sonnet.io' class='projects-actions__link'>Contact</a>
-            {% endif %}
+                <a href='{{project.demoURL}}' class='projects-actions__link'>Open</a>
+              {% else %}
+                <a href='mailto:hello@sonnet.io' class='projects-actions__link'>Contact</a>
+              {% endif %}
             </section>
 
           </article>
@@ -44,10 +46,20 @@ pageClass: projects
   <h2>Other projects</h2>
   <ul class='projects-remaining-list'>
     {% for project in projects.remaining %}
-      <li>
+      <li data-tags="{{project.tags}}">
         <header>
-          <h1><a href='{{project.demoURL}}'>{{project.title}}</a></h1>
-          <time datetime="{{ project.date }}">{{ project.date | dateDisplayShort }}</time>
+          <h1>
+            <a href='{{project.demoURL}}'>{{project.title}}</a>
+          </h1>
+          <span class="projects-remaining-list__meta">
+            <time datetime="{{ project.date }}">{{ project.date | dateDisplayShort }}</time>
+
+            <ul class='projects-tags'>
+              {% for tag in project.tags %}
+                <li><a href='#tag-{{tag}}'>{{tag}}</a></li>
+              {% endfor %}
+            </ul>
+          </span>
         </header>
         <section class='projects-remaining-list__content'>{{ project.content | mdblock | safe}}</section>
 
@@ -55,26 +67,72 @@ pageClass: projects
           <a 
             href='{{project.demoURL}}'
             class='projects-actions__link projects-actions__link--size-s'>Open</a>
-        {% for link in project.links %}
-          {% if link.type === 'source' %}
-          <a 
+          {% for link in project.links %}
+            {% if link.type === 'source' %}
+              <a 
             href='{{link.url}}'
             class='projects-actions__link projects-actions__link--size-s projects-actions__link--secondary'>View code</a>
-          {% elseif link.type === 'article' %}
-          <a 
+            {% elseif link.type === 'article' %}
+              <a 
             href='{{link.url}}'
             class='projects-actions__link projects-actions__link--size-s projects-actions__link--secondary'>Read</a>
-          {% else %}
-          <a
+            {% else %}
+              <a
            href='{{link.url}}' 
            class='projects-actions__link projects-actions__link--size-s'>Open</a>
-          {% endif %}</a>
+            {% endif %}
+          </a>
         {% endfor %}
-        </section>
-        
-        </li>
-    {% endfor %}
+      </section>
 
-  </ul>
-  <hr>
+    </li>
+  {% endfor %}
+
+</ul>
+<hr>
 </div>
+<script type='module'>
+document.addEventListener('DOMContentLoaded', () => {
+  const taggedNodes = document.querySelectorAll('[data-tags]')
+  const allTagButtons = document.querySelectorAll('.projects-tags li')
+
+  let selectedTag = null
+
+  const render = () => {
+    if(selectedTag === null) {
+      taggedNodes.forEach(node => (node.hidden = false))
+      allTagButtons.forEach(node => (node.classList.remove('is-active')))
+      return
+    }
+
+    taggedNodes.forEach(
+      node => {
+        const nodeTags = node.dataset.tags.split(',').map(_ => _.trim())
+
+        node.hidden = !nodeTags.includes(selectedTag)
+      }
+    )
+    allTagButtons.forEach(node => {
+      if(node.innerText === selectedTag) {
+        node.classList.add('is-active')
+      } else {
+        node.classList.remove('is-active')
+      }      
+    })
+  }
+
+  document
+    .querySelectorAll('.projects-tags li')
+    .forEach(node => {
+      node.addEventListener('click', (e) => {
+        let tag = e.target.innerText
+        if(selectedTag === tag) {
+          selectedTag = null
+        } else {
+          selectedTag = tag
+        }
+        render()
+      })
+    })
+})
+</script>

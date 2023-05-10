@@ -4,6 +4,7 @@ export type RemainingProject = {
     content: string
     demoURL: string
     links: { url: string; type: 'source' }[]
+    tags?: string[]
 }
 
 export type Project = {

@@ -57,6 +57,7 @@ const remainingProjects = [
 
         Check the gameplay video [here](https://www.reddit.com/r/iosgaming/comments/f4bkov/my_girlfriend_broke_a_toe_so_i_made_a_game_about/).
         `,
+        tags: ['game', 'illustration'],
     },
 
     {
@@ -65,6 +66,7 @@ const remainingProjects = [
         demoURL: 'https://rafsters.itch.io/all-hands',
         content: `A short (3-6m) walking sim recreating the experience of attending a useless corporate meeting.
         `,
+        tags: ['game', 'illustration', 'mental-health'],
     },
 
     {
@@ -77,6 +79,7 @@ const remainingProjects = [
         `,
 
         links: [{ type: 'article', url: 'https://tidings.potato.horse/about' }],
+        tags: ['AI', 'generative', 'writing', 'website', 'advertising'],
     },
     {
         title: 'Dall-e UI Cheap Bastard Edition™',
@@ -91,6 +94,7 @@ const remainingProjects = [
         links: [
             { type: 'source', url: 'https://github.com/paprikka/dall-e-ui' },
         ],
+        tags: ['AI', 'dev-tools', 'app'],
     },
     {
         title: 'Façade',
@@ -102,6 +106,7 @@ const remainingProjects = [
 
         Check out the [post launch article](https://goo.gl/JxpJQY) as well as the [gallery](https://500px.com/p/rafalpast/galleries/facade).
         `,
+        tags: ['photography', 'minimalism', 'app', 'website'],
     },
 
     {
@@ -109,12 +114,14 @@ const remainingProjects = [
         content: 'A simple app reminding me to speak more slowly.',
         demoURL: 'https://twitter.com/rafalpast/status/1272945933228167169',
         date: '2020-06-14',
+        tags: ['app', 'mental-health'],
     },
     {
         title: 'Lana!',
         date: '2016-03-07',
         content: 'NPM scripts with better UX',
         demoURL: 'https://www.npmjs.com/package/lana-cli',
+        tags: ['dev-tools'],
     },
     {
         title: 'Kalam',
@@ -122,24 +129,28 @@ const remainingProjects = [
         content:
             'Markov Chain based procedural name generator used for Storienteer.',
         demoURL: 'https://github.com/paprikka/kalam',
+        tags: ['AI', 'gebnerative', 'dev-tools'],
     },
     {
         title: 'Mrr',
         date: '2023-01-10',
         content: 'Are you ready to Mrrr?',
         demoURL: 'https://mrr.sonnet.io',
+        tags: ['illustration', 'website', 'animation'],
     },
     {
         title: 'Physically accurate Mrr',
         date: '2023-01-09',
         content: 'Are you ready to Mrrr, Newton?',
         demoURL: 'https://mrrr.vercel.app',
+        tags: ['illustration', 'generative', 'website', 'animation'],
     },
     {
         title: 'YAFTL(yet another fucking todo list)',
         date: '2020-05-14',
         content: 'Materials from a quick prototyping course I ran via Twitch.',
         demoURL: 'https://github.com/paprikka/yaftl',
+        tags: ['dev-tools', 'teaching'],
     },
     {
         title: 'Dotfile Paella',
@@ -147,6 +158,7 @@ const remainingProjects = [
         content:
             'A bunch of dotfile settings I use frequently and a small group of people considers moderately useful.',
         demoURL: 'https://github.com/paprikka/dotfile-paella',
+        tags: ['dev-tools'],
     },
     {
         title: '18 Musicians',
@@ -154,6 +166,7 @@ const remainingProjects = [
         content:
             'Interactive Album cover for 18 Musicians by Steve Reich, performed by Eric Hall (check the site for credits)',
         demoURL: 'https://18-musicians.vercel.app',
+        tags: ['illustration', 'generative', 'website', 'toy'],
     },
     {
         title: 'Reactive Hole',
@@ -170,6 +183,7 @@ const remainingProjects = [
                 href: 'https://github.com/paprikka/reactive-hole',
             },
         ],
+        tags: ['app', 'p2p', 'toy', 'privacy'],
     },
     {
         title: 'Laconic! (a Twitter CDN)',
@@ -182,6 +196,7 @@ const remainingProjects = [
             `,
         demoURL: 'https://laconic.sonnet.io/editor.html',
         links: [{ type: 'article', url: require('./laconic-url') }],
+        tags: ['app', 'toy', 'privacy', 'publishing'],
     },
     {
         title: 'Sulik',
@@ -190,6 +205,7 @@ const remainingProjects = [
 
         Seems like I was onto something, since 9 years later OpenAI [released their Wolfram Alpha plugin](https://writings.stephenwolfram.com/2023/03/chatgpt-gets-its-wolfram-superpowers/).`,
         demoURL: 'https://github.com/paprikka/sulik',
+        tags: ['AI', 'app', 'toy', 'text-to-speech'],
     },
     {
         title: 'Return to Castle Kittenstein',
@@ -200,6 +216,7 @@ const remainingProjects = [
         links: [
             { type: 'source', url: 'https://github.com/paprikka/kittenstein' },
         ],
+        tags: ['game', 'AR', 'meow', 'dance', 'meatspace'],
     },
     {
         title: 'Haiku',
@@ -212,6 +229,7 @@ const remainingProjects = [
         3. Control the presentation from your phone.
         `,
         demoURL: 'https://github.com/paprikka/haiku',
+        tags: ['app', 'design', 'publishing', 'real-time', 'p2p'],
     },
     {
         title: 'Rainbotron',
@@ -220,6 +238,7 @@ const remainingProjects = [
             An art installation/impromptu photo studio made of furniture salvaged in Brick Lane. WebSockets meets Spotify meets your grandma's old wardrobe.
             `,
         demoURL: 'https://500px.com/photo/151829029/aaron-by-rafal-pastuszak',
+        tags: ['carpentry', 'photography', 'meatspace'],
     },
 
     {
@@ -229,6 +248,7 @@ const remainingProjects = [
         I was a host and co-founder of Werework—a creative tech speakeasy based in London. We'd meet (almost!) every full moon to drink, eat, talk, and play with digital experiments.
         `,
         demoURL: 'https://medium.com/werework-thinks',
+        tags: ['meatspace'],
     },
 ]
 
