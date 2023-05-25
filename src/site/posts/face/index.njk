@@ -1,0 +1,221 @@
+---
+title: 'First face'
+date: 2023-05-25
+hidden: false
+---
+
+
+
+
+I remember the first time I ever drew a face. It looked like this:
+
+{%pic "./imgs/face.png", "a face" %}
+
+I was sitting with my cousin, much older than me, on a hill overlooking my house. It was summer. Late afternoon. It was warm, the grass was golden. The air smelled like honey and beeswax. He drew it first. I followed. 
+
+That's how I draw faces now:
+
+{%pic "./imgs/face2.png", "a face" %}
+
+I remember the first letter I ever wrote. It looked like this:
+
+{%pic "./imgs/r.png", "an r" %}
+
+I drew it with a flat carpenter's pencil on a piece of wood. The flat graphite nib of the [pencil](https://www.beatsons.co.uk/images/faithfull-carpenters-pencils-red-pack-of-3-sharp-card-p7045-30241_medium.jpg) and the texture of the wood made it hard to create curved shapes. I didn't know then what runes are and if I followed my first attempt at writing with the rest of my name or just stopped at "R". 
+
+I drew it in the room all of us slept and watched TV. It was warm, it's was morning. The air smelled of spring and tobacco. My dad drew it first. Then I followed. This is How I write now:
+
+{%pic "./imgs/hi.png", "a hi" %}
+
+
+I'm none of the things I wanted to be between then and now. Impostor syndrome and nihilism kicks in when I don't do much. I drew 1000s of faces. One time I had spent several nights writing the word "love" in the same font 1000s of times to get it right.
+
+But none of the faces I draw look like this:
+
+<div class="preview-container">
+    {%pic "./imgs/placeholder.png", "a hi" %}
+    <button class='preview-container-cta'>Click to draw</button>
+    <video class='preview-container-video' id='preview' autoplay loop muted></video>
+    <div class="error-message">There was an error, that's ok. Try again or find a mirror.</div>
+</div>
+
+<style>
+    .preview-container {
+        display: block;
+        position: relative;
+        aspect-ratio: 4/3;
+        border: 2px solid;
+        margin-left: calc(var(--page-margin) * -1);
+        width: calc(100% + calc(var(--page-margin) * 2));
+    }
+
+    .post__content .preview-container :is(img, video) {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .preview-container button {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        translate: -50% 0;
+        background: black;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        padding: 0 1rem;
+        line-height: 2em;
+        cursor: pointer;
+    }
+
+    .preview-container .error-message {
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+
+        background: white;
+        color: black;
+        padding: 2rem;
+        font-size: 2rem;
+        text-align: center;
+        border: 2px solid black;
+        visibility: hidden;
+    }
+
+    .preview-container button:hover {
+        opacity: 0.8;
+    }
+
+    .preview-container video {
+        position: absolute;
+        inset: 0;
+        visibility: hidden;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+</style>
+<script type='module'>
+    const ctaEl = document.querySelector('.preview-container-cta');
+    console.log(ctaEl);
+
+    const videoEl = document.querySelector('.preview-container-video');
+
+    const errorMessageEl = document.querySelector('.error-message');
+
+    ctaEl.addEventListener('click', () => {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                videoEl.srcObject = stream;
+                videoEl.play();
+                videoEl.style.visibility = 'visible';
+                ctaEl.style.display = 'none';
+            })
+            .catch((err) => {
+                errorMessageEl.style.visibility = 'visible';
+                
+            });
+    });
+</script>
+
+
+and none of the letters I draw look like this:
+ 
+<div class='gallery'>
+    {%pic "./imgs/tughra.png", "img"  %}
+    {%pic "./imgs/folio.png", "img"  %}
+    {%pic "./imgs/eshgh.png", "img"  %}
+    {%pic "./imgs/reed1.jpg", "img"  %}
+    {%pic "./imgs/reed2.jpg", "img"  %}
+    <div class="gallery-nav">
+        <button class="gallery-nav__prev">prev</button>
+        <button class="gallery-nav__next">next</button>
+    </div>
+</div>
+
+<style>
+    .gallery {
+        width: 100%;
+        height: 70vh;
+        position: relative;
+    }
+
+     .post .post__content .gallery img {
+        position: absolute;
+        inset: 0;
+        object-fit: contain;
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .gallery-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        translate: 0 -50%;
+    }
+
+    .gallery-nav button  {
+         background: black;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        padding: 0 1rem;
+        line-height: 2em;
+        cursor: pointer;
+    }
+
+    .gallery-nav button:disabled {
+        opacity: 0.5;
+    }
+</style>
+
+<script type="module">
+    const prevButton = document.querySelector('.gallery-nav__prev');
+    const nextButton = document.querySelector('.gallery-nav__next');
+    let index = 0;
+    const images = document.querySelectorAll('.gallery img');
+
+
+    const render = () => {
+        if(index === 0) {
+            prevButton.disabled = true;
+        } else {
+            prevButton.disabled = false;
+        }
+        if(index >= images.length - 1) {
+            nextButton.disabled = true;
+        } else {
+            nextButton.disabled = false;
+        }
+
+        images.forEach((img, i) => {
+            if(i === index) {
+                img.style.visibility = 'visible';
+            } else {
+                img.style.visibility = 'hidden';
+            }
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        index--;
+        render();
+    });
+
+    nextButton.addEventListener('click', () => {
+        index++;
+        render();
+    });
+
+    render()
+</script>
+
+
+But then, I draw a little face on a piece of rock and you smile. I write you a card and you read my name, rolling your Rs.
+
+[🤍](http://www.dar-al-masnavi.org/n-I-0001.html#1)
