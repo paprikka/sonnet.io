@@ -4,12 +4,11 @@ date: 2023-05-25
 hidden: false
 ---
 
-
 I remember the first time I drew a face. It looked like this:
 
 {%pic "./imgs/face.png", "a face" %}
 
-I was sitting on the slope of a hill overlooking my house with my older cousin. It was a late summer afternoon: still warm, with the grass still golden, but slowly turning red, the air smelling like honey and beeswax. He drew first. I followed. 
+I was sitting on the slope of a hill overlooking my house with my older cousin. It was a late summer afternoon: still warm, with the grass still golden, but slowly turning red, the air smelling like honey and beeswax. He drew first. I followed.
 
 That's how I draw faces now:
 
@@ -19,42 +18,38 @@ I also remember the first letter I ever wrote! It looked like this:
 
 {%pic "./imgs/r.png", "an r" %}
 
-I drew it on a wooden plank with a red flat carpenter pencil. The shape of the [lead](https://www.beatsons.co.uk/images/faithfull-carpenters-pencils-red-pack-of-3-sharp-card-p7045-30241_medium.jpg) and the texture of the wood made it hard to draw curves. You had to go in straight lines and press just a little bit so the lead didn't sink into the pulp. 
+I drew it on a wooden plank with a red flat carpenter pencil. The shape of the [lead](https://www.beatsons.co.uk/images/faithfull-carpenters-pencils-red-pack-of-3-sharp-card-p7045-30241_medium.jpg) and the texture of the wood made it hard to draw curves. You had to go in straight lines and press just a little bit so the lead didn't sink into the pulp.
 
-I drew it in the room all of us slept and watched TV. The light was crisp (with the shadows freshly chiseled) and the air smelled of spring and tobacco. My dad wrote first. Then I followed. 
+I drew it in the room all of us slept and watched TV. The light was crisp (with the shadows freshly chiseled) and the air smelled of spring and tobacco. My dad wrote first. Then I followed.
 
 This is how I write now:
 
 {%pic "./imgs/hi.png", "a hi" %}
 
+_Hello!_ says the impostor syndrome (nihilism kicks in): I'm none of the things I wanted to be between then and now. I still draw the same face and I still write the same «ر».
 
-*Hello!* says the impostor syndrome (nihilism kicks in): I'm none of the things I wanted to be between then and now. I still draw the same face and I still write the same «ر».
+{# Impostor syndrome and nihilism kicks in when I don't feel useful. I drew 1000s of faces and this one time I had spent several nights writing the word "love" in the same style 1000s of times to get it right. #}
 
- {# Impostor syndrome and nihilism kicks in when I don't feel useful. I drew 1000s of faces and this one time I had spent several nights writing the word "love" in the same style 1000s of times to get it right. #}
+---
 
-And, none of the faces I draw look like this:
+Still, none of the faces I draw look like this:
 
-<a href='#step-1' class='next-step-button preview-container-cta'>Click to continue</a>
+<a href='#step-1' class='next-step-button preview-container-cta'>(Click to continue)</a>
+
 <section class="faces__step-1" id='step-1' hidden="hidden">
-    <div class="preview-container" hidden>
+    <div class="preview-container">
         <div class="embed">
-            <video class='preview-container-video' id='preview' autoplay loop muted></video>
+            <video class='preview-container-video' id='preview' playsinline autoplay loop muted></video>
         </div>
         <div class="error-message">There was an error, that's ok. <button class='retry-button'>Try again</button> or find a mirror.</div>
         <div class="cannot-see-you-message">Don't worry, I can't see you.</div>
     </div>
-    <p><a href='#step-2' class='next-step-button'>Click to continue...</a></p>
-</section>
-
-
-<section class='faces__step-2' hidden id='step-2'>
-
-And, none of the notes I write look like this:
+<p>And, none of the notes I write look like this:</p>
 {% fig "./imgs/folio.png", "Calligraphy"  %}
 Calligraphy (written with a reed pen)
 {% endfig %}
 
- Or this:
+Or this:
 
 {%fig "./imgs/reed1.jpg", "Calligraphy"  %}
 <a href='http://www.dar-al-masnavi.org/n-I-0001.html#1'>Calligraphy</a> (written with a reed pen)
@@ -65,13 +60,12 @@ Calligraphy (written with a reed pen)
 But then, I draw a little face on a piece of rock and you smile.
 
 I write you a card and you read my name, rolling your Rs.
+
 </section>
 
-
 <style>
-    [hidden] {
-        visibility: hidden !important;
-        opacity: 0;
+    [hidden] > * {
+        display: none;
     }
 
     .cannot-see-you-message {
@@ -83,10 +77,10 @@ I write you a card and you read my name, rolling your Rs.
         font-size: 1.25rem;
     }
     .preview-container {
-        {# background: url('/images/face/placeholder.webp'); #}
+        --aspect-ratio: 3/4;
         background-size: contain;
         position: relative;
-        aspect-ratio: 4/3;
+        aspect-ratio: var(--aspect-ratio);
         margin-left: calc(var(--page-margin) * -1);
         width: calc(100% + calc(var(--page-margin) * 2));
         animation: preview-container--enter 1s ease-in-out;
@@ -97,14 +91,46 @@ I write you a card and you read my name, rolling your Rs.
         to {opacity: 1;}
     }
 
+    .preview-container::before {
+        content: '.';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        animation: preview-container--loading 1s linear infinite;
+        font-size: 3rem;
+    }
+
+    @keyframes preview-container--loading {
+        0% {content: '.';}
+        20% {content: '..';}
+        40% {content: '...';}
+        60% {content: '....';}
+        80% {content: '.....';}
+    }
+
+
+
+
+
     .preview-container::after {
         content: '';
         display: block;
         position: absolute;
         inset: 0;
-        background: url('/images/face/mirror.webp');
+        background: url('/images/face/mirror-vertical.webp');
         background-size: contain;
         pointer-events: none;
+    }
+
+    @media (min-aspect-ratio: 1) {
+        .preview-container {
+            --aspect-ratio: 4/3;
+        }
+
+        .preview-container::after {
+            background-image: url('/images/face/mirror.webp');
+        }
     }
 
     .preview-container .error-message {
@@ -147,10 +173,12 @@ I write you a card and you read my name, rolling your Rs.
     .preview-container video {
         position: absolute;
         inset: 10%;
+        width: 80%;
+        height: 80%;
         visibility: hidden;
-        aspect-ratio: 4/3;
         object-fit: cover;
-        filter: brightness(1.4) contrast(4.3)  saturate(0)
+        filter: brightness(1.4) contrast(4.3)  saturate(0);
+        transform: rotateY(180deg);
     }
 
     .preview-container__spacer {
@@ -158,74 +186,72 @@ I write you a card and you read my name, rolling your Rs.
         height: 100vh;
     }
 </style>
-
 <div class="preview-container__spacer"></div>
-
-<script type='module'>
-    const previewContainerEl = document.querySelector('.preview-container');
-    const ctaEl = document.querySelector('.preview-container-cta');
-    const retryButtonEl = document.querySelector('.retry-button');
-    const videoEl = document.querySelector('.preview-container-video');
-    const errorMessageEl = document.querySelector('.error-message');
-    document.querySelectorAll('.next-step-button').forEach(
-        el => el.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.target.hidden = true;
-            const nextStepEl = document.querySelector(e.target.getAttribute('href'));
-            nextStepEl.hidden = false;
-            setTimeout(
-                () => {
-                    nextStepEl.scrollIntoView({behavior: 'smooth'});
-                },
-                500
-            )
-        })
-    )
-    ;[...document.querySelectorAll('.next-step-button')]
-        .at(-1)
-        .addEventListener('click', () => {
-            document.querySelector('.preview-container__spacer').remove()
-        })
-
-    const requestVideoInput = e => {
-        e.preventDefault();
-        previewContainerEl.hidden = false;
-        const getVideoStream = () => 
-        {
-            if(!videoEl.paused) return
-            return navigator.mediaDevices.getUserMedia({ 
-                video: true 
-            })
-            .then((stream) => {
-                videoEl.srcObject = stream;
-                videoEl.play();
-            })
-
-        }
-        getVideoStream()
-        .then(
-            () => {
-                videoEl.style.visibility = 'visible';
-                ctaEl.style.display = 'none';
-                // pause the video when videoEl is not in view
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            getVideoStream()
-                        } else {
-                            videoEl.pause();
-                            //unload the video stream from the element
-                            videoEl.srcObject.getTracks().forEach(track => track.stop());
-                        }
-                    });
-                }, { threshold: 0.5 });
-                observer.observe(videoEl);
-            }
-        )
-            .catch((err) => {
-                errorMessageEl.style.visibility = 'visible';
-            });
+<script type="module">
+  const previewContainerEl = document.querySelector(".preview-container");
+  const ctaEl = document.querySelector(".preview-container-cta");
+  const retryButtonEl = document.querySelector(".retry-button");
+  const videoEl = document.querySelector(".preview-container-video");
+  const errorMessageEl = document.querySelector(".error-message");
+  document.querySelectorAll(".next-step-button").forEach((el) =>
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.target.hidden = true;
+    })
+  );
+  const getVideoStream = () => {
+    if (!videoEl.paused) return;
+    return navigator.mediaDevices
+      .getUserMedia({
+        video: true,
+      })
+      .then((stream) => {
+        videoEl.srcObject = stream;
+        videoEl.play();
+      });
+  };
+  const requestVideoInput = async () => {
+    try {
+      await getVideoStream();
+    } catch (error) {
+      errorMessageEl.style.visibility = "visible";
     }
-    retryButtonEl.addEventListener('click', requestVideoInput);
-    ctaEl.addEventListener('click', requestVideoInput);
+    // pause the video when videoEl is not in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            getVideoStream();
+          } else {
+            if(!videoEl.paused) {
+                videoEl.pause();
+                //unload the video stream from the element
+                videoEl.srcObject.getTracks().forEach((track) => track.stop());
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(videoEl);
+  };
+  const handleCTAClick = (e) => {
+    e.preventDefault();
+    previewContainerEl.hidden = false;
+    document.querySelector(".faces__step-1").hidden = false;
+    videoEl.style.visibility = "visible";
+    ctaEl.style.display = "none";
+    previewContainerEl.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+    setTimeout(
+        () => {
+            requestVideoInput(e);
+            document.querySelector(".preview-container__spacer").remove();  
+        }
+    )
+  };
+  retryButtonEl.addEventListener("click", handleCTAClick);
+  ctaEl.addEventListener("click", handleCTAClick);
 </script>
