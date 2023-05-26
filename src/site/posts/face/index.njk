@@ -40,6 +40,7 @@ Still, none of the faces I draw look like this:
     <div class="preview-container">
         <div class="embed">
             <video class='preview-container-video' id='preview' playsinline autoplay loop muted></video>
+            <div class='preview-container-video-overlay'></div>
         </div>
         <div class="error-message">There was an error, that's ok. <button class='retry-button'>Try again</button> or find a mirror.</div>
         <div class="cannot-see-you-message">Don't worry, I can't see you.</div>
@@ -168,6 +169,12 @@ I write you a card and you read my name, rolling your Rs.
         width: 100%;
         height: 100%;
         position: relative;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .preview-container .embed.is-active {
+        opacity: 1;
     }
 
     .preview-container video {
@@ -179,6 +186,13 @@ I write you a card and you read my name, rolling your Rs.
         object-fit: cover;
         filter: brightness(1.4) contrast(4.3)  saturate(0);
         transform: rotateY(180deg);
+    }
+    
+    .preview-container-video-overlay {
+        position: absolute;
+        inset: 0;
+        background: var(--color-bg);
+        mix-blend-mode: multiply;
     }
 
     .preview-container__spacer {
@@ -212,7 +226,10 @@ I write you a card and you read my name, rolling your Rs.
   };
   const requestVideoInput = async () => {
     try {
+      errorMessageEl.style.visibility = "hidden";
       await getVideoStream();
+      const embedEl = document.querySelector(".preview-container .embed");
+      embedEl.classList.add("is-active");
     } catch (error) {
       errorMessageEl.style.visibility = "visible";
     }
