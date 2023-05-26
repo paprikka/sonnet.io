@@ -40,7 +40,6 @@ Still, none of the faces I draw look like this:
     <div class="preview-container">
         <div class="embed">
             <video class='preview-container-video' id='preview' playsinline autoplay loop muted></video>
-            <div class='preview-container-video-overlay'></div>
         </div>
         <div class="error-message">There was an error, that's ok. <button class='retry-button'>Try again</button> or find a mirror.</div>
         <div class="cannot-see-you-message">Don't worry, I can't see you.</div>
@@ -193,6 +192,7 @@ I write you a card and you read my name, rolling your Rs.
         inset: 0;
         background: var(--color-bg);
         mix-blend-mode: multiply;
+        opacity: .3;
     }
 
     .preview-container__spacer {
