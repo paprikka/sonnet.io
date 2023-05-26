@@ -40,7 +40,7 @@ And, none of the faces I draw look like this:
         <div class="embed">
             <video class='preview-container-video' id='preview' autoplay loop muted></video>
         </div>
-        <div class="error-message">There was an error, that's ok. Try again or find a mirror.</div>
+        <div class="error-message">There was an error, that's ok. <button class='retry-button'>Try again</button> or find a mirror.</div>
         <div class="cannot-see-you-message">Don't worry, I can't see you.</div>
     </div>
     <p><a href='#step-2' class='next-step-button'>Click to continue...</a></p>
@@ -92,10 +92,6 @@ I write you a card and you read my name, rolling your Rs.
         animation: preview-container--enter 1s ease-in-out;
     }
 
-    .cannot-see-you-message {
-
-    }
-
     @keyframes preview-container--enter {
         from {opacity: 0;}
         to {opacity: 1;}
@@ -108,28 +104,14 @@ I write you a card and you read my name, rolling your Rs.
         inset: 0;
         background: url('/images/face/mirror.webp');
         background-size: contain;
-    }
-
-    .preview-container button {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        translate: -50% 0;
-        background: black;
-        color: white;
-        border: none;
-        font-size: 2rem;
-        padding: 0 1rem;
-        line-height: 2em;
-        cursor: pointer;
+        pointer-events: none;
     }
 
     .preview-container .error-message {
         position: absolute;
-        left: 10%;
-        right: 10%;
-        bottom: 10%;
-
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
         background: white;
         color: black;
         padding: 2rem;
@@ -137,6 +119,19 @@ I write you a card and you read my name, rolling your Rs.
         text-align: center;
         border: 2px solid black;
         visibility: hidden;
+    }
+
+    .preview-container .error-message button {
+        background: black;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        padding: 0 0.5rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 0 0.2rem black;
+        line-height: 1.3;
+        cursor: pointer;
     }
 
     .preview-container button:hover {
@@ -169,6 +164,7 @@ I write you a card and you read my name, rolling your Rs.
 <script type='module'>
     const previewContainerEl = document.querySelector('.preview-container');
     const ctaEl = document.querySelector('.preview-container-cta');
+    const retryButtonEl = document.querySelector('.retry-button');
     const videoEl = document.querySelector('.preview-container-video');
     const errorMessageEl = document.querySelector('.error-message');
     document.querySelectorAll('.next-step-button').forEach(
@@ -190,7 +186,8 @@ I write you a card and you read my name, rolling your Rs.
         .addEventListener('click', () => {
             document.querySelector('.preview-container__spacer').remove()
         })
-    ctaEl.addEventListener('click', (e) => {
+
+    const requestVideoInput = e => {
         e.preventDefault();
         previewContainerEl.hidden = false;
         const getVideoStream = () => 
@@ -228,5 +225,7 @@ I write you a card and you read my name, rolling your Rs.
             .catch((err) => {
                 errorMessageEl.style.visibility = 'visible';
             });
-    });
+    }
+    retryButtonEl.addEventListener('click', requestVideoInput);
+    ctaEl.addEventListener('click', requestVideoInput);
 </script>
