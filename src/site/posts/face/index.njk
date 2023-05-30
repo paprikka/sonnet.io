@@ -203,6 +203,9 @@ I write you a card and you read my name, rolling your Rs.
 </style>
 <div class="preview-container__spacer"></div>
 <script type="module">
+  const umami = window.umami || {
+    trackEvent: () => {},
+  }
   const previewContainerEl = document.querySelector(".preview-container");
   const ctaEl = document.querySelector(".preview-container-cta");
   const retryButtonEl = document.querySelector(".retry-button");
