@@ -208,6 +208,7 @@ I write you a card and you read my name, rolling your Rs.
   const retryButtonEl = document.querySelector(".retry-button");
   const videoEl = document.querySelector(".preview-container-video");
   const errorMessageEl = document.querySelector(".error-message");
+  let hasPlayedOnce = false;
   document.querySelectorAll(".next-step-button").forEach((el) =>
     el.addEventListener("click", (e) => {
       e.preventDefault();
@@ -222,7 +223,7 @@ I write you a card and you read my name, rolling your Rs.
       })
       .then((stream) => {
         videoEl.srcObject = stream;
-        videoEl.play();
+        return videoEl.play();
       });
   };
   const requestVideoInput = async () => {
@@ -231,7 +232,11 @@ I write you a card and you read my name, rolling your Rs.
       await getVideoStream();
       const embedEl = document.querySelector(".preview-container .embed");
       embedEl.classList.add("is-active");
+      if(hasPlayedOnce) return
+      hasPlayedOnce = true;
+      umami.trackEvent('mirror-play');
     } catch (error) {
+      umami.trackEvent('mirror-error', {error: error.message});
       errorMessageEl.style.visibility = "visible";
     }
     // pause the video when videoEl is not in view
@@ -270,6 +275,12 @@ I write you a card and you read my name, rolling your Rs.
         }
     )
   };
-  retryButtonEl.addEventListener("click", handleCTAClick);
-  ctaEl.addEventListener("click", handleCTAClick);
+  retryButtonEl.addEventListener("click", (e) => {
+    umami.trackEvent('mirror-retry-click')
+    handleCTAClick(e);
+  });
+  ctaEl.addEventListener("click", (e) => {
+    umami.trackEvent('mirror-click')
+    handleCTAClick(e)
+  });
 </script>
