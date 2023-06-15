@@ -1,9 +1,9 @@
 {
-      "redirects": [
-        { 
-          "source": "/cv",
-          "destination": "https://drive.google.com/file/d/1_wYWfAWAv4RlNERMkqStms0-wEBiVCaC/view?usp=sharing", 
-          "permanent": true
+    "redirects": [
+        {
+            "source": "/cv",
+            "destination": "https://drive.google.com/file/d/1kCpQpNraPxfrKfnhrdnk-fcisNeKB0_n/view?usp=sharing",
+            "permanent": true
         }
-      ]
-    }
+    ]
+}
