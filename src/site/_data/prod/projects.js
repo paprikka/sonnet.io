@@ -221,7 +221,18 @@ const remainingProjects = [
             `,
         demoURL: 'https://500px.com/photo/151829029/aaron-by-rafal-pastuszak',
     },
-
+    {
+        title: 'Bat!',
+        date: '2013-04-27',
+        content: 'Quickly measure site contrast and readability',
+        demoURL: 'https://github.com/paprikka/le-bat',
+        links: [
+            {
+                type: 'source',
+                url: 'http://paprikka.github.io/le-bat/#/preview',
+            },
+        ],
+    },
     {
         title: 'Werework',
         date: ['2016-04-25', '2018-04-25'],
