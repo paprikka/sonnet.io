@@ -49,6 +49,47 @@ Please share with a friend who needs to sit the fuck down or enjoy the experienc
  */
 const remainingProjects = [
     {
+        title: 'Days',
+        date: '2023-07-03',
+        demoURL: 'https://days.sonnet.io',
+        content: `
+        My life in days, inspired by Buster Benson's [Life in Weeks](https://busterbenson.com/life-in-weeks).
+
+        Feel free to fork it, but please be gentle, it's still the first iteration.
+        `,
+        links: [{ type: 'source', url: 'https://github.com/paprikka/days' }],
+    },
+    {
+        title: 'Tip of the Tongue',
+        date: '2023-07-03',
+        demoURL: 'https://tip.potato.horse',
+        content: `Tip. is a tool parahippocampal gyrus massage.
+
+You describe the thing you can't name and it spits out a [guess](https://twitter.com/rafalpast/status/1676517556159492097?s=20).
+        `,
+    },
+    {
+        title: 'Lemonade',
+        date: '2023-06-30',
+        demoURL: 'https://lemonade.sonnet.io',
+        content: `Lemonade is a stupid simple Fediverse community browser.
+
+        It's aimed at people who are not familiar with federated social media.
+        `,
+        links: [{ type: 'article', url: 'https://lemonade.sonnet.io/about' }],
+    },
+    {
+        title: 'Meat-GPT',
+        date: '2023-05-23',
+        demoURL: 'https://meat-gpt.sonnet.io',
+        content: `"Prime answers to rare questions."
+
+        The success of the site was to a large part driven by terrible AI site catalogues, and their hallucinated ideas of what Meat-GPT is about.
+
+        Irony deficency is not a joke. Remember to get tested regularly.
+        `,
+    },
+    {
         title: 'Tommy the Toe and the Chamber of Hostile Carpentry',
         date: '2020-02-01',
         demoURL: 'https://apps.apple.com/gb/app/tommy-the-toe/id1498417487',
@@ -57,6 +98,21 @@ const remainingProjects = [
 
         Check the gameplay video [here](https://www.reddit.com/r/iosgaming/comments/f4bkov/my_girlfriend_broke_a_toe_so_i_made_a_game_about/).
         `,
+    },
+    {
+        title: 'Important Meeting Notes',
+        date: '2021-11-01',
+        content: `A collection of drawings and short visual stories updated irregularly but frequently.
+
+        It was originally inspired by the notes I took during useless middle management meetings.
+        
+        You can learn more about the project [here](https://sonnet.io/posts/use-rainbow/) or on [css-tricks](https://css-tricks.com/userainbow/).
+
+        `,
+        demoURL: 'https://potato.horse',
+        links: [
+            { type: 'article', url: 'https://sonnet.io/posts/use-rainbow/' },
+        ],
     },
 
     {
