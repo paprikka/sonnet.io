@@ -35,38 +35,15 @@
         order: 2;
     }
 
-    &__content {
-        order: 3;
-
-        a {
-            font-weight: 600;
-            font-style: italic;
-            color: var(--color-text);
-
-            &:hover,
-            &:active {
-                color: var(--color-link);
-            }
-        }
-    }
-
-    p {
-        font-size: 2rem;
-        margin: calc(var(--ru) * 2rem) 0;
-        line-height: calc(var(--ru) * 2rem);
-    }
-
-    hr {
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        border: none;
-        font-size: 3rem;
-        line-height: calc(var(--ru) * 3rem);
-        height: calc(var(--ru) * 3rem);
-        &::after {
-            content: '❦';
-        }
+    &:after {
+        content: '';
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 10rem;
+        pointer-events: none;
+        background: linear-gradient(180deg, transparent, var(--color-bg) 100%);
     }
 
     @media all and (min-width: $screen-narrow) {
@@ -76,19 +53,13 @@
                 line-height: calc(var(--ru) * 6rem);
             }
         }
-
-        &__content {
-            p {
-                font-size: 2.5rem;
-                line-height: calc(var(--ru) * 2.5rem);
-            }
-        }
     }
 
     /* TODO: replace with vars */
     @media all and (min-width: $screen-mid) {
         align-items: stretch;
-        min-height: calc(100vh - 2 * var(--page-margin));
+        height: calc(100vh - 2 * var(--page-margin));
+        overflow: hidden;
 
         &__decor {
             display: block;
@@ -139,15 +110,91 @@
             bottom: var(--page-margin);
         }
 
-        &__content {
-            order: 2;
-            max-width: 60vw;
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.intro-content {
+    order: 3;
+
+    a {
+        font-weight: 600;
+        font-style: italic;
+        color: var(--color-text);
+
+        &:hover,
+        &:active {
+            color: var(--color-link);
+        }
+    }
+
+    p {
+        font-size: 2rem;
+        margin: calc(var(--ru) * 2rem) 0;
+        line-height: calc(var(--ru) * 2rem);
+
+        &:last-child br {
+            display: none;
+        }
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin: calc(var(--ru) * 2rem) 0;
+        line-height: calc(var(--ru) * 2rem);
+        font-weight: inherit;
+        font-style: italic;
+    }
+
+    hr {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        line-height: calc(var(--ru) * 3rem);
+        height: calc(var(--ru) * 3rem);
+        &::after {
+            content: '❦';
+        }
+    }
+
+    @media all and (min-width: $screen-narrow) {
+        p {
+            font-size: 2.5rem;
+            line-height: calc(var(--ru) * 2.5rem);
+        }
+
+        h2 {
+            font-size: 4rem;
+            margin: calc(var(--ru) * 2rem) 0;
+            line-height: calc(var(--ru) * 3rem);
+            font-weight: inherit;
+            font-style: italic;
+        }
+    }
+
+    @media all and (min-width: $screen-mid) {
+        order: 2;
+        max-width: 60vw;
+
+        h2 {
+            font-size: 3.5vw;
+            font-weight: inherit;
+            font-style: italic;
+            line-height: 1;
         }
 
         p {
-            font-size: 2.5vw;
-            line-height: calc(var(--ru) * 1em);
+            font-size: 1.75vw;
+            line-height: var(--ru);
             margin: calc(var(--ru) * 0.5em) 0;
+        }
+
+        p:last-child br {
+            display: block;
         }
 
         hr {

@@ -1,100 +1,28 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const footnotes = require('eleventy-plugin-footnotes')
-
-const Image = require('@11ty/eleventy-img')
-
-const path = require('path')
-const getResolvedSrc = (src, page) => {
-    const isRemote = !src.startsWith('.')
-    if (isRemote) return src
-
-    const isColocated = !isRemote && !src.startsWith('./src')
-    if (!isColocated) return src
-
-    return path.resolve(page.inputPath, '../', src)
-}
-
-async function imageShortcode(
-    src,
-    alt,
-    sizes = '(min-width: 1200px) 60rem, 100vw'
-) {
-    const isAnimated = src.endsWith('.gif')
-    const sharedOpts = {
-        widths: [600, 1200],
-        outputDir: './dist/images/opt',
-        urlPath: '/images/opt',
-    }
-
-    const options = isAnimated
-        ? {
-              ...sharedOpts,
-              formats: ['webp', 'gif'],
-              sharpOptions: {
-                  animated: true,
-              },
-          }
-        : {
-              ...sharedOpts,
-              formats: ['avif', 'webp', 'jpeg'],
-          }
-    const metadata = await Image(getResolvedSrc(src, this.page), options)
-
-    const imageAttributes = {
-        alt,
-        sizes,
-        loading: 'lazy',
-        decoding: 'async',
-    }
-
-    const meta = Image.generateHTML(metadata, imageAttributes)
-
-    // TODO: remove me
-    // ? temporary hack before pushing to HN
-    if (src === './src/site/posts/sit/imgs/hero.gif') {
-        console.log('=== there can be only one ===')
-        return meta.replace('height="2400"', 'height="600" data-yolo="true"')
-    }
-    return meta
-}
+const pluginWebC = require('@11ty/eleventy-plugin-webc')
+const { imageShortcode } = require('./src/utils/image-shortcode.js')
 
 module.exports = function (config) {
-    let env = process.env.ELEVENTY_ENV
-
-    config.addPlugin(footnotes, {
-        baseClass: 'footnotes',
-    })
-
-    let markdown = require('markdown-it')({
-        linkify: true,
-    })
-
-    config.addFilter('md', function (rawString) {
-        return markdown.renderInline(rawString)
-    })
-
-    config.addFilter('mdblock', function (rawString) {
-        return markdown.render(rawString)
-    })
-
     // Layout aliases can make templates more portable
-    config.addLayoutAlias('default', 'layouts/base.njk')
-
-    // Add some utility filters
-    config.addFilter('squash', require('./src/utils/filters/squash.js'))
-
-    config.addFilter('json', (val) => {
-        return JSON.stringify(val, null, 2)
+    config.addLayoutAlias('default', '_layouts/base.njk')
+    config.addPlugin(footnotes, { baseClass: 'footnotes' })
+    config.addPlugin(pluginWebC, {
+        components: [
+            'src/site/_includes/components/**/*.webc',
+            'npm:@11ty/eleventy-img/*.webc',
+        ],
     })
 
-    const dateFormatter = require('./src/utils/filters/date.js')
-    config.addFilter('dateDisplay', dateFormatter)
-
-    config.addFilter('dateDisplayShort', (val) =>
-        Array.isArray(val)
-            ? val.map((val) => dateFormatter(val, 'LLLL yyyy')).join(' – ')
-            : dateFormatter(val, 'LLLL yyyy')
+    config.addFilter('md', require('./src/utils/filters/md').inline)
+    config.addFilter('mdblock', require('./src/utils/filters/md').block)
+    config.addFilter('squash', require('./src/utils/filters/squash'))
+    config.addFilter('json', require('./src/utils/filters/json').json)
+    config.addFilter('dateDisplay', require('./src/utils/filters/date'))
+    config.addFilter(
+        'dateDisplayShort',
+        require('./src/utils/filters/date-display-short').dateDisplayShort
     )
 
     // add support for syntax highlighting
@@ -104,15 +32,7 @@ module.exports = function (config) {
     config.addTransform('htmlmin', require('./src/utils/minify-html.js'))
 
     // compress and combine js files
-    config.addFilter('jsmin', function (code) {
-        const UglifyJS = require('uglify-js')
-        let minified = UglifyJS.minify(code)
-        if (minified.error) {
-            console.log('UglifyJS error: ', minified.error)
-            return code
-        }
-        return minified.code
-    })
+    config.addFilter('jsmin', require('./src/utils/filters/jsmin.js').jsmin)
 
     // pass some assets right through
     config.addPassthroughCopy('./src/site/images')
@@ -120,29 +40,21 @@ module.exports = function (config) {
 
     config.addPlugin(pluginRss)
 
-    async function renderFig(content, src, alt) {
-        const imgHTML = await imageShortcode.bind(this)(src, alt)
-        return `
-        <figure class='post__figure'>
-            ${imgHTML}
-            <figcaption>${content}</figcaption>
-        </figure>
-        `.trim()
-    }
     // TODO: merge into one shortcode after publishing the post
-    config.addPairedAsyncShortcode('fig', renderFig)
+    config.addPairedAsyncShortcode(
+        'fig',
+        require('./src/utils/figure-shortcode').renderFig
+    )
 
-    config.addPairedShortcode('figure', (content, src, alt) => {
-        return `
-        <figure class='post__figure'>
-            <img src='${src}' alt='${alt}' loading='lazy'>
-            <figcaption>${content}</figcaption>
-        </figure>
-        `.trim()
-    })
+    config.addPairedShortcode(
+        'figure',
+        require('./src/utils/figure-legacy-shortcode').legacyFigureShortcode
+    )
 
-    config.addShortcode('picture', (src, alt) =>
-        `<p><img loading='lazy' src='${src}' alt='${alt}'/></p>`.trim()
+    config.addShortcode(
+        'picture',
+        require('./src/utils/picture-legacy-shortcode.js')
+            .pictureLegacyShortcode
     )
 
     config.addAsyncShortcode('pic', imageShortcode)

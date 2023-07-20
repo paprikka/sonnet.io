@@ -1,16 +1,16 @@
 .intro-header {
     line-height: calc(var(--ru) * 2rem);
-    font-size: 2rem;
-    padding: calc(var(--ru) * 1rem - 1px) 0;
-    border-top: 1px solid var(--color-text);
-    border-bottom: 1px solid var(--color-text);
+    font-size: 1.5rem;
+    padding: calc(var(--ru) * 0.75rem - 1px) 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 
     ul {
         padding: 0;
         margin: 0;
         list-style: none;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
@@ -21,6 +21,15 @@
 
     a {
         color: var(--color-body);
+        font-family: var(--font-secondary);
+        text-decoration: none;
+        font-weight: 600;
+
+        @media (hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
         &:hover,
         &:active {
@@ -32,8 +41,7 @@
 
     @media all and (min-width: $screen-mid) {
         text-align: left;
-        line-height: calc(var(--ru) * 2rem);
-        font-size: 2vw;
+        font-size: 1.25vw;
         padding: 0;
         border: none;
 

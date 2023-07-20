@@ -1,0 +1,49 @@
+<button :data-options="options">🔄</button>
+
+<script>
+    customElements.define('now-selector', class extends HTMLElement {
+        connectedCallback() {
+            let state = {
+                optionIndex: 0
+            }
+            const button  = this.querySelector('button')
+            const options = button
+                .dataset
+                .options
+                .split(',')
+                .map( _=> _.trim())
+
+            const output = button
+            button.onclick=() => {
+                state.optionIndex >= options.length - 1
+                    ? state.optionIndex= 0
+                    : state.optionIndex++
+                
+                    render()
+            }
+
+            const render = () => {
+                output.innerText = options[state.optionIndex]
+            }
+
+            render()
+
+
+        }
+    })
+</script>
+
+<style webc:scoped>
+    button {
+        display: inline-block;
+        background: none transparent;
+        color: inherit;
+        appearance: none;
+        border: none;
+        border-bottom: 2px dashed;
+        padding: 0;
+        margin: 0 0 0 .5ch;
+        cursor: pointer;
+        font-weight: 500;
+    }
+</style>
