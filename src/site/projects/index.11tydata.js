@@ -326,6 +326,7 @@ const formatProject = (project) => ({
 })
 
 module.exports = {
+    foo: 'bar',
     favourites: favourites.map(formatProject),
     remaining: [
         ...remainingProjects.sort((a, b) => {

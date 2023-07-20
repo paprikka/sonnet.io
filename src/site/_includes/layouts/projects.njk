@@ -9,9 +9,10 @@ pageClass: projects
 
   <p class='page-projects__intro'>A selection of my personal projects and experiments.
     <br>For my client work, see my  <a href='/cv' target='_blank'>CV</a> or <a href='mailto:hello@sonnet.io'>get&nbsp;in&nbsp;touch</a>!</p>
-
+  <pre>
+    </pre>
   <ul class='projects-list'>
-    {%- for project in projects.favourites -%}
+    {%- for project in favourites -%}
     
       {%- if  project.isFavourite -%}
         <li class='projects-entry'>
@@ -43,7 +44,7 @@ pageClass: projects
   </ul>
   <h2>Other projects</h2>
   <ul class='projects-remaining-list'>
-    {% for project in projects.remaining %}
+    {% for project in remaining %}
       <li>
         <header>
           <h1><a href='{{project.demoURL}}'>{{project.title}}</a></h1>
