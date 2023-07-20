@@ -1,0 +1,15 @@
+<hr>
+<style webc:scoped>
+    hr {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        border: none;
+        font-size: 3rem;
+        line-height: calc(var(--ru) * 3rem);
+        height: calc(var(--ru) * 3rem);
+    }
+    hr::after {
+        content: '❦';
+    }
+</style>

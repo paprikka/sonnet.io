@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link rel="stylesheet" href="../../../../node_modules/normalize.css/normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet" webc:keep />
+    <link rel="stylesheet" href="base.css" />
+    <style @raw="getBundle('css')" webc:keep></style>
+    <template webc:type="11ty" 11ty:type="njk">
+        {% include "meta.njk" %}
+    </template>
+    <script webc:keep>
+        document.addEventListener("DOMContentLoaded", () => {
+            const remoteLinks = document.querySelectorAll('a[href^="//"], a[href^="http"]');
+
+            [...remoteLinks].forEach((anchor) => {
+                anchor.target = "_blank";
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper" @raw="content"></div>
+
+    <script webc:keep async defer data-domains="www.sonnet.io,sonnet.io"
+        data-website-id="fbde7cb0-26f1-44d4-ba49-2423c13314a6"
+        src="https://sonnet-events.vercel.app/umami.js"> </script>
+
+
+    <template webc:type="11ty" 11ty:type="njk">
+        <script>__sonnet_build_time = "{{ site.buildTime }}"</script>
+    </template>
+    <script @raw="getBundle('js')" webc:keep></script>
+
+</body>
+
+</html>

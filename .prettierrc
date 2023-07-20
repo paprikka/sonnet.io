@@ -4,5 +4,14 @@
     "semi": false,
     "singleQuote": true,
     "jsxSingleQuote": true,
-    "bracketSpacing": true
+    "bracketSpacing": true,
+    "overrides": [
+        {
+            "files": "*.webc",
+            "options": {
+                "parser": "markdown",
+                "proseWrap": "preserve"
+            }
+        }
+    ]
 }
