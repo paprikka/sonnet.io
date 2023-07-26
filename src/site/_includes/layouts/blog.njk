@@ -11,8 +11,8 @@ pageClass: intro
       {%- for page in collections.post | reverse-%}
         {% if (page.data.hidden != true) %}
           <li class='listing__post'>
+            <time class='listing__post-time' datetime="{{ page.date }}">{{ page.date | dateDisplay("dd/MM/yy") }}</time>
             <a class='listing__post-link' href="{{ page.url }}">{{ page.data.title }}</a>
-            <time class='listing__post-time' datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
           </li>
         {% endif %}
       {%- endfor -%}

@@ -1,5 +1,5 @@
 .listing {
-    --listing-width: 40rem;
+    --listing-width: 60rem;
 
     text-align: center;
 
@@ -19,28 +19,33 @@
     }
 
     &__post {
-        margin-bottom: calc(var(--ru) * 2rem);
-        text-align: left;
+        margin-bottom: calc(var(--ru) * 4rem);
+        text-align: center;
         overflow: visible;
     }
 
     &__post-link {
         font-size: 3rem;
-        line-height: calc(var(--ru) * 2rem);
+        line-height: calc(var(--ru) * 2pxrem);
         color: var(--color-text);
         display: block;
         word-break: break-word;
+        font-weight: 400;
         text-decoration: none;
-        font-weight: 600;
+
         &:hover,
         &:active {
             color: var(--color-link);
+            text-decoration: underline;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 0.2rem;
         }
     }
 
     &__post-time {
         font-size: 1.5rem;
-        line-height: calc(var(--ru) * 2rem);
+        line-height: 1.1;
         opacity: 0.6;
         font-family: var(--font-secondary);
     }
@@ -74,6 +79,11 @@
             font-size: 8rem;
             line-height: calc(var(--ru) * 10rem);
             text-align: center;
+        }
+
+        &__post-link {
+            font-size: 6rem;
+            line-height: calc(var(--ru) * 4rem);
         }
 
         ul {
