@@ -2,6 +2,23 @@
     /* line-height: calc(var(--ru) * 1rem); */
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 8rem;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            var(--color-bg) 70%
+        );
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 
     &__decor {
         display: none;
@@ -22,6 +39,7 @@
         strong {
             font-weight: 500;
         }
+
         h2 {
             display: none;
         }
@@ -50,10 +68,17 @@
         }
     }
 
-    p {
+    p.important {
         font-size: 2rem;
         margin: calc(var(--ru) * 2rem) 0;
         line-height: calc(var(--ru) * 2rem);
+    }
+
+    p {
+        --s: 1.5rem;
+        font-size: var(--s);
+        margin: calc(var(--ru) * var(--s)) 0;
+        line-height: calc(var(--ru) * var(--s));
     }
 
     hr {
