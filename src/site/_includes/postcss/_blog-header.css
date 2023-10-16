@@ -41,9 +41,45 @@
 
     @media all and (max-width: $screen-narrow) {
         & {
+            position: sticky;
+            top: 0;
+            margin-inline: calc(var(--page-margin) * -1);
+            padding: 0 var(--page-margin);
+            z-index: 10;
+
+            background-color: var(--color-bg);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            bottom: -2rem;
+            height: 2rem;
+            background-image: linear-gradient(
+                to bottom,
+                hsl(0, 100%, 98%) 0%,
+                hsla(0, 100%, 98%, 0.971) 9.2%,
+                hsla(0, 100%, 98%, 0.927) 17.4%,
+                hsla(0, 100%, 98%, 0.869) 24.7%,
+                hsla(0, 100%, 98%, 0.8) 31.3%,
+                hsla(0, 100%, 98%, 0.723) 37.3%,
+                hsla(0, 100%, 98%, 0.639) 42.8%,
+                hsla(0, 100%, 98%, 0.552) 48.1%,
+                hsla(0, 100%, 98%, 0.463) 53.3%,
+                hsla(0, 100%, 98%, 0.375) 58.6%,
+                hsla(0, 100%, 98%, 0.29) 64.1%,
+                hsla(0, 100%, 98%, 0.211) 69.9%,
+                hsla(0, 100%, 98%, 0.14) 76.3%,
+                hsla(0, 100%, 98%, 0.08) 83.3%,
+                hsla(0, 100%, 98%, 0.032) 91.1%,
+                hsla(0, 100%, 98%, 0) 100%
+            );
         }
 
         nav {

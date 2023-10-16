@@ -12,9 +12,13 @@ $screen-wide: 1200px;
 
     --page-margin: calc(2rem * var(--ru));
     --page-margin-mid: calc(3rem * var(--ru));
+    --bg-h: 0;
+    --bg-s: 100%;
+    --bg-l: 98%;
 
-    --color-bg: #fff4f4;
-    --color-bg-fade: #fff4f4ee;
+    --color-bg: hsla(var(--bg-h), var(--bg-s), var(--bg-l), 1);
+
+    --color-bg-fade: hsla(var(--bg-h), var(--bg-s), var(--bg-l), 0.9);
     --color-text: #3e3e3e;
     --color-text-fade: #3e3e3e88;
     --color-link: #e00202;
