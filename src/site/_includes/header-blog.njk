@@ -35,6 +35,16 @@
 
 <script type='module'>
 
+  [...document.querySelectorAll('#menu a')]
+    .forEach( el => {
+      el.addEventListener('click', () =>{
+        if(el.getAttribute('href').startsWith('http')) {
+          document.dispatchEvent(new CustomEvent('menu:close'))
+        }
+      })
+    } 
+  )
+
   document.addEventListener('menu:close', () => {
     document
       .querySelector('#blog-header')
