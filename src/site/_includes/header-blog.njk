@@ -1,10 +1,9 @@
-<header class="blog-header">
-  <nav class="blog-header__nav">
-    <ul>
-      <li class="blog-header__logo">
-        <a href="/"></a>
-      </li>
-      <li class="flex-spacer"></li>
+<header class="blog-header" id='blog-header'>
+  <a href="/" class="blog-header__logo"></a>
+  <nav>
+    <a href="/" class="blog-header__logo"></a>
+
+    <ul id='menu' aria-labelledby="show-menu-button">
       <li>
         <a href="/blog">Writing</a>
       </li>
@@ -12,8 +11,46 @@
         <a href="/projects">Projects</a>
       </li>
       <li>
+        <a href="https://untested.sonnet.io">Notes</a>
+      </li>
+      <li>
+        <a href="https://consulting.sonnet.io">Work with me</a>
+      </li>
+      <li>
         <a href="/posts/hi">Say&nbsp;hi</a>
       </li>
     </ul>
+
+    <button class='hide-menu'
+      onclick='document.dispatchEvent(new CustomEvent("menu:close"))' arial-label='close menu'></button>
   </nav>
+
+  <button class='show-menu' id="show-menu-button"
+    arial-label='show menu'
+    aria-expanded='false'
+  onclick='document.dispatchEvent(new CustomEvent("menu:open"))'
+  >menu</button>
+
 </header>
+
+<script type='module'>
+
+  document.addEventListener('menu:close', () => {
+    document
+      .querySelector('#blog-header')
+      .classList
+      .remove('is-visible');
+
+    document.querySelector('#show-menu-button').setAttribute('aria-expanded', 'false')
+
+  })
+
+  document.addEventListener('menu:open', () => {
+    document
+      .querySelector('#blog-header')
+      .classList
+      .add('is-visible')
+
+      document.querySelector('#show-menu-button').setAttribute('aria-expanded', 'true')
+  })
+</script>

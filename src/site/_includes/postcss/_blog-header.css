@@ -1,37 +1,17 @@
 .blog-header {
     line-height: calc(var(--ru) * 2rem);
-    font-size: 1.5rem;
-    padding: calc(var(--ru) * 1rem) 0;
+    font-size: 1.25rem;
+    padding: 0;
     margin-bottom: calc(var(--ru) * 2rem);
 
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    li {
-        display: inline-block;
-        padding: 0 1rem;
-    }
-
-    li:empty {
-        padding: 0;
-    }
-
     &__logo {
-        a {
-            display: block;
-            height: 3rem;
-            width: 5rem;
-            background: url(/images/logo.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            opacity: 0.9;
-        }
+        display: block;
+        height: 3rem;
+        width: 5rem;
+        background: url(/images/logo.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        opacity: 0.9;
     }
 
     a {
@@ -52,10 +32,117 @@
             color: var(--color-link);
         }
     }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media all and (max-width: $screen-narrow) {
+        & {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        nav {
+            font-size: 2rem;
+            line-height: 2;
+            list-style: none;
+            margin: 0;
+            position: fixed;
+            inset: 0;
+            padding: var(--page-margin);
+            background-color: var(--color-bg);
+
+            display: grid;
+            place-content: center;
+            place-items: center;
+
+            gap: 1rem;
+
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+            & .blog-header__logo {
+                position: absolute;
+                top: var(--page-margin);
+                left: var(--page-margin);
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+
+        &.is-visible nav {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .blog-header__menu {
+            position: fixed;
+            inset: 0;
+            background-color: var(--color-bg-fade);
+            backdrop-filter: blur(1px);
+            display: grid;
+            grid-template-rows:
+                3rem
+                repeat(auto-fit, minmax(min-content, 1fr))
+                3rem;
+            align-content: center;
+            justify-items: center;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        .hide-menu {
+            position: absolute;
+            bottom: var(--page-margin);
+            right: var(--page-margin);
+
+            color: inherit;
+
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            font-size: 3rem;
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            line-height: 3rem;
+            cursor: pointer;
+
+            &::after {
+                content: '×';
+            }
+        }
+
+        .show-menu {
+            display: inline-block;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            padding: 0;
+            color: inherit;
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+
     @media all and (min-width: $screen-narrow) {
         max-width: 80rem;
-        margin-left: auto;
-        margin-right: auto;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
         &__logo {
             a {
@@ -63,26 +150,33 @@
                 width: 8rem;
             }
         }
-    }
 
-    &__logo {
-        display: none;
-    }
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
 
-    &--blog {
-        &__logo {
-            flex: 10;
-            display: block;
-            width: 100%;
-            color: var(--color-text);
-
-            font-weight: 400;
-            font-style: italic;
-            font-size: 4rem;
-
-            a {
-                text-decoration: none;
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                align-items: center;
             }
+
+            li a {
+                padding-inline: 1rem;
+            }
+        }
+
+        nav &__logo {
+            display: none;
+        }
+
+        .hide-menu,
+        .show-menu {
+            display: none;
         }
     }
 }
