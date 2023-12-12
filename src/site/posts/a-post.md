@@ -4,7 +4,7 @@ date: 2018-03-21
 hidden: true
 ---
 
-I’ve spent the past 10+ years [helping businesses](https://uk.linkedin.com/in/rafalpast) to move towards digital & mobile.
+I’ve spent the past 10+ years [helping businesses](https://linkedin.com/in/rafalpast) to move towards digital & mobile.
 
 Recently, I made an app called [Façade](http://facade.photo/), it makes rainbows.
 
