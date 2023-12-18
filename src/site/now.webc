@@ -4,30 +4,32 @@ layout: layouts/basewebc.webc
 
 <header>
     <template webc:type="11ty" 11ty:type="md,njk">
-    {% pic "./now-header.png", "A simple round face with a neutral expression. It looks a bit like a cheap 1960s Soviet cartoon" %}
+        {% pic "./now-header.png", "A simple round face with a neutral expression. It looks a bit like a cheap 1960s
+        Soviet cartoon" %}
     </template>
 
-Hi <now-selector @options="friend,wizard,fish"></now-selector>, I haven't seen you since <now-selector @options="the last month, the last year, before the Great War, before the Great Mushroom War"></now-selector>!
-Here's what I've been up to:
+    <p>Hi <now-selector @options="friend,wizard,fish"></now-selector>, I haven't seen you since <now-selector
+            @options="the last month, the last year, before the Great War, before the Great Mushroom War"></now-selector>!
+        Here's what I've been up to:</p>
 
 </header>
 <article>
 
 <template webc:type="11ty" 11ty:type="md,njk">
-
 -   Living in Porto with my partner Luna and our dog, Mango.
--   Experimenting and trying to build something useful on [sonnet.io](//sonnet.io)
--   Making small more or less serious toys, like [Ensō](https://enso.sonnet.io), [butter](https://butter.sonnet.io) or [Meat GPT](https://meat-gpt.sonnet.io)
+-   [Working with the garage door up](https://untested.sonnet.io)
+-   Trying to build a sustainable, [kind](https://untested.sonnet.io/Kind+software) business on [sonnet.io](//sonnet.io) 
+-   Making small more or less serious toys, like [Ensō](https://enso.sonnet.io), [midnight](https://midnight.sonnet.io), [butter](https://butter.sonnet.io), or [Meat GPT](https://meat-gpt.sonnet.io)
 -   [writing](//sonnet.io/blog)
--   making bootleg King Gizzard and the Lizard Wizard t-shirts and fishing knifes
--   meeting beautifully weird people via [Say Hi](//sonnet.io/posts/hi)
--   mentoring students, engineers and founders via [Say Hi](//sonnet.io/posts/hi)
+-   making bootleg King Gizzard and the Lizard Wizard t-shirts and [fishing knives](https://untested.sonnet.io/Bird-knife)
+-   meeting beautifully weird people via [Say Hi](https://sonnet.io/posts/hi)
 -   learning Portuguese (slowly)
--   bouldering (regularly)
+-   bouldering (not regularly)
 -   drawing (infrequently and compulsively)
--   learning about Natural Language Processing, Visual Comms, rapid prototyping
+-   learning about Natural Language Processing, visual comms, rapid prototyping, marketing [and shaders!](https://untested.sonnet.io/Shader+Park+and+2D)
 
 I'm currently reading [The Dawn of Everything](https://en.wikipedia.org/wiki/The_Dawn_of_Everything) and listening to [Eyes Like the Sky](https://www.youtube.com/playlist?list=OLAK5uy_l37p_FhiiP4UPjsCTRdcVI-TjPvSptP84)
+    
 </template>
 
 </article>
@@ -38,25 +40,36 @@ I'm currently reading [The Dawn of Everything](https://en.wikipedia.org/wiki/The
         font-size: 1.5rem;
         line-height: 1.4;
         margin: calc(var(--ru) * 1rem) auto 0;
-        max-width: 50rem;
+        max-width: 45rem;
     }
 
     header {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        line-height: 1;
         font-style: italic;
-        margin: 0 0 4rem;
+        margin: 0 auto;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 50rem;
     }
 
+    header p {
+        text-wrap: balance;
+    }
+    
     header picture {
         display: flex;
         justify-content: center;
+        max-width: 35rem;
     }
 
-    header  img {
+    header img {
         max-width: 70%;
         height: auto;
-        margin: 0 0 1rem;;
+        margin: 0 0 1rem;
+        ;
     }
 
     input {
@@ -65,17 +78,18 @@ I'm currently reading [The Dawn of Everything](https://en.wikipedia.org/wiki/The
         border: none;
         border-bottom: 2px solid var(--color-text);
     }
+
     a {
-            color: var(--color-text);
-            font-weight: 600;
-            font-style: italic;
+        color: var(--color-text);
+        font-weight: 600;
+        font-style: italic;
 
 
-            &:hover,
-            &:active {
-                color: var(--color-link);
-            }
+        &:hover,
+        &:active {
+            color: var(--color-link);
         }
+    }
 
 
     ol,
@@ -87,21 +101,24 @@ I'm currently reading [The Dawn of Everything](https://en.wikipedia.org/wiki/The
 
     ul {
         list-style: none;
-        
+
     }
+
     ul li {
+        position: relative;
+        --w: 1.4rem;
+
+        &::before {
+            display: inline-block;
+            width: var(--w);
+            content: '–';
+            margin-left: calc(var(--w) * -1);
+            opacity: 0.5;
             position: relative;
-            --w: 1.4rem;
-            &::before {
-                display: inline-block;
-                width: var(--w);
-                content: '–';
-                margin-left: calc(var(--w) * -1);
-                opacity: 0.5;
-                position: relative;
-                top: -.05em;
-            }
+            top: -.05em;
         }
+    }
+
     li {
         margin: 0 0 .5em;
     }
