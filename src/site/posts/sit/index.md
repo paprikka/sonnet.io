@@ -46,7 +46,7 @@ An artist's interpretation of my Twitter feed, the colours depicted are not accu
 Just like advertising, which assumes consent by default, most of the Web in its current shape robs you of your time. You can withdraw consent, but only after we’ve shown you the brain parasite.
 
 <div style='aspect-ratio: 1280 / 960; width: 100%'>
-<video src='/images/sit/loop.mp4' preload autoplay muted loop playsinline poster=""></video>
+<video src='https://res.cloudinary.com/dlve3inen/video/upload/v1705235447/sit-article-loop.mp4' preload autoplay muted loop playsinline poster=""></video>
 </div> 
 
 
