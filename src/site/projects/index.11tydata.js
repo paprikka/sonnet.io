@@ -63,7 +63,7 @@ const remainingProjects = [
         title: 'Tip of the Tongue',
         date: '2023-07-03',
         demoURL: 'https://tip.potato.horse',
-        content: `Tip. is a tool parahippocampal gyrus massage.
+        content: `Tip. is a parahippocampal gyrus massage tool.
 
 You describe the thing you can't name and it spits out a [guess](https://twitter.com/rafalpast/status/1676517556159492097?s=20).
         `,
