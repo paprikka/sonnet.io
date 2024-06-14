@@ -5,3 +5,17 @@
     data-website-id="fbde7cb0-26f1-44d4-ba49-2423c13314a6"
     src="https://sonnet-events.vercel.app/umami.js"
 ></script>
+
+<script>
+        document.addEventListener('click', function(event) {
+            let target = event.target;
+            while (target && target !== document) {
+                if (target.hasAttribute('data-sonnet-event')) {
+                    const eventName = target.getAttribute('data-sonnet-event');
+                    umami.trackEvent(eventName);
+                    break;
+                }
+                target = target.parentElement;
+            }
+        });
+</script>
